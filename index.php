@@ -1,3 +1,9 @@
+<?php
+
+error_reporting(0);
+ini_set(“display_errors”, 0 );
+
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -12,7 +18,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <!-- Estilos customizados para esse template -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="lib/css/style-index.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
