@@ -15,8 +15,7 @@ ini_set(“display_errors”, 0 );
   <link rel="icon" href="../../../../favicon.ico">
   <title>Login</title>
   <!-- Principal CSS do Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="lib/css/bootstrap.min.css">
   <!-- Estilos customizados para esse template -->
   <link href="lib/css/style-index.css" rel="stylesheet">
 </head>
