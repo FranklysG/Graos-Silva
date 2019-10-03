@@ -5,9 +5,10 @@
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="lib/css/style-dashboard.css">
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/font/css/all.css">
-    <title>Olá, mundo!</title>
+    <title>Grãos Silva!</title>
 
 </head>
 
@@ -19,11 +20,11 @@
                     <h4 class="text-lowercase font-weight-bold p-3 text-white">Grãos Silva</h4>
                 </div>
                 <div class="col-12 bg-warning d-inline-block mt-4">
-                    <ul class="menu">
-                        <li><a href=""><i class="">Link</i></i></a></li>
-                        <li><a href=""><i class="">Link</i></i></a></li>
-                        <li><a href=""><i class="">Link</i></i></a></li>
-                        <li><a href=""><i class="">Link</i></i></a></li>
+                    <ul class="menu p-0">
+                        <li class="pt-2"><a href="" class="font-weight-bold text-white"><i class="fa fa-user-tie"><label class="pl-2"> Cliente</label></i></i></a></li>
+                        <li class="pt-2"><a href="" class="font-weight-bold text-white"><i class="fa fa-piggy-bank"><label class="pl-2"> Produto</label></i></i></a></li>
+                        <li class="pt-2"><a href="" class="font-weight-bold text-white"><i class="fa fa-truck-moving"><label class="pl-2"> Veiculo</label></i></i></a></li>
+                        <li class="pt-2"><a href="" class="font-weight-bold text-white"><i class="fa fa-truck-loading"><label class="pl-2"> Armazen</label></i></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -35,7 +36,7 @@
                 <div class="col-2 d-inline-block" style="position:relative;top:10px;">
                     <img src="lib/img/avatars/avatar.jpg" class="float-right d-inline-block rounded-circle w-50" alt="">
                 </div>
-                <div class="col-12 bg-primary d-inline-block">.</div>
+                <div class="col-12 bg-primary d-inline-block"><?php include('app/cadastro/cadastro-cliente.php');?></div>
             </div>
         </div>
     </div>
