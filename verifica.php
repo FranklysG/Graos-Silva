@@ -7,7 +7,7 @@
 
 
   if (($login == "admin") and ($pass == "admin")) {
-    header('Location: dashboard.php');
+    header('Location: dashboard.php?pag=cadastro-cliente');
   } else {
     header('Location: index.php?login=false');
   }

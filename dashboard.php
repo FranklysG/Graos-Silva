@@ -22,10 +22,10 @@
                 </div>
                 <div class="col-12 bg-warning d-inline-block mt-4">
                     <ul class="menu p-0">
-                        <li class="pt-2"><a href="" class="font-weight-bold text-white"><i class="fa fa-user-tie"><label class="pl-2"> Cliente</label></i></i></a></li>
-                        <li class="pt-2"><a href="" class="font-weight-bold text-white"><i class="fa fa-piggy-bank"><label class="pl-2"> Produto</label></i></i></a></li>
-                        <li class="pt-2"><a href="" class="font-weight-bold text-white"><i class="fa fa-truck-moving"><label class="pl-2"> Veiculo</label></i></i></a></li>
-                        <li class="pt-2"><a href="" class="font-weight-bold text-white"><i class="fa fa-truck-loading"><label class="pl-2"> Armazen</label></i></i></a></li>
+                        <li class="pt-2"><a href="?pag=cadastro-cliente" class="font-weight-bold text-white"><i class="fa fa-user-tie"><label class="pl-2"> Cliente</label></i></i></a></li>
+                        <li class="pt-2"><a href="?pag=" class="font-weight-bold text-white"><i class="fa fa-piggy-bank"><label class="pl-2"> Produto</label></i></i></a></li>
+                        <li class="pt-2"><a href="?pag=cadastro-veiculo" class="font-weight-bold text-white"><i class="fa fa-truck-moving"><label class="pl-2"> Veiculo</label></i></i></a></li>
+                        <li class="pt-2"><a href="?pag=" class="font-weight-bold text-white"><i class="fa fa-truck-loading"><label class="pl-2"> Armazen</label></i></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -37,7 +37,19 @@
                 <div class="col-2 d-inline-block" style="position:relative;top:10px;">
                     <img src="lib/img/avatars/avatar.jpg" class="float-right d-inline-block rounded-circle w-50" alt="">
                 </div>
-                <div class="col-12 bg-primary d-inline-block"><?php include('app/cadastro/cadastro-cliente.php');?></div>
+                <div class="col-12 bg-primary d-inline-block">
+                    <?php 
+                        $pag = filter_input(INPUT_GET, "pag");
+                        switch($pag){
+                            case 'cadastro-cliente' :
+                                include('app/cadastro/cadastro-cliente.php');
+                                break;
+                            case 'cadastro-veiculo' :
+                                include('app/cadastro/cadastro-veiculo.php');
+                                break;
+                        }
+                    ?>
+                </div>
             </div>
         </div>
     </div>
