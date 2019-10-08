@@ -1,65 +1,11 @@
-<div class="container">
+<link rel="stylesheet" href="../../lib/css/style-cadastro-cliente.css">
+<div id ="teste" class="container" style="background-color: #f2f2f2;">
     <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72"
-            height="72">
-        <h2>Formulário de checkout</h2>
-        <p class="lead">Abaixo temos um exemplo de formulário construído com controles de formulário Bootstrap. Cada
-            campo obrigatório possui um estado de validação que é ativado quando tenta-se enviar o formulário sem
-            completá-lo.</p>
+        <h2 >Cadastro de Cliente</h2>
     </div>
 
-    <div class="row">
-        <div class="col-md-4 order-md-2 mb-4">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Seu carrinho</span>
-                <span class="badge badge-secondary badge-pill">3</span>
-            </h4>
-            <ul class="list-group mb-3">
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                        <h6 class="my-0">Nome do produto</h6>
-                        <small class="text-muted">Breve descrição</small>
-                    </div>
-                    <span class="text-muted">R$12</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                        <h6 class="my-0">Segundo produto</h6>
-                        <small class="text-muted">Breve descrição</small>
-                    </div>
-                    <span class="text-muted">R$8</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                        <h6 class="my-0">Terceiro item</h6>
-                        <small class="text-muted">Breve descrição</small>
-                    </div>
-                    <span class="text-muted">R$5</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between bg-light">
-                    <div class="text-success">
-                        <h6 class="my-0">Código de promoção</h6>
-                        <small>CODIGOEXEMEPLO</small>
-                    </div>
-                    <span class="text-success">-R$5</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between">
-                    <span>Total (BRL)</span>
-                    <strong>R$20</strong>
-                </li>
-            </ul>
-
-            <form class="card p-2">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Código promocional">
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-secondary">Resgatar</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-md-8 order-md-1">
-            <h4 class="mb-3">Endereço de cobrança</h4>
+    <div class="row" style="margin-left: 30px; margin-right: 30px;">
+        <div class="col-md-12 order-md-1">
             <form class="needs-validation" novalidate="">
                 <div class="row">
                     <div class="col-md-6 mb-3">
@@ -74,142 +20,118 @@
                         <label for="sobrenome">Sobrenome</label>
                         <input type="text" class="form-control" id="sobrenome" placeholder="" value="" required="">
                         <div class="invalid-feedback">
-                            É obrigatório inserir um sobre nome válido.
+                            É obrigatório inserir um Sobrenome válido.
                         </div>
                     </div>
                 </div>
-
-                <div class="mb-3">
-                    <label for="nickname">Nickname</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">@</span>
-                        </div>
-                        <input type="text" class="form-control" id="nickname" placeholder="Nickname" required="">
-                        <div class="invalid-feedback" style="width: 100%;">
-                            Seu nickname é obrigatório.
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="primeiroNome">CPF</label>
+                        <input type="text" class="form-control" id="cpf" placeholder="" value=""
+                            required="">
+                        <div class="invalid-feedback">
+                            É obrigatório inserir um CPF válido.
                         </div>
                     </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="email">Email <span class="text-muted">(Opcional)</span></label>
-                    <input type="email" class="form-control" id="email" placeholder="fulano@exemplo.com">
-                    <div class="invalid-feedback">
-                        Por favor, insira um endereço de e-mail válido, para atualizações de entrega.
+                    <div class="col-md-6 mb-3">
+                        <label for="sobrenome">RG</label>
+                        <input type="text" class="form-control" id="rg" placeholder="" value="" required="">
+                        <div class="invalid-feedback">
+                            É obrigatório inserir um RG válido.
+                        </div>
                     </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" class="form-control" id="endereco" placeholder="Rua dos bobos, nº 0"
-                        required="">
-                    <div class="invalid-feedback">
-                        Por favor, insira seu endereço de entrega.
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="endereco2">Endereço 2 <span class="text-muted">(Opcional)</span></label>
-                    <input type="text" class="form-control" id="endereco2" placeholder="Apartamento ou casa">
                 </div>
 
                 <div class="row">
-                    <div class="col-md-5 mb-3">
-                        <label for="pais">País</label>
-                        <select class="custom-select d-block w-100" id="pais" required="">
-                            <option value="">Escolha...</option>
-                            <option>Brasil</option>
-                        </select>
+                    <div class="col-md-8 mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="exemplo@exemplo.com" value=""
+                            required="">
                         <div class="invalid-feedback">
-                            Por favor, escolha um país válido.
+                            É obrigatório inserir um endereço válido.
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" class="form-control" id="telefone" placeholder="(12)12345-1234" value="" required="" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9 mb-3">
+                        <label for="endereço">Endereço</label>
+                        <input type="text" class="form-control" id="endereco" placeholder="" value=""
+                            required="">
+                        <div class="invalid-feedback">
+                            É obrigatório inserir um endereço válido.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="numero">Número</label>
+                        <input type="text" class="form-control" id="numero" placeholder="" value="" required="">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 mb-3">
+                        <label for="primeiroNome">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" placeholder="" value=""
+                            required="">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="sobrenome">CEP</label>
+                        <input type="text" class="form-control" id="cep" placeholder="" value="" required="">
+                        <div class="invalid-feedback">
+                            É obrigatório inserir um CEP válido.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                            <label for="cep">Cidade</label>
+                            <input type="text" class="form-control" id="cep" placeholder="" required="">
+                    </div>
+                    <div class="col-md-6 mb-3">
                         <label for="estado">Estado</label>
                         <select class="custom-select d-block w-100" id="estado" required="">
-                            <option value="">Escolha...</option>
+                            <option value="">...</option>
                             <option>Acre</option>
+                            <option>Alagoas</option>
+                            <option>Amapá</option>
+                            <option>Amazonas</option>
+                            <option>Bahia</option>
+                            <option>Ceará</option>
+                            <option>Distrito Federal</option>
+                            <option>Espírito Santo</option>
+                            <option>Goiás</option>
+                            <option>Maranhão</option>
+                            <option>Mato Grosso</option>
+                            <option>Mato Grosso do Sul</option>
+                            <option>Minas Gerais</option>
+                            <option>Pará</option>
+                            <option>Paraíba</option>
+                            <option>Paraná</option>
+                            <option>Pernambuco</option>
+                            <option>Piauí</option>
+                            <option>Rio de Janeiro</option>
+                            <option>Rio Grande do Norte</option>
+                            <option>Rio Grande do Sul</option>
+                            <option>Rondônia</option>
+                            <option>Roraima</option>
+                            <option>Santa Catarina</option>
+                            <option>São Paulo</option>
+                            <option>Sergipe</option>
+                            <option>Tocantins</option>
                         </select>
                         <div class="invalid-feedback">
                             Por favor, insira um estado válido.
                         </div>
                     </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="cep">CEP</label>
-                        <input type="text" class="form-control" id="cep" placeholder="" required="">
-                        <div class="invalid-feedback">
-                            É obrigatório inserir um CEP.
-                        </div>
-                    </div>
+                    
                 </div>
-                <hr class="mb-4">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="mesmo-endereco">
-                    <label class="custom-control-label" for="mesmo-endereco">Endereço de entrega é o mesmo que o de
-                        cobrança.</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="salvar-info">
-                    <label class="custom-control-label" for="salvar-info">Lembrar desta informação, na próxima
-                        vez.</label>
-                </div>
-                <hr class="mb-4">
 
-                <h4 class="mb-3">Pagamento</h4>
-
-                <div class="d-block my-3">
-                    <div class="custom-control custom-radio">
-                        <input id="credito" name="paymentMethod" type="radio" class="custom-control-input"
-                            checked="" required="">
-                        <label class="custom-control-label" for="credito">Cartão de crédito</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input id="debito" name="paymentMethod" type="radio" class="custom-control-input"
-                            required="">
-                        <label class="custom-control-label" for="debito">Cartão de débito</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input"
-                            required="">
-                        <label class="custom-control-label" for="paypal">PayPal</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="cc-nome">Nome no cartão</label>
-                        <input type="text" class="form-control" id="cc-nome" placeholder="" required="">
-                        <small class="text-muted">Nome completo, como mostrado no cartão.</small>
-                        <div class="invalid-feedback">
-                            O nome que está no cartão é obrigatório.
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="cc-numero">Número do cartão de crédito</label>
-                        <input type="text" class="form-control" id="cc-numero" placeholder="" required="">
-                        <div class="invalid-feedback">
-                            O número do cartão de crédito é obrigatório.
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 mb-3">
-                        <label for="cc-expiracao">Data de expiração</label>
-                        <input type="text" class="form-control" id="cc-expiracao" placeholder="" required="">
-                        <div class="invalid-feedback">
-                            Data de expiração é obrigatória.
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="cc-cvv">CVV</label>
-                        <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-                        <div class="invalid-feedback">
-                            Código de segurança é obrigatório.
-                        </div>
-                    </div>
-                </div>
+                <center style="margin-top: 20px;"><button type="submit" class="btn btn-secondary">Cadastrar</button></center>
                 <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue o checkout</button>
             </form>
         </div>
     </div>
