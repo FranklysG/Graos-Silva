@@ -33,7 +33,7 @@
             </div>
 
             <div id="main" class="col-10 d-inline-block p-0 m-0">
-                <div class="row bg-dark">
+                <div class="row bg-dark mr-0">
                     <div class="col-9 d-inline-block" style="position:relative;top:15px;">
                         <input type="text" name="" id="" class="form-control">
                     </div>
