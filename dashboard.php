@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="lib/css/style-dashboard.css">
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/font/css/all.css">
-    <link rel="stylesheet" href="lib/css/style-cadastro-cliente.css">
+    <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-cadastro-cliente.css">
+    <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-registro-cliente.css">
     <title>Grãos Silva!</title>
 
 </head>
@@ -46,7 +47,7 @@
                     $pag = filter_input(INPUT_GET, "pag");
                     switch ($pag) {
                         case 'cadastro-cliente':
-                            include('app/cadastro/cadastro-cliente.php');
+                            include('app/cadastro/cadastro-cliente/registro-cliente.php');
                             break;
                         case 'cadastro-produto':
                             include('app/cadastro/cadastro-produto.php');
