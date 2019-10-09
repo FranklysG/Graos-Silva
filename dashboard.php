@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="lib/css/style-dashboard.css">
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/font/css/all.css">
+    <link rel="stylesheet" href="lib/css/style-cadastro-cliente.css">
     <title>Grãos Silva!</title>
 
 </head>

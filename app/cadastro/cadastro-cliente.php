@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../lib/css/style-cadastro-cliente.css">
+
 <div id ="teste" class="container" style="background-color: #f2f2f2;">
     <div class="py-5 text-center">
         <h2 >Cadastro de Cliente</h2>
