@@ -1,55 +1,28 @@
 
-<div id ="teste" class="container" style="background-color: #f2f2f2;">
+<div id ="" class="container" style="background-color: #f2f2f2;">
     <div class="py-5 text-center">
         <h2 >Cadastro de Cliente</h2>
     </div>
 
-    <div class="row" style="margin-left: 30px; margin-right: 30px;">
+    <div class="row" style="margin-left: 40px; margin-right: 40px;">
         <div class="col-md-12 order-md-1">
             <form class="needs-validation" novalidate="">
                 <div class="row">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-8 mb-3">
                         <label for="primeiroNome">Nome</label>
-                        <input type="text" class="form-control" id="primeiroNome" placeholder="" value=""
+                        <input type="text" class="form-control" id="nome" placeholder="" value=""
                             required="">
-                        <div class="invalid-feedback">
-                            É obrigatório inserir um nome válido.
-                        </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="sobrenome">Sobrenome</label>
-                        <input type="text" class="form-control" id="sobrenome" placeholder="" value="" required="">
-                        <div class="invalid-feedback">
-                            É obrigatório inserir um Sobrenome válido.
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="primeiroNome">CPF</label>
-                        <input type="text" class="form-control" id="cpf" placeholder="" value=""
-                            required="">
-                        <div class="invalid-feedback">
-                            É obrigatório inserir um CPF válido.
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="sobrenome">RG</label>
-                        <input type="text" class="form-control" id="rg" placeholder="" value="" required="">
-                        <div class="invalid-feedback">
-                            É obrigatório inserir um RG válido.
-                        </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="sobrenome">CPF</label>
+                        <input type="text" class="form-control" id="cpf" placeholder="" value="" required="">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-8 mb-3">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="exemplo@exemplo.com" value=""
-                            required="">
-                        <div class="invalid-feedback">
-                            É obrigatório inserir um endereço válido.
-                        </div>
+                        <input type="email" class="form-control" id="email" placeholder="exemplo@exemplo.com" value="" required="">
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="telefone">Telefone</label>
