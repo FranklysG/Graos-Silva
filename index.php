@@ -22,8 +22,8 @@ ini_set(“display_errors”, 0 );
 
 <body class="text-center">
   <form class="form-signin" action="verifica.php" method="POST">
-    <h2 style="font-weight: 700;color: #199c37;text-shadow: 3px 3px 2px #c2c2c2;"><img src="img/logo.png"
-        style="width: 40px;"></h2><br>
+    <h2 style="font-weight: 700;color: #199c37;text-shadow: 3px 3px 2px #c2c2c2;"><img src="lib/img/graosSilva-logo.png"
+        style="width: 120px;"></h2><br>
     <label for="inputEmail" class="sr-only">Endereço de email</label>
     <input type="text" name="login" class="form-control" placeholder="Seu email" required autofocus><br>
     <label for="inputPassword" class="sr-only">Senha</label>
