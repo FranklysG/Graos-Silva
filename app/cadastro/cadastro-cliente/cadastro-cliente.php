@@ -8,7 +8,7 @@
         <div class="col-md-12 order-md-1">
             <form class="needs-validation" novalidate="">
                 <div class="row">
-                    <div class="col-md-8 mb-3">
+                    <div class="col-md-5 mb-3">
                         <label for="primeiroNome">Nome</label>
                         <input type="text" class="form-control" id="nome" placeholder="" value=""
                             required="">
@@ -17,6 +17,10 @@
                         <label for="sobrenome">CPF</label>
                         <input type="text" class="form-control" id="cpf" placeholder="" value="" required="">
                     </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" class="form-control" id="telefone" placeholder="(12)12345-1234" value="" required="" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}">
+                    </div>
                 </div>
 
                 <div class="row">
@@ -24,10 +28,7 @@
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" placeholder="exemplo@exemplo.com" value="" required="">
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="telefone">Telefone</label>
-                        <input type="tel" class="form-control" id="telefone" placeholder="(12)12345-1234" value="" required="" pattern="([0-9]{2})[0-9]{5}-[0-9]{4}">
-                    </div>
+
                 </div>
                 <div class="row">
                     <div class="col-md-9 mb-3">

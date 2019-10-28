@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="lib/font/css/all.css">
     <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-cadastro-cliente.css">
     <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-registro-cliente.css">
+
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="jquery.maskedinput.js"></script>
     <title>Grãos Silva!</title>
 
 </head>
