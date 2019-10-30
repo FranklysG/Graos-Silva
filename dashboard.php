@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-cadastro-cliente.css">
     <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-registro-cliente.css">
     <link rel="stylesheet" href="lib/css/style-cadastro-veiculo.css">
+    <link rel="stylesheet" href="lib/css/style-cadastro-armazem.css">
 
     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="jquery.maskedinput.js"></script>
@@ -23,7 +24,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div id="menu" class="col-2 d-inline-block bg-dark p-0 m-0" style="height:635px;">
+            <div id="menu" class="col-2 d-inline-block bg-dark p-0 m-0" style="height:auto;">
                 <div class="col-12 d-inline-block pl-0">
                     <div class="text-uppercase font-weight-bold ml-2 text-white"><img src="lib/img/graosSilva-logo.png" class="m-2" style="width: 50px;filter:invert(100%);padding-top: 20px;"><p class="d-inline-flex ml-2 text-left"> GRÃOS<br>SILVA</p></div>
                 </div>
@@ -43,23 +44,26 @@
                         <input type="text" name="" id="" class="form-control">
                     </div>
                     <div class="col-2 d-inline-block">
-                        <img src="lib/img/avatars/avatar.jpg" class="float-right d-inline-block rounded-circle mt-3" style="width:50px;">
+                        <img src="lib/img/avatars/logo.png" class="float-right d-inline-block rounded-circle mt-3" style="width:49px;height: 50px;">
                     </div>
                 </div>
                 <div class="col-12 d-inline-block">
                     <?php
-                    $pag = filter_input(INPUT_GET, "pag");
-                    switch ($pag) {
-                        case 'cadastro-cliente':
-                            include('app/cadastro/cadastro-cliente/registro-cliente.php');
-                            break;
-                        case 'cadastro-produto':
-                            include('app/cadastro/cadastro-produto.php');
-                            break;
-                        case 'cadastro-veiculo':
-                            include('app/cadastro/cadastro-veiculo.php');
-                            break;
-                    }
+                        $pag = filter_input(INPUT_GET, "pag");
+                        switch ($pag) {
+                            case 'cadastro-cliente':
+                                include('app/cadastro/cadastro-cliente/registro-cliente.php');
+                                break;
+                            case 'cadastro-produto':
+                                include('app/cadastro/cadastro-produto.php');
+                                break;
+                            case 'cadastro-veiculo':
+                                include('app/cadastro/cadastro-veiculo.php');
+                                break;
+                                case 'cadastro-armazem':
+                                include('app/cadastro/cadastro-armazem.php');
+                                break;
+                        }
                     ?>
                 </div>
             </div>
