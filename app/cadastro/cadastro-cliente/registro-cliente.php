@@ -33,7 +33,7 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="telefone">Telefone</label>
-                            <input type="tel" class="form-control" id="telefone" placeholder="(12)12345-1234" value=""
+                            <input type="tel" class="form-control" id="telefone" placeholder="" value=""
                                 required="">
                             <script>
                                 jQuery("#telefone").mask("(99) 99999-9999");
@@ -126,7 +126,7 @@
         </div>
         <div class="table" id="tabela">
             <table class="table">
-                <thead class="thead-dark">
+                <thead class="thead-dark">  
                     <tr>
                         <th scope="col"></th>
                         <th scope="col">Nome</th>
@@ -138,12 +138,12 @@
                 </thead>
                 <tbody style="font-size: 15px;">
                     <?php
-                        for($i = 0;$i < 5;$i ++ ){
-                                    
+                        for($i = 0;$i < 9;$i ++ ){
+
                     ?>
                     <tr>
-                        <td><i class="fas fa-user-edit" style="margin-top: 10px;"></i><i class="fas fa-trash"
-                                style="margin-top: 21px;"></i></td>
+                        <td><i class="fas fa-user-edit" style="margin-right: 15px;"></i><i class="fas fa-trash"
+                                style=""></i></td>
                         <td>Marcelo Vilanova Ferreira Junior</td>
                         <td>040.217.923-41</td>
                         <td>dbvmarcelo13@gmail.com</td>
