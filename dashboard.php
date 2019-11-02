@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="lib/css/css-cadastro-motorista/style-cadastro-motorista-veiculo.css">
     <link rel="stylesheet" href="lib/css/style-cadastro-armazem.css">
 
-    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="jquery.maskedinput.js"></script>
+    <script type="text/javascript" src="lib/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="lib/js/jquery.maskedinput.js"></script>
     <title>Grãos Silva!</title>
 
 </head>
@@ -26,7 +26,9 @@
         <div class="row">
             <div id="menu" class="col-2 d-inline-block bg-dark p-0 m-0" style="height:auto;">
                 <div class="col-12 d-inline-block pl-0">
-                    <div class="text-uppercase font-weight-bold ml-2 text-white"><img src="lib/img/graosSilva-logo.png" class="m-2" style="width: 50px;filter:invert(100%);padding-top: 20px;"><p class="d-inline-flex ml-2 text-left"> GRÃOS<br>SILVA</p></div>
+                    <div class="text-uppercase font-weight-bold ml-2 text-white"><img src="lib/img/graosSilva-logo.png" class="m-2" style="width: 50px;filter:invert(100%);padding-top: 20px;">
+                        <p class="d-inline-flex ml-2 text-left"> GRÃOS<br>SILVA</p>
+                    </div>
                 </div>
                 <div class="col-12 d-inline-block mt-4 p-0">
                     <ul class="menu p-0">
@@ -50,33 +52,29 @@
                 </div>
                 <div class="col-12 d-inline-block p-0">
                     <?php
-                        $pag = filter_input(INPUT_GET, "pag");
-                        switch ($pag) {
-                            case 'cadastro-cliente':
-                                include('app/cadastro/cadastro-cliente/cadastro-cliente.php');
-                                break;
-                            case 'cadastro-produto':
-                                include('app/cadastro/cadastro-produto.php');
-                                break;
-                            case 'cadastro-motorista':
-                                include('app/cadastro/cadastro-motorista/cadastro-motorista.php');
-                                break;
-                            case 'cadastro-veiculo':
-                                include('app/cadastro/cadastro-motorista/cadastro-veiculo.php');
-                                break;
-                            case 'cadastro-armazem':
-                            include('app/cadastro/cadastro-armazem.php');
+                    $pag = filter_input(INPUT_GET, "pag");
+                    switch ($pag) {
+                        case 'cadastro-cliente':
+                            include('app/cadastro/cadastro-cliente/cadastro-cliente.php');
                             break;
-                        }
+                        case 'cadastro-produto':
+                            include('app/cadastro/cadastro-produto/cadastro-produto.php');
+                            break;
+                        case 'cadastro-motorista':
+                            include('app/cadastro/cadastro-motorista/cadastro-motorista.php');
+                            break;
+                        case 'cadastro-veiculo':
+                            include('app/cadastro/cadastro-motorista/cadastro-veiculo.php');
+                            break;
+                        case 'cadastro-armazem':
+                            include('app/cadastro/cadastro-armazem/cadastro-armazem.php');
+                            break;
+                    }
                     ?>
                 </div>
             </div>
         </div>
     </div>
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
