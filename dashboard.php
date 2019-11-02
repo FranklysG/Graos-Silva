@@ -1,3 +1,4 @@
+<?php include('lib/class_php/con.php'); ?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="lib/font/css/all.css">
     <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-cadastro-cliente.css">
     <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-registro-cliente.css">
-    <link rel="stylesheet" href="lib/css/style-cadastro-veiculo.css">
+    <link rel="stylesheet" href="lib/css/css-cadastro-motorista/style-cadastro-motorista-veiculo.css">
     <link rel="stylesheet" href="lib/css/style-cadastro-armazem.css">
 
     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
@@ -19,7 +20,6 @@
     <title>Grãos Silva!</title>
 
 </head>
-
 
 <body>
     <div class="container-fluid">
@@ -32,8 +32,9 @@
                     <ul class="menu p-0">
                         <li class="pt-2"><a href="?pag=cadastro-cliente" class="font-weight-bold text-white ml-3"><i class="fa fa-user-tie"></i><label class="pl-2"> Cliente</label></a></li>
                         <li class="pt-2"><a href="?pag=cadastro-produto" class="font-weight-bold text-white ml-3"><i class="fa fa-piggy-bank"></i><label class="pl-2"> Produto</label></a></li>
+                        <li class="pt-2"><a href="?pag=cadastro-motorista" class="font-weight-bold text-white ml-3"><i class="fa fa-user"></i><label class="pl-2"> Motorista</label></a></li>
                         <li class="pt-2"><a href="?pag=cadastro-veiculo" class="font-weight-bold text-white ml-3"><i class="fa fa-truck-moving"></i><label class="pl-2"> Veiculo</label></a></li>
-                        <li class="pt-2"><a href="?pag=" class="font-weight-bold text-white ml-3"><i class="fa fa-truck-loading"></i><label class="pl-2"> Armazen</label></a></li>
+                        <li class="pt-2"><a href="?pag=cadastro-armazem" class="font-weight-bold text-white ml-3"><i class="fa fa-truck-loading"></i><label class="pl-2"> Armazen</label></a></li>
                     </ul>
                 </div>
             </div>
@@ -52,24 +53,26 @@
                         $pag = filter_input(INPUT_GET, "pag");
                         switch ($pag) {
                             case 'cadastro-cliente':
-                                include('app/cadastro/cadastro-cliente/registro-cliente.php');
+                                include('app/cadastro/cadastro-cliente/cadastro-cliente.php');
                                 break;
                             case 'cadastro-produto':
                                 include('app/cadastro/cadastro-produto.php');
                                 break;
+                            case 'cadastro-motorista':
+                                include('app/cadastro/cadastro-motorista/cadastro-motorista.php');
+                                break;
                             case 'cadastro-veiculo':
-                                include('app/cadastro/cadastro-veiculo.php');
+                                include('app/cadastro/cadastro-motorista/cadastro-veiculo.php');
                                 break;
-                                case 'cadastro-armazem':
-                                include('app/cadastro/cadastro-armazem.php');
-                                break;
+                            case 'cadastro-armazem':
+                            include('app/cadastro/cadastro-armazem.php');
+                            break;
                         }
                     ?>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
