@@ -48,7 +48,7 @@
                         <img src="lib/img/avatars/logo.png" class="float-right d-inline-block rounded-circle mt-3" style="width:49px;height: 50px;">
                     </div>
                 </div>
-                <div class="col-12 d-inline-block">
+                <div class="col-12 d-inline-block p-0">
                     <?php
                         $pag = filter_input(INPUT_GET, "pag");
                         switch ($pag) {
