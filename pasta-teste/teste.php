@@ -20,16 +20,23 @@ $rows = $veiculo->sql($sql);
         <th><b>PLACA</b></th>
     </tr>
     <?php
-        foreach($rows as $row){
-    ?>
+    foreach ($rows as $row) {
+        ?>
         <tr>
             <td><button class="btn btn-outline-primary"><i class="far fa-edit"></i> Editar </button></td>
-            <td><?php echo $row['id'];?></td>
-            <td><?php echo $row['modelo'];?></td>
-            <td><?php echo $row['cor'];?></td>
-            <td><?php echo $row['placa'];?></td>
+            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['modelo']; ?></td>
+            <td><?php echo $row['cor']; ?></td>
+            <td><?php echo $row['placa']; ?></td>
         </tr>
     <?php
-        }
+    }
     ?>
+    <tr>
+        <td><button class="btn btn-outline-primary"><i class="fas fa-plus"></i> Add </button></td>
+        <td><input type="text" name=""></td>
+        <td><input type="text" name=""></td>
+        <td><input type="text" name=""></td>
+        <td><input type="text" name=""></td>
+    </tr>
 </table>
