@@ -14,7 +14,7 @@ class Conn
         $this->host = "localhost";
         $this->dbname = "graossilva";
         $this->username = "root";
-        $this->password = "senha do db";
+        $this->password = "senha banco";
     }
 
     public function open()
@@ -34,6 +34,7 @@ class Conn
     public function close(){
         $this->transaction = null;
     }
+
     public function sql($sql, $param = null)
     {
         try {

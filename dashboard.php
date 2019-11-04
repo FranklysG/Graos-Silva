@@ -1,4 +1,4 @@
-<?php include('lib/class_php/con.php'); ?>
+<?php include('lib/class_php/con.class.php'); ?>
 <!doctype html>
 <html lang="pt-br">
 

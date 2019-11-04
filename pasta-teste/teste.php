@@ -1,6 +1,6 @@
 <?php
 
-include('../lib/class_php/con.php');
+include('../lib/class_php/con.class.php');
 
 $veiculo = new Conn();
 
@@ -35,8 +35,13 @@ $rows = $veiculo->sql($sql);
     <tr>
         <td><button class="btn btn-outline-primary"><i class="fas fa-plus"></i> Add </button></td>
         <td><input type="text" name=""></td>
-        <td><input type="text" name=""></td>
-        <td><input type="text" name=""></td>
-        <td><input type="text" name=""></td>
+        <td><input type="text" name="modelo"></td>
+        <td><input type="text" name="cor"></td>
+        <td><input type="text" name="placa"></td>
     </tr>
 </table>
+<?php
+
+$veiculo->close();
+
+?>
