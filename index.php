@@ -35,11 +35,12 @@ ini_set(“display_errors”, 0 );
     </div>
     <button class="btn btn-lg btn-block" type="submit"
       style="background-color: #199c37;color: #fff;border-color: #199c37;">Login</button>
+    <button class="btn btn-lg btn-block btn-primary" type="submit"><a href="pasta-teste/teste.php" style="color: #fff;">Pag teste</a></button>
     <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
     <?php if($_GET['login']){?>
-      <div class="btn btn-danger" disabled="disabled">
-        Verifique seus dados e tente novamente!
-      </div>
+    <div class="btn btn-danger" disabled="disabled">
+      Verifique seus dados e tente novamente!
+    </div>
     <?php }?>
   </form>
 

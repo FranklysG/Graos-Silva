@@ -3,6 +3,7 @@
 class Conn
 {
 
+    private static $transaction;
     private $host;
     private $dbname;
     private $username;
@@ -13,27 +14,32 @@ class Conn
         $this->host = "localhost";
         $this->dbname = "graossilva";
         $this->username = "root";
-        $this->password = "senha do db";
+        $this->password = "app@123.";
     }
 
     public function open()
     {
         try {
-            $conn = new PDO("mysql:host={$this->host};dbname={$this->dbname}", "{$this->username}", "{$this->password}");
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+           if(self::$transaction == null){
+                self::$transaction = new PDO("mysql:host={$this->host};dbname={$this->dbname}", "{$this->username}", "{$this->password}");
+                self::$transaction->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            return $conn;
+            }
+            return self::$transaction;
         } catch (PDOException $e) {
             echo 'ERROR: ' . $e->getMessage();
         }
     }
 
+    public function close(){
+        $this->transaction = null;
+    }
     public function sql($sql, $param = null)
     {
         try {
             $stmt = $this->open()->prepare($sql);
             $stmt->execute($param);
-            return $stmt->fetch(PDO::FETCH_ASSOC);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             echo 'ERROR: ' . $e->getMessage();
         }
