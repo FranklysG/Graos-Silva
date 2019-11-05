@@ -1,7 +1,7 @@
 <?php
-include('con.class.php');
+include('../con.class.php');
 
-Class Crud{
+Class CrudVeiculo{
 
     private $conn;
 
@@ -15,7 +15,7 @@ Class Crud{
     }
     
     public function add(){
-
+        
     }
 
     public function del(){

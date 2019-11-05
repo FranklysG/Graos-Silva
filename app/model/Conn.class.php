@@ -32,7 +32,7 @@ class Conn
     }
 
     public function close(){
-        $this->transaction = null;
+        self::$transaction = null;
     }
 
     public function sql($sql, $param = null)

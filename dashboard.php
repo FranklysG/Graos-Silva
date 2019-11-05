@@ -1,4 +1,4 @@
-<?php include('lib/class_php/con.class.php'); ?>
+<?php include('app/model/Load.class.php');?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -55,19 +55,19 @@
                     $pag = filter_input(INPUT_GET, "pag");
                     switch ($pag) {
                         case 'cadastro-cliente':
-                            include('app/cadastro/cadastro-cliente/cadastro-cliente.php');
+                            include('app/cadastro/cadastro-cliente/CadastroClienteList.php');
                             break;
                         case 'cadastro-produto':
-                            include('app/cadastro/cadastro-produto/cadastro-produto.php');
+                            include('app/cadastro/cadastro-produto/CadastroProdutoList.php');
                             break;
                         case 'cadastro-motorista':
-                            include('app/cadastro/cadastro-motorista/cadastro-motorista.php');
+                            include('app/cadastro/cadastro-motorista/CadastroMotoristaList.php');
                             break;
                         case 'cadastro-veiculo':
-                            include('app/cadastro/cadastro-motorista/cadastro-veiculo.php');
+                            include('app/cadastro/cadastro-motorista/CadastroVeiculoList.php');
                             break;
                         case 'cadastro-armazem':
-                            include('app/cadastro/cadastro-armazem/cadastro-armazem.php');
+                            include('app/cadastro/cadastro-armazem/CadastroArmazemList.php');
                             break;
                     }
                     ?>

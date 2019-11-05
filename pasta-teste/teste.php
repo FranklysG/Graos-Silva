@@ -1,11 +1,12 @@
 <?php
 
-include('../lib/class_php/con.class.php');
+include('../app/model/Load.class.php');
 
-$veiculo = new Conn();
+try {
+    $conn = new Conn;
+    $sql = "select * from veiculo";
 
-$sql = "SELECT * FROM veiculo";
-$rows = $veiculo->sql($sql);
+    $rows = $conn->sql($sql);
 
 ?>
 <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
@@ -24,10 +25,10 @@ $rows = $veiculo->sql($sql);
         ?>
         <tr>
             <td><button class="btn btn-outline-primary"><i class="far fa-edit"></i> Editar </button></td>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['modelo']; ?></td>
-            <td><?php echo $row['cor']; ?></td>
-            <td><?php echo $row['placa']; ?></td>
+            <td><?php echo $row['id'];?></td>
+            <td><?php echo $row['modelo'];?></td>
+            <td><?php echo $row['cor'];?></td>
+            <td><?php echo $row['placa'];?></td>
         </tr>
     <?php
     }
@@ -42,6 +43,10 @@ $rows = $veiculo->sql($sql);
 </table>
 <?php
 
-$veiculo->close();
+$conn->close();
+
+} catch (PDOException $e) {
+    echo 'ERROR: ' . $e->getMessage();
+}
 
 ?>
