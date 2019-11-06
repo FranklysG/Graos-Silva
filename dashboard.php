@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/font/css/all.css">
     <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-cadastro-cliente.css">
-    <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-registro-cliente.css">
     <link rel="stylesheet" href="lib/css/css-cadastro-motorista/style-cadastro-motorista.css">
     <link rel="stylesheet" href="lib/css/style-cadastro-veiculo.css">
     <link rel="stylesheet" href="lib/css/style-cadastro-armazem.css">
