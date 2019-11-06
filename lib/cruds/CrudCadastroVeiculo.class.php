@@ -1,5 +1,5 @@
 <?php
-include('../con.class.php');
+include('../../app/model/Load.class.php');
 
 Class CrudVeiculo{
 
