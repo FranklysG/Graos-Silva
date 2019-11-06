@@ -38,12 +38,12 @@
       ?>
 
       <div class="row">
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table p-1"><i class="far fa-edit pr-1 btn text-primary"><?php ?></i><i class="fas fa-trash btn text-danger"></i></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table p-1"><?php echo $row['id']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table p-1"><?php echo $row['modelo']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table p-1"><?php echo $row['cor']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table p-1"><?php echo $row['placa']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table p-1"><?php echo $row['dtcadastro']; ?></div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><i class="far fa-edit pr-1 btn text-primary"><?php ?></i><i class="fas fa-trash btn text-danger"></i></div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['id']; ?></div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['modelo']; ?></div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['cor']; ?></div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['placa']; ?></div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['dtcadastro']; ?></div>
       </div>
 
     <?php } ?>
