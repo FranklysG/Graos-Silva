@@ -21,3 +21,6 @@
 label{
     font-family: 'Comfortaa', cursive !important;
 }
+.modal-backdrop{
+    display:none !important;
+}
