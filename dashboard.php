@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="lib/font/css/all.css">
     <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-cadastro-cliente.css">
     <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-registro-cliente.css">
-    <link rel="stylesheet" href="lib/css/css-cadastro-motorista/style-cadastro-motorista-veiculo.css">
+    <link rel="stylesheet" href="lib/css/css-cadastro-motorista/style-cadastro-motorista.css">
+    <link rel="stylesheet" href="lib/css/style-cadastro-veiculo.css">
     <link rel="stylesheet" href="lib/css/style-cadastro-armazem.css">
 
     <script type="text/javascript" src="lib/js/jquery-3.4.1.min.js"></script>
@@ -64,7 +65,7 @@
                             include('app/cadastro/cadastro-motorista/CadastroMotoristaList.php');
                             break;
                         case 'cadastro-veiculo':
-                            include('app/cadastro/cadastro-motorista/CadastroVeiculoList.php');
+                            include('app/cadastro/cadastro-veiculo/CadastroVeiculoList.php');
                             break;
                         case 'cadastro-armazem':
                             include('app/cadastro/cadastro-armazem/CadastroArmazemList.php');
