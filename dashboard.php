@@ -1,4 +1,6 @@
-<?php include('app/model/Load.class.php');?>
+<?php 
+include('app/model/Load.class.php');
+?>
 <!doctype html>
 <html lang="pt-br">
 
