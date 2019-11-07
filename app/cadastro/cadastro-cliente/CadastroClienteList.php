@@ -1,6 +1,7 @@
+
 <div id="" class="container" style="background-color: #f2f2f2;">
     <div class="py-5 text-center">
-        <h2>Registro de Cliente</h2>
+        <h1>Clientes</h1>
     </div>
     <div>
         <button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px;"
@@ -47,8 +48,8 @@
                                 placeholder="exemplo@exemplo.com" value="" required="">
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="endereço">Endereço</label>
-                            <input type="text" class="form-control caixaAlta" id="endereco" placeholder="" value=""
+                            <label for="logradouro">Logradouro</label>
+                            <input type="text" class="form-control caixaAlta" id="logradouro" placeholder="" value=""
                                 required="">
                         </div>
                     </div>

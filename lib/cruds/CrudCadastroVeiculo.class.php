@@ -1,5 +1,4 @@
 <?php
-include('../../app/model/Load.class.php');
 
 Class CrudVeiculo{
 
@@ -13,21 +12,18 @@ Class CrudVeiculo{
     {
         $this->conn->close();
     }
-    
-    public function add(){
-        
+
+    public function add(Veiculo $veiculo){
+        try{
+            $sql = "INSERT INTO veiculo(marca, cor, placa) VALUES (:marca, :cor, :placa)";
+            $param = array(
+                ':marca' => $veiculo->getMarca(),
+                ':cor' => $veiculo->getCor(),
+                ':placa' => $veiculo->getPlaca()
+            );
+            return $this->conn->sqlOne($sql, $param);
+        } catch (PDOException $e) {
+            echo 'ERROR: ' . $e->getMessage();
+        }
     }
-
-    public function del(){
-
-    }
-
-    public function edit(){
-
-    }
-
-    public function show($sql){
-
-    }
-
 }
