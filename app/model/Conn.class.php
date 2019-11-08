@@ -14,7 +14,7 @@ class Conn
         $this->host = "localhost";
         $this->dbname = "graossilva";
         $this->username = "root";
-        $this->password = "";
+        $this->password = "app@123.";
     }
 
     public function open()
@@ -35,12 +35,29 @@ class Conn
         self::$transaction = null;
     }
 
-    public function sql($sql, $param = null)
+    public function id(){
+        $this->open()->lastInsertId();
+    }
+
+    public function rollback(){
+        $this->open()->rollback();
+    }
+
+    public function sqlRows($sql, $param = null)
     {
         try {
             $stmt = $this->open()->prepare($sql);
             $stmt->execute($param);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo 'ERROR: ' . $e->getMessage();
+        }
+    }
+
+    public function sqlOne($sql, $param = null){
+        try {
+            $stmt = $this->open()->prepare($sql);
+            return $stmt->execute($param);
         } catch (PDOException $e) {
             echo 'ERROR: ' . $e->getMessage();
         }
