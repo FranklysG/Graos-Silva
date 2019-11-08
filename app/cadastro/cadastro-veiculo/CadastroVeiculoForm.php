@@ -1,6 +1,7 @@
 <?php
 
 $newVeiculo = new Veiculo;
+$editVeiculo = new Veiculo;
 $action = new ControlVeiculo;
 $marca = "";
 $cor = "";
@@ -8,26 +9,23 @@ $placa = "";
 $message = "";
 
 $btnSalvar = filter_input(INPUT_POST, "btnSalvar");
+$btnDel = filter_input(INPUT_POST, "btnDel");
 $id = filter_input(INPUT_GET, "id");
 
-if ($id) { }
 if ($btnSalvar) {
-    $newVeiculo->setMarca(filter_input(INPUT_POST, "marca"));
-    $newVeiculo->setCor(filter_input(INPUT_POST, "cor"));
-    $newVeiculo->setPlaca(filter_input(INPUT_POST, "placa"));
+    if (filter_input(INPUT_POST, "id")) {
+        $editVeiculo->setId(filter_input(INPUT_POST, "id"));
+        $editVeiculo->setMarca(filter_input(INPUT_POST, "marca"));
+        $editVeiculo->setCor(filter_input(INPUT_POST, "cor"));
+        $editVeiculo->setPlaca(filter_input(INPUT_POST, "placa"));
 
-    if ($action->add($newVeiculo)) {
-        ?>
-            <div class="alert alert-success">
-                <strong>Success!</strong> Indicates a successful or positive action.
-            </div>
-        <?php
+        $action->edit($editVeiculo);
     } else {
-        ?>
-            <div class="alert alert-danger">
-                <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
-            </div>
-        <?php
+        $newVeiculo->setMarca(filter_input(INPUT_POST, "marca"));
+        $newVeiculo->setCor(filter_input(INPUT_POST, "cor"));
+        $newVeiculo->setPlaca(filter_input(INPUT_POST, "placa"));
+
+        $action->add($newVeiculo);
     }
 }
 
@@ -36,18 +34,19 @@ if ($btnSalvar) {
     <div class="row">
         <div class="col-sm-4 mb-3">
             <p class="veiculo_title">MARCA
-                <input type="text" class="form-control m-0" name="marca" placeholder="SCANIA" value="<?php echo $marca ?>" required="">
+                <input type="hidden" class="form-control m-0" id="id" name="id">
+                <input type="text" class="form-control m-0" id="marca" name="marca" placeholder="SCANIA" value="<?php echo $marca; ?>">
             </p>
         </div>
         <div class="col-sm-4 mb-3">
             <p class="veiculo_title">COR
-                <input type="text" class="form-control m-0" name="cor" placeholder="BRANCA" value="<?php echo $cor ?>" required="">
+                <input type="text" class="form-control m-0" id="cor" name="cor" placeholder="BRANCA" value="<?php echo $marca; ?>">
             </p>
         </div>
 
         <div class="col-sm-4 mb-3">
             <p class="veiculo_title">PLACA
-                <input type="text" class="form-control m-0" name="placa" placeholder="XTG 8946" value="<?php echo $placa ?>" required="">
+                <input type="text" class="form-control m-0" id="placa" name="placa" placeholder="XTG 8946" value="<?php echo $marca; ?>">
             </p>
         </div>
     </div>
