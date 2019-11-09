@@ -40,7 +40,6 @@ class CrudVeiculo
                 ':cor' => $veiculo->getCor(),
                 ':placa' => $veiculo->getPlaca()
             );
-            var_dump($sql);
             return $this->conn->sqlOne($sql, $param);
         } catch (PDOException $e) {
             echo 'ERROR: ' . $e->getMessage();

@@ -3,11 +3,11 @@
 class ControlVeiculo
 {
 
-    private $crudVeiculo;
+    private $crud;
 
     public function __construct()
     {
-        $this->crudVeiculo = new crudVeiculo;
+        $this->crud = new CrudVeiculo;
     }
 
     public function add(Veiculo $veiculo)
@@ -15,7 +15,7 @@ class ControlVeiculo
         if ((strlen(trim($veiculo->getMarca())) > 0) and 
         (strlen(trim($veiculo->getCor())) > 0) and 
         (strlen(trim($veiculo->getPlaca())) > 0)) {
-            $this->crudVeiculo->add($veiculo);
+            $this->crud->add($veiculo);
             return true;
         } else {
             return false;
@@ -30,7 +30,7 @@ class ControlVeiculo
         (strlen(trim($veiculo->getMarca())) > 0) and 
         (strlen(trim($veiculo->getCor())) > 0) and 
         (strlen(trim($veiculo->getPlaca())) > 0)) {
-            $this->crudVeiculo->edit($veiculo);
+            $this->crud->edit($veiculo);
             return true;
         } else {
             return false;
