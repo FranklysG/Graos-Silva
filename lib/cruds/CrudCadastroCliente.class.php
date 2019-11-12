@@ -18,11 +18,10 @@ class CrudCliente
     public function add(Cliente $cliente)
     {
         try {
-            $sql = "INSERT INTO cliente (nome, cpf,rg , telefone, cep, email, logradouro, numero, bairro, cidade, estado) VALUES (:nome, :cpf, :rg, :telefone, :cep, :email, :logradouro, :numero, :bairro, :cidade, :estado);";
+            $sql = "INSERT INTO cliente (nome, cpf, telefone, cep, email, logradouro, numero, bairro, cidade, estado) VALUES (:nome, :cpf, :telefone, :cep, :email, :logradouro, :numero, :bairro, :cidade, :estado);";
             $param = array(
                 ':nome' => $cliente->getNome(),
                 ':cpf' => $cliente->getCpf(),
-                ':rg' => $cliente->getRg(),
                 ':telefone' => $cliente->getTelefone(),
                 ':email' => $cliente->getEmail(),
                 ':logradouro' => $cliente->getLogradouro(),
