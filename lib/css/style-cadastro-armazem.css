@@ -3,3 +3,9 @@
     font-weight: 600;
     text-align: left;
 }
+.armazem_table{
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: 600;
+}
