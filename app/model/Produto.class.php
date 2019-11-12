@@ -6,10 +6,11 @@ Class Produto{
     private $nome;
     private $tipo;
     private $qtde;
+    private $nota_fiscal;
     private $dtcadastro;
 
     public function setId($id){
-        $this->id = $id;
+        $this->id = (int)$id;
     }
 
     public function getId(){
@@ -38,6 +39,14 @@ Class Produto{
 
     public function getQtde(){
         return $this->qtde;
+    }
+    
+    public function setNotaFiscal($nota_Fiscal){
+        $this->notaFiscal = $nota_Fiscal;
+    }
+
+    public function getNotaFiscal(){
+        return $this->nota_fiscal;
     }
 
     public function setDtcadastro($dtcadastro){
