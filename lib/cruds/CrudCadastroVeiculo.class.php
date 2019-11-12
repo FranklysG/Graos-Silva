@@ -40,10 +40,22 @@ class CrudVeiculo
                 ':cor' => $veiculo->getCor(),
                 ':placa' => $veiculo->getPlaca()
             );
-            var_dump($sql);
             return $this->conn->sqlOne($sql, $param);
         } catch (PDOException $e) {
             echo 'ERROR: ' . $e->getMessage();
         }
     }
+
+    public function del(Veiculo $veiculo){
+        try {
+            $sql = "DELETE FROM veiculo WHERE id =:id";
+            $param = array(
+                ':id' => $veiculo->getId(),
+            );
+            return $this->conn->sqlOne($sql, $param);
+        } catch (PDOException $e) {
+            echo 'ERROR: ' . $e->getMessage();
+        }
+    }
+
 }

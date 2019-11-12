@@ -1,7 +1,6 @@
 <?php
 
-$newVeiculo = new Veiculo;
-$editVeiculo = new Veiculo;
+$veiculo = new Veiculo;
 $action = new ControlVeiculo;
 $marca = "";
 $cor = "";
@@ -12,20 +11,26 @@ $btnSalvar = filter_input(INPUT_POST, "btnSalvar");
 $btnDel = filter_input(INPUT_POST, "btnDel");
 $id = filter_input(INPUT_GET, "id");
 
+if($btnDel){
+    $veiculo->setId(filter_input(INPUT_POST, "id"));
+    $action->del($veiculo);
+    
+}
+
 if ($btnSalvar) {
     if (filter_input(INPUT_POST, "id")) {
-        $editVeiculo->setId(filter_input(INPUT_POST, "id"));
-        $editVeiculo->setMarca(filter_input(INPUT_POST, "marca"));
-        $editVeiculo->setCor(filter_input(INPUT_POST, "cor"));
-        $editVeiculo->setPlaca(filter_input(INPUT_POST, "placa"));
+        $veiculo->setId(filter_input(INPUT_POST, "id"));
+        $veiculo->setMarca(filter_input(INPUT_POST, "marca"));
+        $veiculo->setCor(filter_input(INPUT_POST, "cor"));
+        $veiculo->setPlaca(filter_input(INPUT_POST, "placa"));
 
-        $action->edit($editVeiculo);
+        $action->edit($veiculo);
     } else {
-        $newVeiculo->setMarca(filter_input(INPUT_POST, "marca"));
-        $newVeiculo->setCor(filter_input(INPUT_POST, "cor"));
-        $newVeiculo->setPlaca(filter_input(INPUT_POST, "placa"));
+        $veiculo->setMarca(filter_input(INPUT_POST, "marca"));
+        $veiculo->setCor(filter_input(INPUT_POST, "cor"));
+        $veiculo->setPlaca(filter_input(INPUT_POST, "placa"));
 
-        $action->add($newVeiculo);
+        $action->add($veiculo);
     }
 }
 
