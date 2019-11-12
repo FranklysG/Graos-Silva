@@ -8,8 +8,8 @@ include('Motorista.class.php');
 include('Produto.class.php');
 include('Veiculo.class.php');
 
-include(__FILE__.'../../../../lib/controller/ControlCadastroVeiculo.class.php');
+include('C:\xampp\htdocs\graossilva\lib\controller\ControlCadastroVeiculo.class.php');
 
-include(__FILE__.'../../../../lib/cruds/CrudCadastroVeiculo.class.php');
+include('C:\xampp\htdocs\graossilva\lib\cruds\CrudCadastroVeiculo.class.php');
 
 

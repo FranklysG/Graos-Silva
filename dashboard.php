@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="lib/css/css-cadastro-motorista/style-cadastro-motorista.css">
     <link rel="stylesheet" href="lib/css/style-cadastro-veiculo.css">
     <link rel="stylesheet" href="lib/css/style-cadastro-armazem.css">
+    <link rel="stylesheet" href="lib/css/style-cadastro-produto.css">
 
     <script type="text/javascript" src="lib/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="lib/js/jquery.maskedinput.js"></script>
