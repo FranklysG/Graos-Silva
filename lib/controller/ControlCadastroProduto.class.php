@@ -24,8 +24,12 @@ class ControlProduto
         }
     }
 
-    public function del()
-    { }
+    public function del(Produto $produto)
+    { 
+        if((strlen(trim($produto->getId())) > 0)){
+            $this->crud->del($produto);
+        }
+    }
 
     public function edit(Produto $produto)
     {

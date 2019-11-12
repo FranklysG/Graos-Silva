@@ -61,4 +61,16 @@ class CrudCliente
             echo 'ERROR: ' . $e->getMessage();
         }
     }
+
+    public function del(Cliente $cliente){
+        try {
+            $sql = "DELETE FROM cliente WHERE id =:id";
+            $param = array(
+                ':id' => $cliente->getId(),
+            );
+            return $this->conn->sqlOne($sql, $param);
+        } catch (PDOException $e) {
+            echo 'ERROR: ' . $e->getMessage();
+        }
+    }
 }

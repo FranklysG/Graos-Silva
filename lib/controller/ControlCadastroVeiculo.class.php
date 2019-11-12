@@ -22,8 +22,12 @@ class ControlVeiculo
         }
     }
 
-    public function del()
-    { }
+    public function del(Veiculo $veiculo)
+    { 
+        if((strlen(trim($veiculo->getId())) > 0)){
+            $this->crud->del($veiculo);
+        }
+    }
 
     public function edit(Veiculo $veiculo){
         if ((strlen(trim($veiculo->getId())) > 0) and

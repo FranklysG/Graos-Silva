@@ -27,8 +27,12 @@ class ControlFornecedor
         }
     }
 
-    public function del()
-    { }
+    public function del(Fornecedor $fornecedor)
+    { 
+        if((strlen(trim($fornecedor->getId())) > 0)){
+            $this->crud->del($fornecedor);
+        }
+    }
 
     public function edit(Fornecedor $fornecedor)
     {

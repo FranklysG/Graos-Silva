@@ -54,4 +54,16 @@ class CrudFornecedor
             echo 'ERROR: ' . $e->getMessage();
         }
     }
+
+    public function del(Fornecedor $fornecedor){
+        try {
+            $sql = "DELETE FROM fornecedor WHERE id =:id";
+            $param = array(
+                ':id' => $fornecedor->getId(),
+            );
+            return $this->conn->sqlOne($sql, $param);
+        } catch (PDOException $e) {
+            echo 'ERROR: ' . $e->getMessage();
+        }
+    }
 }
