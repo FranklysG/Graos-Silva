@@ -30,8 +30,12 @@ class ControlCliente
         }
     }
 
-    public function del()
-    { }
+    public function del(Cliente $cliente)
+    { 
+        if((strlen(trim($cliente->getId())) > 0)){
+            $this->crud->del($cliente);
+        }
+    }
 
     public function edit(Cliente $cliente)
     {
