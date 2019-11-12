@@ -54,4 +54,16 @@ class CrudArmazem
             echo 'ERROR: ' . $e->getMessage();
         }
     }
+
+    public function del(Armazem $armazem){
+        try {
+            $sql = "DELETE FROM armazem WHERE id =:id";
+            $param = array(
+                ':id' => $armazem->getId(),
+            );
+            return $this->conn->sqlOne($sql, $param);
+        } catch (PDOException $e) {
+            echo 'ERROR: ' . $e->getMessage();
+        }
+    }
 }

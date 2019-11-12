@@ -27,8 +27,12 @@ class ControlArmazem
         }
     }
 
-    public function del()
-    { }
+    public function del(Armazem $armazem)
+    { 
+        if((strlen(trim($armazem->getId())) > 0)){
+            $this->crud->del($armazem);
+        }
+    }
 
     public function edit(Armazem $armazem)
     {

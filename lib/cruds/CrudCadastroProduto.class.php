@@ -47,4 +47,16 @@ class CrudProduto
             echo 'ERROR: ' . $e->getMessage();
         }
     }
+
+    public function del(Produto $produto){
+        try {
+            $sql = "DELETE FROM produto WHERE id =:id";
+            $param = array(
+                ':id' => $produto->getId(),
+            );
+            return $this->conn->sqlOne($sql, $param);
+        } catch (PDOException $e) {
+            echo 'ERROR: ' . $e->getMessage();
+        }
+    }
 }

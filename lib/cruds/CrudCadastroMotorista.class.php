@@ -62,6 +62,18 @@ Class CrudMotorista{
             echo 'ERROR: ' . $e->getMessage();
         }
     }
+
+    public function del(Motorista $motorista){
+        try {
+            $sql = "DELETE FROM motorista WHERE id =:id";
+            $param = array(
+                ':id' => $motorista->getId(),
+            );
+            return $this->conn->sqlOne($sql, $param);
+        } catch (PDOException $e) {
+            echo 'ERROR: ' . $e->getMessage();
+        }
+    }
 }
 
 ?>

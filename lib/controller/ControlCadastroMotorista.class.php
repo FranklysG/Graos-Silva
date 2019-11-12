@@ -32,8 +32,12 @@ class ControlMotorista
         }
     }
 
-    public function del()
-    { }
+    public function del(Motorista $motorista)
+    { 
+        if((strlen(trim($motorista->getId())) > 0)){
+            $this->crud->del($motorista);
+        }
+    }
 
     public function edit(Motorista $motorista)
     {

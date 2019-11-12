@@ -1,0 +1,11 @@
+.produto_title{
+    line-height: 3em;
+    font-weight: 600;
+    text-align: left;
+}
+.produto_table{
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: 600;
+}

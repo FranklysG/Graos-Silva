@@ -1,15 +1,14 @@
 <div class="container">
 
-  <h4 class="veiculo_title">VENDAS DE GRAOS</h4>
+  <h4 class="produto_title">VENDAS DE PRODUTOS</h4>
 
   <div class="row">
-    
     <div class="col col-md-2 col-sm-2 col-xs-2">
-      <input type="text" class="form-control w-100" placeholder="NOTA FISCAL" required="">
+      <input type="text" class="form-control w-100" placeholder="Nota Fiscal" required="">
     </div>
     <div class="col col-md-3 col-sm-3 col-xs-3">
       <span><input type="button" class="btn btn-primary mt-2" placeholder="" required="" value="buscar"></span>
-      <span><input type="button" class="btn btn-success mt-2" placeholder="" required="" value="novo" data-toggle="modal" data-target="#veiculoModelForm" data-whatever="@mdo"></span>
+      <span><input type="button" class="btn btn-success mt-2" placeholder="" required="" value="novo" data-toggle="modal" data-target="#produtoModelForm"></span>
     </div>
 
   </div>
@@ -17,65 +16,72 @@
   <br><br>
 
   <div class="container-fluid">
-    <div class="row veiculo_title_table bg-dark text-light mb-1">
-      <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_title"></div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_title">NOTA FISCAL</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_title">NOME</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_title">TIPO</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_title">QUANTIDADE</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_title">DATA</div>
+    <div class="row produto_title_table bg-dark text-light mb-1">
+      <div class="col col-md-2 col-sm-2 col-xs-2 produto_title"></div>
+      <div class="col col-md-2 col-sm-2 col-xs-2 produto_title">NOTA FISCAL</div>
+      <div class="col col-md-2 col-sm-2 col-xs-2 produto_title">NOME</div>
+      <div class="col col-md-2 col-sm-2 col-xs-2 produto_title">TIPO</div>
+      <div class="col col-md-2 col-sm-2 col-xs-2 produto_title">QUANTIDADE</div>
+      <div class="col col-md-2 col-sm-2 col-xs-2 produto_title">DATA CADASTRO</div>
     </div>
 
     <?php
     $conn = new Conn;
 
-    $sql = "select * from veiculo";
-    $rows = $conn->sql($sql);
+    $sql = "select * from produto";
+    $rows = $conn->sqlRows($sql);
 
     foreach ($rows as $row) {
       ?>
-
       <div class="row">
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><i class="far fa-edit pr-1 btn text-primary"><?php ?></i><i class="fas fa-trash btn text-danger"></i></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['id']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['marca']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['cor']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['placa']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['dtcadastro']; ?></div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 produto_table pl-3 pt-1">
+          <i id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#produtoModelForm" data-id="<?php echo $row['id']; ?>"
+          data-marca="<?php echo $row['marca']; ?>"
+          data-placa="<?php echo $row['placa']; ?>"
+          data-cor="<?php echo $row['cor']; ?>"></i>
+          <i id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#produtoModelForm" data-id="<?php echo $row['id']; ?>"></i>
+        </div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 produto_table pl-3 pt-1"><?php echo $row['id']; ?></div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 produto_table pl-3 pt-1"><?php echo $row['nome']; ?></div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 produto_table pl-3 pt-1"><?php echo $row['tipo']; ?></div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 produto_table pl-3 pt-1"><?php echo $row['qtde']; ?></div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 produto_table pl-3 pt-1"><?php echo $row['dtcadastro']; ?></div>
       </div>
-
     <?php } ?>
   </div>
 </div>
 
-<div class="modal bd-example-modal-lg" id="veiculoModelForm" tabindex="-1" role="dialog" aria-labelledby="veiculoModelFormLabel" aria-hidden="true">
+<div class="modal bd-example-modal-lg" id="produtoModelForm" tabindex="-1" role="dialog" aria-labelledby="produtoModelFormLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title veiculo_title" id="veiculoModelFormLabel">NOVO VEICULO</h5>
+        <h5 class="modal-title produto_title" id="produtoModelFormLabel">VENDAS DE PRODUTOS</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <?php include('CadastroVeiculoForm.php'); ?>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Salvar</button>
+        <?php include('CadastroProdutoForm.php');?>
       </div>
     </div>
   </div>
 </div>
 
+
+
 <script>
-  $('#veiculoModelForm').on('show.bs.modal', function(event) {
-    var button = $(event.relatedTarget) // Botão que acionou o modal
-    var recipient = button.data('whatever') // Extrai informação dos atributos data-*
-    // Se necessário, você pode iniciar uma requisição AJAX aqui e, então, fazer a atualização em um callback.
-    // Atualiza o conteúdo do modal. Nós vamos usar jQuery, aqui. No entanto, você poderia usar uma biblioteca de data binding ou outros métodos.
+  $('#produtoModelForm').on('show.bs.modal', function(event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('id') // Extract info from data-* attributes
+    var recipient_marca = button.data('marca') // Extract info from data-* attributes
+    var recipient_cor = button.data('cor') // Extract info from data-* attributes
+    var recipient_placa = button.data('placa') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
     var modal = $(this)
-    modal.find('.modal-title').text('NOVO VEICULO ')
-    modal.find('.modal-body input').val(recipient)
+    modal.find('#id').val(recipient)
+    modal.find('#marca').val(recipient_marca)
+    modal.find('#cor').val(recipient_cor)
+    modal.find('#placa').val(recipient_placa)
   })
 </script>
