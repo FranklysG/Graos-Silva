@@ -36,16 +36,20 @@
 
     foreach ($rows as $row) {
       ?>
-
       <div class="row">
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1" data-toggle="modal" data-target="#veiculoModelForm"><i class="far fa-edit pr-1 btn text-primary"><?php ?></i><i class="fas fa-trash btn text-danger"></i></div>
+        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1">
+          <i id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#veiculoModelForm" data-id="<?php echo $row['id']; ?>"
+          data-marca="<?php echo $row['marca']; ?>"
+          data-placa="<?php echo $row['placa']; ?>"
+          data-cor="<?php echo $row['cor']; ?>"></i>
+          <i id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#veiculoModelForm" data-id="<?php echo $row['id']; ?>"></i>
+        </div>
         <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['id']; ?></div>
         <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['marca']; ?></div>
         <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['cor']; ?></div>
         <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['placa']; ?></div>
         <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['dtcadastro']; ?></div>
       </div>
-
     <?php } ?>
   </div>
 </div>
@@ -60,20 +64,27 @@
         </button>
       </div>
       <div class="modal-body">
-        <?php include('CadastroVeiculoForm.php'); ?>
+        <?php include('CadastroVeiculoForm.php');?>
       </div>
     </div>
   </div>
 </div>
 
+
+
 <script>
   $('#veiculoModelForm').on('show.bs.modal', function(event) {
-    var button = $(event.relatedTarget) // Botão que acionou o modal
-    var recipient = button.data('whatever') // Extrai informação dos atributos data-*
-    // Se necessário, você pode iniciar uma requisição AJAX aqui e, então, fazer a atualização em um callback.
-    // Atualiza o conteúdo do modal. Nós vamos usar jQuery, aqui. No entanto, você poderia usar uma biblioteca de data binding ou outros métodos.
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('id') // Extract info from data-* attributes
+    var recipient_marca = button.data('marca') // Extract info from data-* attributes
+    var recipient_cor = button.data('cor') // Extract info from data-* attributes
+    var recipient_placa = button.data('placa') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
     var modal = $(this)
-    modal.find('.modal-title').text('NOVO VEICULO ')
-    modal.find('.modal-body input').val(recipient)
+    modal.find('#id').val(recipient)
+    modal.find('#marca').val(recipient_marca)
+    modal.find('#cor').val(recipient_cor)
+    modal.find('#placa').val(recipient_placa)
   })
 </script>
