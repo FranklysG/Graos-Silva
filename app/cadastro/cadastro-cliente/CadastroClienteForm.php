@@ -18,6 +18,12 @@ $btnSalvar = filter_input(INPUT_POST, "btnSalvar");
 $btnDel = filter_input(INPUT_POST, "btnDel");
 $id = filter_input(INPUT_GET, "id");
 
+if($btnDel){
+    $cliente->setId(filter_input(INPUT_POST, "id"));
+    $action->del($cliente);
+    
+}
+
 if ($btnSalvar) {
     if(filter_input(INPUT_POST, "id")){
         $cliente->setId(filter_input(INPUT_POST, "id"));
@@ -32,7 +38,7 @@ if ($btnSalvar) {
         $cliente->setCidade(filter_input(INPUT_POST, "cidade"));
         $cliente->setEstado(filter_input(INPUT_POST, "estado"));
 
-        $action->edit($editCliente);
+        $action->edit($cliente);
     }else{
         $cliente->setNome(filter_input(INPUT_POST, "nome"));
         $cliente->setCpf(filter_input(INPUT_POST, "cpf"));
@@ -54,8 +60,8 @@ if ($btnSalvar) {
     <div class="row">
         <div class="col-sm-6 mb-1">
             <p class="cliente_title">NOME
-                <input type="text" class="form-control m-0 caixaAlta" id="nome" name="nome" placeholder="" value="<?php echo $nome; ?>" required>
                 <input type="hidden" class="form-control m-0 caixaAlta" id="id" name="id">
+                <input type="text" class="form-control m-0 caixaAlta" id="nome" name="nome" placeholder="" value="<?php echo $nome; ?>" required>
             </p>
         </div>
         <div class="col-sm-3 mb-1">
