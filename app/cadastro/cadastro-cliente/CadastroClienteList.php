@@ -49,7 +49,7 @@
                     data-numero="<?php echo $row['numero']; ?>"
                     data-cidade="<?php echo $row['cidade']; ?>"
                     data-estado="<?php echo $row['estado']; ?>"></i>
-                    <i id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#clienteModelForm" data-id="<?php echo $row['id']; ?>"></i>
+                    <i id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#clienteModelDel" data-id="<?php echo $row['id']; ?>"></i>
                 </div>
                 <!--<div class="col col-lg-2 col-md-2 col-sm-2 col-xs-2 cliente_table pl-3 pt-1" data-toggle="modal" data-target="#clienteModelForm"><i class="far fa-edit pr-1 btn text-primary"></i><i class="fas fa-trash btn text-danger"></i></div>-->
                 <div class="col col-lg-3 col-md-3 col-sm-3 col-xs-3 cliente_table pl-3 pt-1"><?php echo $row['nome']; ?></div>
@@ -77,8 +77,37 @@
             </div>
         </div>
         </div>
+        
+        <div class="modal bd-example-modal-lg" id="clienteModelDel" tabindex="-1" role="dialog" aria-labelledby="clienteModelFormLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content" style="background:none;border:none;">
+            <div class="modal-body">
+                <div class="alert alert-danger" role="alert">
+                <form class="needs-validation" method="POST">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    <input type="hidden" class="form-control m-0" id="id" name="id">
+                    Tem certeza que deseja excluir o item ?
+                    <br><br>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" name="btnDel" value="btnDel">Ok</button>
+                </form>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
 
         <script>
+        $('#clienteModelDel').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('id') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('#id').val(recipient)
+        })
         $('#clienteModelForm').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget) // Botão que acionou o modal
             var recipient = button.data('id') // Extrai informação dos atributos data-*
