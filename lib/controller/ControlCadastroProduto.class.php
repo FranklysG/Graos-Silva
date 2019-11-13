@@ -14,10 +14,11 @@ class ControlProduto
     {
         if ((strlen(trim($produto->getNome())) > 0) and 
         (strlen(trim($produto->getTipo())) > 0) and 
-        (strlen(trim($produto->getQtde())) > 0) and
-        (strlen(trim($produto->getNotaFiscal())) > 0)
+        (strlen(trim($produto->getQtde())) > 0)
+        //(strlen(trim($produto->getNotaFiscal())) > 0)
         ) {
             $this->crud->add($produto);
+            
             return true;
         } else {
             return false;
@@ -36,8 +37,8 @@ class ControlProduto
         if ((strlen(trim($produto->getId())) > 0) and 
         (strlen(trim($produto->getNome())) > 0) and 
         (strlen(trim($produto->getTipo())) > 0) and 
-        (strlen(trim($produto->getQtde())) > 0) and
-        (strlen(trim($produto->getNotaFiscal())) > 0)
+        (strlen(trim($produto->getQtde())) > 0)
+        //(strlen(trim($produto->getNotaFiscal())) > 0)
         ) {
             $this->crud->edit($produto);
             return true;
