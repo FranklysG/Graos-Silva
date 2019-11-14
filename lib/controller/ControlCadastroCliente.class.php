@@ -13,8 +13,7 @@ class ControlCliente
     public function add(Cliente $cliente)
     {
         if ((strlen(trim($cliente->getNome())) > 0) and 
-        (strlen(trim($cliente->getCpf())) > 0) and 
-        (strlen(trim($cliente->getRg())) > 0) and 
+        (strlen(trim($cliente->getCpf())) > 0) and  
         (strlen(trim($cliente->getTelefone())) > 0) and 
         (strlen(trim($cliente->getEmail())) > 0) and 
         (strlen(trim($cliente->getLogradouro())) > 0) and 
@@ -43,7 +42,6 @@ class ControlCliente
         if ((strlen(trim($cliente->getId())) > 0) and 
         (strlen(trim($cliente->getNome())) > 0) and 
         (strlen(trim($cliente->getCpf())) > 0) and 
-        (strlen(trim($cliente->getRg())) > 0) and 
         (strlen(trim($cliente->getTelefone())) > 0) and 
         (strlen(trim($cliente->getEmail())) > 0) and 
         (strlen(trim($cliente->getLogradouro())) > 0) and 
