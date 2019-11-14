@@ -113,7 +113,7 @@ if ($btnSalvar) {
         </div>
         <div class="col-sm-6 mb-1">
             <p class="cliente_title">ESTADO
-                <!--<input type="text" class="form-control m-0 caixaAlta" name="estado" id="estado" placeholder="" value="<?php echo $estado; ?>" required>-->
+                
                 <select class="form-control m-0 caixaAlta" name="estado" id="estado" placeholder="" value="<?php echo $estado; ?>" required>
                         <option value="">...</option>
                         <option>AC</option>
