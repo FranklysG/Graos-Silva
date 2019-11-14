@@ -68,18 +68,12 @@ if ($btnSalvar) {
             <p class="cliente_title">CPF
                 <input type="text" class="form-control m-0 caixaAlta" name="cpf" id="cpf" placeholder="" value="<?php echo $cpf; ?>" required>
             </p>
-            <script>
-                jQuery("#cpf").mask("999.999.999-99");
-            </script>
         </div>
 
         <div class="col-sm-3 mb-1">
             <p class="cliente_title">TELEFONE
                 <input type="text" class="form-control m-0 caixaAlta" name="telefone" id="telefone" placeholder="" value="<?php echo $telefone; ?>" required>
             </p>
-            <script>
-                jQuery("#telefone").mask("(99) 99999-9999");
-            </script>
         </div>
     </div>
     <div class="row">
@@ -109,9 +103,6 @@ if ($btnSalvar) {
             <p class="cliente_title">CEP
                 <input type="text" class="form-control m-0 caixaAlta" name="cep" id="cep" placeholder="" value="<?php echo $cep; ?>" required>
             </p>
-            <script>
-                jQuery("#cep").mask("99999-999");
-            </script>
         </div>
     </div>
     <div class="row">
@@ -122,7 +113,37 @@ if ($btnSalvar) {
         </div>
         <div class="col-sm-6 mb-1">
             <p class="cliente_title">ESTADO
-                <input type="text" class="form-control m-0 caixaAlta" name="estado" id="estado" placeholder="" value="<?php echo $estado; ?>" required>
+                <!--<input type="text" class="form-control m-0 caixaAlta" name="estado" id="estado" placeholder="" value="<?php echo $estado; ?>" required>-->
+                <select class="form-control m-0 caixaAlta" name="estado" id="estado" placeholder="" value="<?php echo $estado; ?>" required>
+                        <option value="">...</option>
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AP</option>
+                        <option>AM</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>DF</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MT</option>
+                        <option>MS</option>
+                        <option>MG</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PR</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RS</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>SC</option>
+                        <option>SP</option>
+                        <option>SE</option>
+                        <option>TO</option>
+                </select>
             </p>
         </div>
     </div>
