@@ -1,45 +1,63 @@
 <?php
 
-// $newArmazem = new Armazem;
-// $editArmazem = new Armazem;
-// $action = new ControlArmazem;
-// $marca = "";
-// $cor = "";
-// $placa = "";
-// $message = "";
+$armazem = new Armazem;
+$action = new ControlArmazem;
+$id = "";
+$nome = "";
+$cnpj = "";
+$rua = "";
+$bairro = "";
+$cidade = "";
+$cep = "";
+$estado = "";
+$dtcadastro = "";
+$message = "";
 
-// $btnSalvar = filter_input(INPUT_POST, "btnSalvar");
-// $btnDel = filter_input(INPUT_POST, "btnDel");
-// $id = filter_input(INPUT_GET, "id");
+$btnSalvar = filter_input(INPUT_POST, "btnSalvar");
+$btnDel = filter_input(INPUT_POST, "btnDel");
+$id = filter_input(INPUT_GET, "id");
 
-// if ($btnSalvar) {
-//     if (filter_input(INPUT_POST, "id")) {
-//         $editArmazem->setId(filter_input(INPUT_POST, "id"));
-//         $editArmazem->setMarca(filter_input(INPUT_POST, "marca"));
-//         $editArmazem->setCor(filter_input(INPUT_POST, "cor"));
-//         $editArmazem->setPlaca(filter_input(INPUT_POST, "placa"));
+if($btnDel){
+    $armazem->setId(filter_input(INPUT_POST, "id"));
+    $action->del($armazem);
+    
+}
 
-//         $action->edit($editArmazem);
-//     } else {
-//         $newArmazem->setMarca(filter_input(INPUT_POST, "marca"));
-//         $newArmazem->setCor(filter_input(INPUT_POST, "cor"));
-//         $newArmazem->setPlaca(filter_input(INPUT_POST, "placa"));
+if ($btnSalvar) {
+    if (filter_input(INPUT_POST, "id")) {
+        $armazem->setId(filter_input(INPUT_POST, "id"));
+        $armazem->setNome(filter_input(INPUT_POST, "nome"));
+        $armazem->setCnpj(filter_input(INPUT_POST, "cnpj"));
+        $armazem->setRua(filter_input(INPUT_POST, "rua"));
+        $armazem->setBairro(filter_input(INPUT_POST, "bairro"));
+        $armazem->setCidade(filter_input(INPUT_POST, "cidade"));
+        $armazem->setCep(filter_input(INPUT_POST, "cep"));
+        $armazem->setEstado(filter_input(INPUT_POST, "estado"));
+       
 
-//         $action->add($newArmazem);
-//     }
-// }
+        $action->edit($armazem);
+    } else {
+
+        $armazem->setNome(filter_input(INPUT_POST, "nome"));
+        $armazem->setCnpj(filter_input(INPUT_POST, "cnpj"));
+        $armazem->setRua(filter_input(INPUT_POST, "rua"));
+        $armazem->setBairro(filter_input(INPUT_POST, "bairro"));
+        $armazem->setCidade(filter_input(INPUT_POST, "cidade"));
+        $armazem->setCep(filter_input(INPUT_POST, "cep"));
+        $armazem->setEstado(filter_input(INPUT_POST, "estado"));
+
+        $action->add($armazem);
+    }
+}
 
 ?>
+
 <form class="needs-validation" method="POST">
     <div class="row">
         <div class="col-sm-4 mb-3">
-            <p class="armazem_title">ID
-                <input type="text" class="form-control m-0" id="id" name="id" placeholder="1"
-                    value="<?php echo $id; ?>">
-            </p>
-        </div>
-        <div class="col-sm-4 mb-3">
             <p class="armazem_title">NOME
+            <input type="hidden" class="form-control m-0" id="id" name="id" placeholder="1"
+                    value="<?php echo $id; ?>">
                 <input type="text" class="form-control m-0" id="nome" name="nome" placeholder="NOME"
                     value="<?php echo $nome; ?>">
             </p>
@@ -79,7 +97,7 @@
         </div>
         <div class="col-sm-6 mb-3">
         <p class="armazem_title">ESTADO
-            <select class="form-control m-0">
+            <select class="form-control m-0" id="estado">
                 <option value="">...</option>
                 <option>AC</option>
                 <option>AL</option>

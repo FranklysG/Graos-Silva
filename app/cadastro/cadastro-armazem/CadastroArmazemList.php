@@ -70,13 +70,15 @@
 </div>
 
 <script>
-  $('#armazemModelForm').on('show.bs.modal', function(event) {
-    var button = $(event.relatedTarget) // Botão que acionou o modal
-    var recipient = button.data('whatever') // Extrai informação dos atributos data-*
-    // Se necessário, você pode iniciar uma requisição AJAX aqui e, então, fazer a atualização em um callback.
-    // Atualiza o conteúdo do modal. Nós vamos usar jQuery, aqui. No entanto, você poderia usar uma biblioteca de data binding ou outros métodos.
+    $('#armazemModelForm').on('show.bs.modal', function(event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('id') // Extract info from data-* attributes
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
     var modal = $(this)
-    modal.find('.modal-title').text('NOVO ARMAZEM ')
-    modal.find('.modal-body input').val(recipient)
+    modal.find('#id').val(recipient)
+    modal.find('#nome').val(recipient_nome)
+    modal.find('#').val(recipient_)
+    modal.find('#placa').val(recipient_placa)
+    
   })
 </script>
