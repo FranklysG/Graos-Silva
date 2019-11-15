@@ -18,7 +18,7 @@ class CrudArmazem
     public function add(Armazem $armazem)
     {
         try {
-            $sql = "INSERT INTO armazen (nome, cnpj, logradouro, bairro, cidade, cep, estado) VALUES (:nome, :cnpj, :logradouro, :bairro, :cidade, :cep, :estado)";
+            $sql = "INSERT INTO armazem (nome, cnpj, logradouro, bairro, cidade, cep, estado) VALUES (:nome, :cnpj, :logradouro, :bairro, :cidade, :cep, :estado)";
             $param = array(
                 ':nome' => $armazem->getNome(),
                 ':cnpj' => $armazem->getCnpj(),
@@ -37,7 +37,7 @@ class CrudArmazem
     public function edit(Armazem $armazem)
     {
         try {
-            $sql = "UPDATE armazen SET nome=:nome , cnpj=:cnpj , logradouro=:logradouro , bairro=:bairro , cidade=:cidade , cep=:cep , estado=:estado  WHERE id=:id;
+            $sql = "UPDATE armazem SET nome=:nome , cnpj=:cnpj , logradouro=:logradouro , bairro=:bairro , cidade=:cidade , cep=:cep , estado=:estado  WHERE id=:id;
             ";
             $param = array(
                 ':id' => $armazem->getId(),

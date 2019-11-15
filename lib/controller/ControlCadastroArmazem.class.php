@@ -20,6 +20,7 @@ class ControlArmazem
         (strlen(trim($armazem->getCidade())) > 0) and 
         (strlen(trim($armazem->getEstado())) > 0)
         ) {
+            var_dump($armazem);
             $this->crud->add($armazem);
             return true;
         } else {
