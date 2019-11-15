@@ -18,12 +18,11 @@ class CrudProduto
     public function add(Produto $produto)
     {
         try {
-            $sql = "INSERT INTO produto (nome, tipo, qtde,nota_fisca, produto_nome_id) VALUES (:nome, :tipo, :qtde,:nota_fiscal)";
+            $sql = "INSERT INTO produto (nome, tipo, qtde) VALUES (:nome, :tipo, :qtde)";
             $param = array(
                 ':nome' => $produto->getNome(),
                 ':tipo' => $produto->getTipo(),
-                ':qtde' =>$produto->getQtde(),
-                ':nota_fiscal' =>$produto->getNotaFiscal()
+                ':qtde' =>$produto->getQtde()
             );
             return $this->conn->sqlOne($sql, $param);
         } catch (PDOException $e) {
@@ -34,13 +33,12 @@ class CrudProduto
     public function edit(Produto $produto)
     {
         try {
-            $sql = "UPDATE produto SET nome=:nome , tipo=:tipo , qtde=:qtde, nota_fiscal=:nota_fiscal  WHERE id=:id";            ;
+            $sql = "UPDATE produto SET nome=:nome , tipo=:tipo , qtde=:qtde  WHERE id=:id";            ;
             $param = array(
                 ':id' => $produto->getId(),
                 ':nome' => $produto->getNome(),
                 ':tipo' => $produto->getTipo(),
-                ':qtde' =>$produto->getQtde(),
-                ':nota_fiscal' =>$produto->getNotaFiscal()
+                ':qtde' =>$produto->getQtde()
             );
             return $this->conn->sqlOne($sql, $param);
         } catch (PDOException $e) {
