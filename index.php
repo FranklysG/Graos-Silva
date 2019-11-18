@@ -25,7 +25,7 @@ ini_set(“display_errors”, 0 );
     <h2 style="font-weight: 700;color: #199c37;text-shadow: 3px 3px 2px #c2c2c2;"><img src="lib/img/graosSilva-logo.png"
         style="width: 120px;"></h2><br>
     <label for="inputEmail" class="sr-only">Endereço de email</label>
-    <input type="text" name="login" class="form-control" placeholder="Seu email" required autofocus><br>
+    <input type="text" name="login" class="form-control" placeholder="Login" required autofocus><br>
     <label for="inputPassword" class="sr-only">Senha</label>
     <input type="password" name="pass" class="form-control" placeholder="Senha" required>
     <div class="checkbox mb-3">
@@ -35,7 +35,7 @@ ini_set(“display_errors”, 0 );
     </div>
     <button class="btn btn-lg btn-block" type="submit"
       style="background-color: #199c37;color: #fff;border-color: #199c37;">Login</button>
-    <button class="btn btn-lg btn-block btn-primary" type="submit"><a href="pasta-teste/teste.php" style="color: #fff;">Pag teste</a></button>
+    <!-- <button class="btn btn-lg btn-block btn-primary" type="submit"><a href="pasta-teste/teste.php" style="color: #fff;">Pag teste</a></button> -->
     <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
     <?php if($_GET['login']){?>
     <div class="btn btn-danger" disabled="disabled">

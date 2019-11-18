@@ -17,7 +17,6 @@ class ControlCliente
         (strlen(trim($cliente->getTelefone())) > 0) and 
         (strlen(trim($cliente->getEmail())) > 0) and 
         (strlen(trim($cliente->getLogradouro())) > 0) and 
-        (strlen(trim($cliente->getNumero())) > 0) and 
         (strlen(trim($cliente->getBairro())) > 0) and 
         (strlen(trim($cliente->getCep())) > 0) and 
         (strlen(trim($cliente->getCidade())) > 0) and 
@@ -45,7 +44,6 @@ class ControlCliente
         (strlen(trim($cliente->getTelefone())) > 0) and 
         (strlen(trim($cliente->getEmail())) > 0) and 
         (strlen(trim($cliente->getLogradouro())) > 0) and 
-        (strlen(trim($cliente->getNumero())) > 0) and 
         (strlen(trim($cliente->getBairro())) > 0) and 
         (strlen(trim($cliente->getCep())) > 0) and 
         (strlen(trim($cliente->getCidade())) > 0) and 

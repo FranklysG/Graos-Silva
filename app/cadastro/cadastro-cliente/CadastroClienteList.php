@@ -46,7 +46,6 @@
                     data-cep="<?php echo $row['cep']; ?>"
                     data-logradouro="<?php echo $row['logradouro']; ?>"
                     data-bairro="<?php echo $row['bairro']; ?>"
-                    data-numero="<?php echo $row['numero']; ?>"
                     data-cidade="<?php echo $row['cidade']; ?>"
                     data-estado="<?php echo $row['estado']; ?>"></i>
                     <i id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#clienteModelDel" data-id="<?php echo $row['id']; ?>"></i>
