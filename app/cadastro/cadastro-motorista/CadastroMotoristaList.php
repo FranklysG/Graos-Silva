@@ -25,7 +25,7 @@
             <div class="col col-md-2 col-sm-2 col-xs-2 motorista_title">CPF</div>
             <div class="col col-md-2 col-sm-2 col-xs-2 motorista_title">CIDADE</div>
             <div class="col col-md-2 col-sm-2 col-xs-2 motorista_title">CEP</div>
-            <div class="col col-md-2 col-sm-2 col-xs-2 motorista_title">DATA CADASTRO</div>
+            <div class="col col-md-2 col-sm-2 col-xs-2 motorista_title">VEICULO</div>
         </div>
 
         <?php

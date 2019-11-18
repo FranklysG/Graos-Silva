@@ -18,14 +18,13 @@ class CrudCliente
     public function add(Cliente $cliente)
     {
         try {
-            $sql = "INSERT INTO cliente (nome, cpf, telefone, cep, email, logradouro, numero, bairro, cidade, estado) VALUES (:nome, :cpf, :telefone, :cep, :email, :logradouro, :numero, :bairro, :cidade, :estado);";
+            $sql = "INSERT INTO cliente (nome, cpf, telefone, cep, email, logradouro, bairro, cidade, estado) VALUES (:nome, :cpf, :telefone, :cep, :email, :logradouro, :bairro, :cidade, :estado);";
             $param = array(
                 ':nome' => $cliente->getNome(),
                 ':cpf' => $cliente->getCpf(),
                 ':telefone' => $cliente->getTelefone(),
                 ':email' => $cliente->getEmail(),
                 ':logradouro' => $cliente->getLogradouro(),
-                ':numero' => $cliente->getNumero(),
                 ':bairro' => $cliente->getBairro(),
                 ':cep' => $cliente->getCep(),
                 ':cidade' => $cliente->getCidade(),
@@ -40,7 +39,7 @@ class CrudCliente
     public function edit(Cliente $cliente)
     {
         try {
-            $sql = "UPDATE cliente SET nome=:nome , cpf=:cpf , telefone=:telefone , cep=:cep , email=:email , logradouro=:logradouro , numero=:numero , bairro=:bairro , cidade=:cidade , estado=:estado  WHERE id=:id";
+            $sql = "UPDATE cliente SET nome=:nome , cpf=:cpf , telefone=:telefone , cep=:cep , email=:email , logradouro=:logradouro , bairro=:bairro , cidade=:cidade , estado=:estado  WHERE id=:id";
             $param = array(
                 ':id' => $cliente->getId(),
                 ':nome' => $cliente->getNome(),
@@ -48,7 +47,6 @@ class CrudCliente
                 ':telefone' => $cliente->getTelefone(),
                 ':email' => $cliente->getEmail(),
                 ':logradouro' => $cliente->getLogradouro(),
-                ':numero' => $cliente->getNumero(),
                 ':bairro' => $cliente->getBairro(),
                 ':cep' => $cliente->getCep(),
                 ':cidade' => $cliente->getCidade(),

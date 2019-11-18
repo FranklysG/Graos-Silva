@@ -11,7 +11,6 @@ Class Cliente{
     private $logradouro;
     private $bairro;
     private $cidade;
-    private $numero;
     private $cep;
     private $estado;
     private $dtcadastro;
@@ -86,14 +85,6 @@ Class Cliente{
     
     public function getCidade(){
         return $this->cidade;
-    }
-
-    public function setNumero($numero){
-        $this->numero = $numero;
-    }
-    
-    public function getNumero(){
-        return $this->numero;
     }
 
     public function setCep($cep){

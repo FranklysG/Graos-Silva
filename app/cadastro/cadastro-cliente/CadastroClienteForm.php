@@ -8,7 +8,6 @@ $telefone = "";
 $cep = "";
 $email = "";
 $logradouro = "";
-$numero = "";
 $bairro = "";
 $cidade = "";
 $estado = "";
@@ -33,7 +32,6 @@ if ($btnSalvar) {
         $cliente->setCep(filter_input(INPUT_POST, "cep"));
         $cliente->setEmail(filter_input(INPUT_POST, "email"));
         $cliente->setLogradouro(filter_input(INPUT_POST, "logradouro"));
-        $cliente->setNumero(filter_input(INPUT_POST, "numero"));
         $cliente->setBairro(filter_input(INPUT_POST, "bairro"));
         $cliente->setCidade(filter_input(INPUT_POST, "cidade"));
         $cliente->setEstado(filter_input(INPUT_POST, "estado"));
@@ -46,7 +44,6 @@ if ($btnSalvar) {
         $cliente->setCep(filter_input(INPUT_POST, "cep"));
         $cliente->setEmail(filter_input(INPUT_POST, "email"));
         $cliente->setLogradouro(filter_input(INPUT_POST, "logradouro"));
-        $cliente->setNumero(filter_input(INPUT_POST, "numero"));
         $cliente->setBairro(filter_input(INPUT_POST, "bairro"));
         $cliente->setCidade(filter_input(INPUT_POST, "cidade"));
         $cliente->setEstado(filter_input(INPUT_POST, "estado"));
@@ -89,14 +86,9 @@ if ($btnSalvar) {
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6 mb-1">
+        <div class="col-sm-9 mb-1">
             <p class="cliente_title">BAIRRO
                 <input type="text" class="form-control m-0 caixaAlta" name="bairro" id="bairro" placeholder="" value="<?php echo $bairro; ?>" required>
-            </p>
-        </div>
-        <div class="col-sm-3 mb-1">
-            <p class="cliente_title">NÚMERO
-                <input type="text" class="form-control m-0 caixaAlta" name="numero" id="numero" placeholder="" value="<?php echo $numero; ?>" required>
             </p>
         </div>
         <div class="col-sm-3 mb-1">

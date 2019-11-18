@@ -31,7 +31,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div id="menu" class="col-2 d-inline-block bg-dark p-0 m-0" style="height:auto;">
+            <div id="menu" class="col-2 d-inline-block bg-dark p-0 m-0" style="height:650px;">
                 <div class="col-12 d-inline-block pl-0">
                     <div class="text-uppercase font-weight-bold ml-2 text-white"><img src="lib/img/graosSilva-logo.png" class="m-2" style="width: 50px;filter:invert(100%);padding-top: 20px;">
                         <p class="d-inline-flex ml-2 text-left"> GRÃOS<br>SILVA</p>
