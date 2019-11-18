@@ -1,6 +1,6 @@
 <div class="container">
 
-    <h4 class="motorista_title">CADASTRO DE MOTORISTA</h4>
+    <h4 class="motorista_title">MOTORISTAS</h4>
 
     <div class="row">
         <div class="col col-md-2 col-sm-2 col-xs-2">
@@ -53,10 +53,10 @@
                 </div>
 
                 <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['nome']; ?></div>
-                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['logradouro']; ?></div>
+                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['cpf']; ?></div>
                 <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['cidade']; ?></div>
                 <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['cep']; ?></div>
-                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['veiculo_id']; ?></div>
+                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['dtcadastro']; ?></div>
             </div>
         <?php } ?>
     </div>

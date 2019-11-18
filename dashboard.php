@@ -43,7 +43,7 @@
                         <li class="pt-2"><a href="?pag=cadastro-produto" class="font-weight-bold text-white ml-3"><i class="fa fa-piggy-bank"></i><label class="pl-2"> Produto</label></a></li>
                         <li class="pt-2"><a href="?pag=cadastro-motorista" class="font-weight-bold text-white ml-3"><i class="fa fa-user"></i><label class="pl-2"> Motorista</label></a></li>
                         <li class="pt-2"><a href="?pag=cadastro-veiculo" class="font-weight-bold text-white ml-3"><i class="fa fa-truck-moving"></i><label class="pl-2"> Veiculo</label></a></li>
-                        <li class="pt-2"><a href="?pag=cadastro-armazem" class="font-weight-bold text-white ml-3"><i class="fa fa-truck-loading"></i><label class="pl-2"> Armazen</label></a></li>
+                        <li class="pt-2"><a href="?pag=cadastro-armazem" class="font-weight-bold text-white ml-3"><i class="fa fa-truck-loading"></i><label class="pl-2"> Armazem</label></a></li>
                     </ul>
                 </div>
             </div>

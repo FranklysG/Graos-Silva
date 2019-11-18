@@ -7,8 +7,8 @@
       <input type="text" class="form-control w-100 bt" placeholder="Nota Fiscal" required="">
     </div>
     <div class="col col-md-3 col-sm-3 col-xs-3">
-      <span><input type="button" class="btn btn-primary mt-2" placeholder="" required="" value="buscar"></span>
-      <span><input type="button" class="btn btn-success mt-2" placeholder="" required="" value="novo" data-toggle="modal" data-target="#produtoModelForm"></span>
+      <span><input type="button" class="btn btn-primary mt-2" placeholder="" required="" value="BUSCAR"></span>
+      <span><input type="button" class="btn btn-success mt-2" placeholder="" required="" value="NOVO" data-toggle="modal" data-target="#produtoModelForm"></span>
     </div>
 
   </div>

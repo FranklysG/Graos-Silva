@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h4 class="armazem_title">CADASTRO DE ARMAZEM</h4>
+  <h4 class="armazem_title">ARMAZEM</h4>
 
   <div class="row">
     <div class="col col-md-2 col-sm-2 col-xs-2">
@@ -13,8 +13,8 @@
       <input type="text" class="form-control w-100" placeholder="Cidade" required="">
     </div>
     <div class="col col-md-3 col-sm-3 col-xs-3">
-      <span><input type="button" class="btn btn-primary mt-2" placeholder="" required="" value="buscar"></span>
-      <span><input type="button" class="btn btn-success mt-2" placeholder="" required="" value="novo" data-toggle="modal" data-target="#armazemModelForm"></span>
+      <span><input type="button" class="btn btn-primary mt-2" placeholder="" required="" value="BUSCAR"></span>
+      <span><input type="button" class="btn btn-success mt-2" placeholder="" required="" value="NOVO" data-toggle="modal" data-target="#armazemModelForm"></span>
     </div>
 
   </div>
@@ -25,7 +25,7 @@
     <div class="row armazem_title_table bg-dark text-light mb-1">
       <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title"></div>
       <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title">NOME</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title">logradouro</div>
+      <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title">LOGRADOURO</div>
       <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title">BAIRRO</div>
       <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title">CIDADE</div>
       <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title">ESTADO</div>
