@@ -57,56 +57,64 @@ if ($btnSalvar) {
     <div class="row">
         <div class="col-sm-6 mb-1">
             <p class="cliente_title">NOME
-                <input type="hidden" class="form-control m-0 caixaAlta" id="id" name="id">
-                <input type="text" class="form-control m-0 caixaAlta" id="nome" name="nome" placeholder="" value="<?php echo $nome; ?>" required>
+                <input type="hidden" class="form-control m-0" id="id" name="id">
+                <input type="text" class="form-control m-0" id="nome" name="nome" placeholder="" value="<?php echo $nome; ?>" required>
             </p>
         </div>
         <div class="col-sm-3 mb-1">
             <p class="cliente_title">CPF
-                <input type="text" class="form-control m-0 caixaAlta" name="cpf" id="cpf" placeholder="" value="<?php echo $cpf; ?>" required>
+                <input type="text" class="form-control m-0" name="cpf" id="cpf" placeholder="" value="<?php echo $cpf; ?>" required>
             </p>
         </div>
 
         <div class="col-sm-3 mb-1">
             <p class="cliente_title">TELEFONE
-                <input type="text" class="form-control m-0 caixaAlta" name="telefone" id="telefone" placeholder="" value="<?php echo $telefone; ?>" required>
+                <input type="text" class="form-control m-0" name="telefone" id="telefone" placeholder="" value="<?php echo $telefone; ?>" required>
             </p>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6 mb-1">
             <p class="cliente_title">EMAIL
-                <input type="text" class="form-control m-0 caixaAlta" name="email" id="email" placeholder="" value="<?php echo $email; ?>" required>
+                <input type="text" class="form-control m-0" name="email" id="email" placeholder="" value="<?php echo $email; ?>" required>
             </p>
         </div>
         <div class="col-sm-6 mb-1">
             <p class="cliente_title">LOGRADOURO
-                <input type="text" class="form-control m-0 caixaAlta" name="logradouro" id="logradouro" placeholder="" value="<?php echo $logradouro; ?>" required>
+                <input type="text" class="form-control m-0" name="logradouro" id="logradouro" placeholder="" value="<?php echo $logradouro; ?>" required>
             </p>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-9 mb-1">
             <p class="cliente_title">BAIRRO
-                <input type="text" class="form-control m-0 caixaAlta" name="bairro" id="bairro" placeholder="" value="<?php echo $bairro; ?>" required>
+                <input type="text" class="form-control m-0" name="bairro" id="bairro" placeholder="" value="<?php echo $bairro; ?>" required>
             </p>
         </div>
         <div class="col-sm-3 mb-1">
+<<<<<<< HEAD
+            <p class="cliente_title">NÚMERO
+                <input type="text" class="form-control m-0" name="numero" id="numero" placeholder="" value="<?php echo $numero; ?>" required>
+            </p>
+        </div>
+        <div class="col-sm-3 mb-1">
+=======
+>>>>>>> 95ba2fcdef558b063725ee5577fb42d2aa2387df
             <p class="cliente_title">CEP
-                <input type="text" class="form-control m-0 caixaAlta" name="cep" id="cep" placeholder="" value="<?php echo $cep; ?>" required>
+                <input type="text" class="form-control m-0" name="cep" id="cep" placeholder="" value="<?php echo $cep; ?>" required>
             </p>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6 mb-1">
             <p class="cliente_title">CIDADE
-                <input type="text" class="form-control m-0 caixaAlta" name="cidade" id="cidade" placeholder="" value="<?php echo $cidade; ?>" required>
+                <input type="text" class="form-control m-0" name="cidade" id="cidade" placeholder="" value="<?php echo $cidade; ?>" required>
             </p>
         </div>
         <div class="col-sm-6 mb-1">
             <p class="cliente_title">ESTADO
                 
-                <select class="form-control m-0 caixaAlta" name="estado" id="estado" placeholder="" value="<?php echo $estado; ?>" required>
+                <select class="form-control m-0" name="estado" id="estado" placeholder="" value="<?php echo $estado; ?>" required>
                         <option value="">...</option>
                         <option>AC</option>
                         <option>AL</option>

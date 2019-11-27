@@ -1,6 +1,7 @@
 <!-- Main content -->
 <section class="content">
 
+<<<<<<< HEAD
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
@@ -10,6 +11,21 @@
             <h3 class="card-title">Cadastro Veiculos</h3>
 
             <div class="card-tools">
+=======
+  <h4 class="veiculo_title">VEICULOS</h4>
+
+  <div class="row">
+    <div class="col col-md-2 col-sm-2 col-xs-2">
+      <span><input type="text" class="form-control w-100" placeholder="Modelo" required=""></span>
+    </div>
+    <div class="col col-md-2 col-sm-2 col-xs-2">
+      <input type="text" class="form-control w-100" placeholder="Placa" required="">
+    </div>
+    <div class="col col-md-3 col-sm-3 col-xs-3">
+      <span><input type="button" class="btn btn-primary mt-2" placeholder="" required="" value="BUSCAR"></span>
+      <span><input type="button" class="btn btn-success mt-2" placeholder="" required="" value="NOVO" data-toggle="modal" data-target="#veiculoModelForm"></span>
+    </div>
+>>>>>>> 558045a6b60d0fb9a45921a9c67e391ffdae26b1
 
             </div>
           </div>

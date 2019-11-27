@@ -9,7 +9,18 @@
           <div class="card-header">
             <h3 class="card-title">Cadastro Veiculos</h3>
 
+<<<<<<< HEAD
             <div class="card-tools">
+=======
+  <div class="row">
+    <div class="col col-md-2 col-sm-2 col-xs-2">
+      <input type="text" class="form-control w-100 bt" placeholder="Nota Fiscal" required="">
+    </div>
+    <div class="col col-md-3 col-sm-3 col-xs-3">
+      <span><input type="button" class="btn btn-primary mt-2" placeholder="" required="" value="BUSCAR"></span>
+      <span><input type="button" class="btn btn-success mt-2" placeholder="" required="" value="NOVO" data-toggle="modal" data-target="#produtoModelForm"></span>
+    </div>
+>>>>>>> 558045a6b60d0fb9a45921a9c67e391ffdae26b1
 
             </div>
           </div>

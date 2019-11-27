@@ -1,6 +1,7 @@
 <!-- Main content -->
 <section class="content">
 
+<<<<<<< HEAD
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -8,6 +9,9 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Cadastro Veiculos</h3>
+=======
+    <h4 class="motorista_title">MOTORISTAS</h4>
+>>>>>>> 558045a6b60d0fb9a45921a9c67e391ffdae26b1
 
                         <div class="card-tools">
 
@@ -115,7 +119,16 @@
                     </div>
                     <!-- /.card-body -->
                 </div>
+<<<<<<< HEAD
                 <!-- /.card -->
+=======
+
+                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['nome']; ?></div>
+                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['cpf']; ?></div>
+                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['cidade']; ?></div>
+                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['cep']; ?></div>
+                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['dtcadastro']; ?></div>
+>>>>>>> 558045a6b60d0fb9a45921a9c67e391ffdae26b1
             </div>
         </div>
     </div>
