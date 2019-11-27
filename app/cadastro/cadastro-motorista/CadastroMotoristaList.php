@@ -1,66 +1,125 @@
-<div class="container">
-
-    <h4 class="motorista_title">CADASTRO DE MOTORISTA</h4>
-
-    <div class="row">
-        <div class="col col-md-2 col-sm-2 col-xs-2">
-            <span><input type="text" class="form-control w-100" placeholder="NOME" required=""></span>
-        </div>
-        <div class="col col-md-2 col-sm-2 col-xs-2">
-            <input type="text" class="form-control w-100" placeholder="CPF" required="">
-        </div>
-        <div class="col col-md-3 col-sm-3 col-xs-3">
-            <span><input type="button" class="btn btn-primary mt-2" placeholder="" required="" value="BUSCAR"></span>
-            <span><input type="button" class="btn btn-success mt-2" placeholder="" required="" value="NOVO" data-toggle="modal" data-target="#motoristaModelForm"></span>
-        </div>
-
-    </div>
-
-    <br><br>
+<!-- Main content -->
+<section class="content">
 
     <div class="container-fluid">
-        <div class="row motorista_title_table bg-dark text-light mb-1">
-            <div class="col col-md-2 col-sm-2 col-xs-2 motorista_title"></div>
-            <div class="col col-md-2 col-sm-2 col-xs-2 motorista_title">NOME</div>
-            <div class="col col-md-2 col-sm-2 col-xs-2 motorista_title">CPF</div>
-            <div class="col col-md-2 col-sm-2 col-xs-2 motorista_title">CIDADE</div>
-            <div class="col col-md-2 col-sm-2 col-xs-2 motorista_title">CEP</div>
-            <div class="col col-md-2 col-sm-2 col-xs-2 motorista_title">VEICULO</div>
-        </div>
+        <div class="row">
+            <div class="col-12">
+                <!-- Default box -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Cadastro Veiculos</h3>
 
-        <?php
-        $conn = new Conn;
+                        <div class="card-tools">
 
-        $sql = "select * from motorista";
-        $rows = $conn->sqlRows($sql);
-
-        foreach ($rows as $row) {
-            ?>
-            <div class="row">
-                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1">
-                    <i id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#motoristaModelForm" 
-                    data-id="<?php echo $row['id']; ?>" 
-                    data-nome="<?php echo $row['nome']; ?>" 
-                    data-cpf="<?php echo $row['cpf']; ?>" 
-                    data-rg="<?php echo $row['rg']; ?>" 
-                    data-logradouro="<?php echo $row['logradouro']; ?>" 
-                    data-bairro="<?php echo $row['rg']; ?>" 
-                    data-cidade="<?php echo $row['cidade']; ?>"
-                    data-cep="<?php echo $row['cep']; ?>" 
-                    data-estado="<?php echo $row['estado']; ?>" 
-                    data-veiculo_id="<?php echo $row['veiculo_id']; ?>"></i>
-                    <i id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#motoristaModelDel" data-id="<?php echo $row['id']; ?>"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form action="" role="form">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <!-- text input -->
+                                    <div class="form-group">
+                                        <label>NOME </label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>CPF</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>VEICULO</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <a class="btn btn-default btn-sm" href="#">
+                                <i class="fas fa-search">
+                                </i>
+                                Buscar
+                            </a>
+                            <a class="btn btn-success btn-sm" href="#" value="NOVO" data-toggle="modal" data-target="#motoristaModelForm">
+                                <i class="fas fa-plus">
+                                </i>
+                                Novo
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['nome']; ?></div>
-                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['logradouro']; ?></div>
-                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['cidade']; ?></div>
-                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['cep']; ?></div>
-                <div class="col col-md-2 col-sm-2 col-xs-2 motorista_table pl-3 pt-1"><?php echo $row['veiculo_id']; ?></div>
+                <!-- /.card -->
             </div>
-        <?php } ?>
+        </div>
     </div>
-</div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <!-- Default box -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Listagem de Veiculos</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body p-0">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th> </th>
+                                    <th>Nome</th>
+                                    <th>Endereço</th>
+                                    <th>Cidade</th>
+                                    <th>Veiculo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $conn = new Conn;
+
+                                $sql = "select * from motorista";
+                                $rows = $conn->sqlRows($sql);
+
+                                foreach ($rows as $row) {
+                                    ?>
+                                    <tr>
+                                        <td class="project-actions text-left">
+                                            <a class="btn btn-primary btn-sm text-white" href="" id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#motoristaModelForm" data-id="<?php echo $row['id']; ?>" data-nome="<?php echo $row['nome']; ?>" data-cpf="<?php echo $row['cpf']; ?>" data-rg="<?php echo $row['rg']; ?>" data-logradouro="<?php echo $row['logradouro']; ?>" data-bairro="<?php echo $row['rg']; ?>" data-cidade="<?php echo $row['cidade']; ?>" data-cep="<?php echo $row['cep']; ?>" data-estado="<?php echo $row['estado']; ?>" data-veiculo_id="<?php echo $row['veiculo_id']; ?>">
+                                                <i class="fas fa-pencil-alt ">
+                                                </i>
+                                                Edit
+                                            </a>
+                                            <a class="btn btn-danger btn-sm text-white" href="" id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#motoristaModelDel" data-id="<?php echo $row['id']; ?>">
+                                                <i class="fas fa-trash fa-sm">
+                                                </i>
+                                                Delete
+                                            </a>
+                                        </td>
+                                        <td><?php echo $row['nome']; ?></td>
+                                        <td><?php echo $row['logradouro']; ?></td>
+                                        <td><?php echo $row['cidade']; ?></td>
+                                        <td><?php echo $row['veiculo_id']; ?></td>
+                                    </tr>
+                                <?php
+                                }
+                                ?>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+    </div>
+</section>
 
 <div class="modal bd-example-modal-lg" id="motoristaModelForm" tabindex="-1" role="dialog" aria-labelledby="motoristaModelFormLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -80,20 +139,18 @@
 
 <div class="modal bd-example-modal-lg" id="motoristaModelDel" tabindex="-1" role="dialog" aria-labelledby="motoristaModelFormLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content" style="background:none;border:none;">
+        <div class="modal-content bg-danger">
             <div class="modal-body">
-                <div class="alert alert-danger" role="alert">
-                    <form class="needs-validation" method="POST">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <input type="hidden" class="form-control m-0" id="id" name="id">
-                        Tem certeza que deseja excluir o item ?
-                        <br><br>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary" name="btnDel" value="btnDel">Ok</button>
-                    </form>
-                </div>
+                <form class="needs-validation" method="POST">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <input type="hidden" class="form-control m-0" id="id" name="id">
+                    Tem certeza que deseja excluir o item ?
+                    <br><br>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" name="btnDel" value="btnDel">Ok</button>
+                </form>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    include('app/model/Load.class.php');
+session_start();
+include('app/model/Load.class.php');
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -11,7 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="lib/css/style-dashboard.css">
-    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="lib/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="lib/css/adminlte.min.css">
     <link rel="stylesheet" href="lib/font/css/all.css">
     <link rel="stylesheet" href="lib/css/css-cadastro-cliente/style-cadastro-cliente.css">
     <link rel="stylesheet" href="lib/css/css-cadastro-motorista/style-cadastro-motorista.css">
@@ -28,60 +29,183 @@
 
 </head>
 
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div id="menu" class="col-2 d-inline-block bg-dark p-0 m-0" style="height:650px;">
-                <div class="col-12 d-inline-block pl-0">
-                    <div class="text-uppercase font-weight-bold ml-2 text-white"><img src="lib/img/graosSilva-logo.png" class="m-2" style="width: 50px;filter:invert(100%);padding-top: 20px;">
-                        <p class="d-inline-flex ml-2 text-left"> GRÃOS<br>SILVA</p>
-                    </div>
-                </div>
-                <div class="col-12 d-inline-block mt-4 p-0">
-                    <ul class="menu p-0">
-                        <li class="pt-2"><a href="?pag=cadastro-cliente" class="font-weight-bold text-white ml-3"><i class="fa fa-user-tie"></i><label class="pl-2"> Cliente</label></a></li>
-                        <li class="pt-2"><a href="?pag=cadastro-produto" class="font-weight-bold text-white ml-3"><i class="fa fa-piggy-bank"></i><label class="pl-2"> Produto</label></a></li>
-                        <li class="pt-2"><a href="?pag=cadastro-motorista" class="font-weight-bold text-white ml-3"><i class="fa fa-user"></i><label class="pl-2"> Motorista</label></a></li>
-                        <li class="pt-2"><a href="?pag=cadastro-veiculo" class="font-weight-bold text-white ml-3"><i class="fa fa-truck-moving"></i><label class="pl-2"> Veiculo</label></a></li>
-                        <li class="pt-2"><a href="?pag=cadastro-armazem" class="font-weight-bold text-white ml-3"><i class="fa fa-truck-loading"></i><label class="pl-2"> Armazen</label></a></li>
-                    </ul>
-                </div>
-            </div>
+<body class="hold-transition sidebar-mini">
+    <div class=".content-wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
 
-            <div id="main" class="col-10 d-inline-block p-0 m-0">
-                <div class="row bg-dark mr-0" style="height:80px;">
-                    <div class="col-9 d-inline-block" style="position:relative;top:20px;">
-                        <input type="text" name="" id="" class="form-control">
-                    </div>
-                    <div class="col-2 d-inline-block">
-                        <img src="lib/img/avatars/logo.png" class="float-right d-inline-block rounded-circle mt-3" style="width:30px;height: 50px;">
+            <!-- SEARCH FORM -->
+            <form class="form-inline ml-3">
+                <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="col-12 d-inline-block p-0">
-                    <?php
-                    $pag = filter_input(INPUT_GET, "pag");
-                    switch ($pag) {
-                        case 'cadastro-cliente':
-                            include('app/cadastro/cadastro-cliente/CadastroClienteList.php');
-                            break;
-                        case 'cadastro-produto':
-                            include('app/cadastro/cadastro-produto/CadastroProdutoList.php');
-                            break;
-                        case 'cadastro-motorista':
-                            include('app/cadastro/cadastro-motorista/CadastroMotoristaList.php');
-                            break;
-                        case 'cadastro-veiculo':
-                            include('app/cadastro/cadastro-veiculo/CadastroVeiculoList.php');
-                            break;
-                        case 'cadastro-armazem':
-                            include('app/cadastro/cadastro-armazem/CadastroArmazemList.php');
-                            break;
-                    }
-                    ?>
+            </form>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                
+                <!-- Notifications Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge">15</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">15 Notifications</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-envelope mr-2"></i> 4 new messages
+                            <span class="float-right text-muted text-sm">3 mins</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-users mr-2"></i> 8 friend requests
+                            <span class="float-right text-muted text-sm">12 hours</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-file mr-2"></i> 3 new reports
+                            <span class="float-right text-muted text-sm">2 days</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="lib/img/graosSilva-logo.png" alt="AdminLTE Logo" class="img-circle elevation-2" style="width: 56px;height: 45px !important;filter: invert(100%);margin: 5px;">
+                <span class="brand-text font-weight-light">Grãos Silva</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="lib/img/avatars/logo.png" alt="AdminLTE Logo" class="img-circle elevation-2" style="width: 30px;height: 35px !important;margin: 5px;">
+                    </div>
+                    <div class="info" style="line-height: 2.4;">
+                        <a href="#" class="d-block">Franklys Guimarães</a>
+                    </div>
                 </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+                        <li class="nav-item">
+                            <a href="?pag=cadastro-cliente" class="nav-link">
+                                <i class="nav-icon fas fa-handshake"></i>
+                                <p>
+                                    Cliente
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?pag=cadastro-produto" class="nav-link">
+                                <i class="nav-icon fa fa-piggy-bank"></i>
+                                <p>
+                                    Produto
+                                    <span class="right badge badge-danger">New</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?pag=cadastro-motorista" class="nav-link">
+                                <i class="nav-icon fa fa-user"></i>
+                                <p>
+                                    Motorista
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?pag=cadastro-veiculo" class="nav-link">
+                                <i class="nav-icon fa fa-truck-moving"></i>
+                                <p>
+                                    Veiculo
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?pag=cadastro-armazem" class="nav-link">
+                                <i class="nav-icon fa fa-truck-loading"></i>
+                                <p>
+                                    Armazém
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
             </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- /Main Sidebar Container -->
+
+        <div class="content-wrapper" style="min-height: 520px;">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+
+                        </div>
+                        <div class="col-sm-6">
+
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+
+            <?php
+            $pag = filter_input(INPUT_GET, "pag");
+            switch ($pag) {
+                case 'cadastro-cliente':
+                    include('app/cadastro/cadastro-cliente/CadastroClienteList.php');
+                    break;
+                case 'cadastro-produto':
+                    include('app/cadastro/cadastro-produto/CadastroProdutoList.php');
+                    break;
+                case 'cadastro-motorista':
+                    include('app/cadastro/cadastro-motorista/CadastroMotoristaList.php');
+                    break;
+                case 'cadastro-veiculo':
+                    include('app/cadastro/cadastro-veiculo/CadastroVeiculoList.php');
+                    break;
+                case 'cadastro-armazem':
+                    include('app/cadastro/cadastro-armazem/CadastroArmazemList.php');
+                    break;
+            }
+            ?>
         </div>
     </div>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
 </body>
 
 </html>

@@ -1,55 +1,111 @@
-<div class="container">
-
-  <h4 class="produto_title">VENDAS DE PRODUTOS</h4>
-
-  <div class="row">
-    <div class="col col-md-2 col-sm-2 col-xs-2">
-      <input type="text" class="form-control w-100 bt" placeholder="Nota Fiscal" required="">
-    </div>
-    <div class="col col-md-3 col-sm-3 col-xs-3">
-      <span><input type="button" class="btn btn-primary mt-2" placeholder="" required="" value="buscar"></span>
-      <span><input type="button" class="btn btn-success mt-2" placeholder="" required="" value="novo" data-toggle="modal" data-target="#produtoModelForm"></span>
-    </div>
-
-  </div>
-
-  <br><br>
+<!-- Main content -->
+<section class="content">
 
   <div class="container-fluid">
-    <div class="row produto_title_table bg-dark text-light mb-1">
-      <div class="col col-md-2 col-sm-2 col-xs-2 produto_title"></div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 produto_title">NOTA FISCAL</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 produto_title">NOME</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 produto_title">TIPO</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 produto_title">QUANTIDADE</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 produto_title">DATA CADASTRO</div>
-    </div>
+    <div class="row">
+      <div class="col-12">
+        <!-- Default box -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Cadastro Veiculos</h3>
 
-    <?php
-    $conn = new Conn;
+            <div class="card-tools">
 
-    $sql = "select * from produto";
-    $rows = $conn->sqlRows($sql);
-
-    foreach ($rows as $row) {
-      ?>
-      <div class="row">
-        <div class="col col-md-2 col-sm-2 col-xs-2 produto_table pl-3 pt-1">
-          <i id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#produtoModelForm" data-id="<?php echo $row['id']; ?>"
-          data-produto="<?php echo $row['nome']; ?>"
-          data-tipo="<?php echo $row['tipo']; ?>"
-          data-quantidade="<?php echo $row['qtde']; ?>"></i>
-          <i id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#produtoModelDel" data-id="<?php echo $row['id']; ?>"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <form action="" role="form">
+              <div class="row">
+                <div class="col-sm-3">
+                  <!-- text input -->
+                  <div class="form-group">
+                    <label>PRODUTO </label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <div>
+              <a class="btn btn-default btn-sm" href="#">
+                <i class="fas fa-search">
+                </i>
+                Buscar
+              </a>
+              <a class="btn btn-success btn-sm" href="#" value="novo" data-toggle="modal" data-target="#produtoModelForm">
+                <i class="fas fa-plus">
+                </i>
+                Novo
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 produto_table pl-3 pt-1"><?php echo $row['id']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 produto_table pl-3 pt-1"><?php echo $row['nome']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 produto_table pl-3 pt-1"><?php echo $row['tipo']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 produto_table pl-3 pt-1"><?php echo $row['qtde']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 produto_table pl-3 pt-1"><?php echo $row['dtcadastro']; ?></div>
+        <!-- /.card -->
       </div>
-    <?php } ?>
+    </div>
   </div>
-</div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <!-- Default box -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Listagem de Veiculos</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body p-0">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th> </th>
+                  <th>Nome</th>
+                  <th>Tipo</th>
+                  <th>Quantidade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $conn = new Conn;
+
+                $sql = "select * from produto";
+                $rows = $conn->sqlRows($sql);
+
+                foreach ($rows as $row) {
+                  ?>
+                  <tr>
+                    <td class="project-actions text-left">
+                      <a class="btn btn-primary btn-sm text-white" href="" id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#produtoModelForm" data-id="<?php echo $row['id']; ?>" data-produto="<?php echo $row['nome']; ?>" data-tipo="<?php echo $row['tipo']; ?>" data-quantidade="<?php echo $row['qtde']; ?>">
+                        <i class="fas fa-pencil-alt ">
+                        </i>
+                        Edit
+                      </a>
+                      <a class="btn btn-danger btn-sm text-white" href="" id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#produtoModelDel" data-id="<?php echo $row['id']; ?>">
+                        <i class="fas fa-trash fa-sm">
+                        </i>
+                        Delete
+                      </a>
+                    </td>
+                    <td><?php echo $row['nome']; ?></td>
+                    <td><?php echo $row['tipo']; ?></td>
+                    <td><?php echo $row['qtde']; ?></td>
+                  </tr>
+                <?php
+                }
+                ?>
+
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+    </div>
+  </div>
+</section>
 
 <div class="modal bd-example-modal-lg" id="produtoModelForm" tabindex="-1" role="dialog" aria-labelledby="produtoModelFormLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
@@ -61,7 +117,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <?php include('CadastroProdutoForm.php');?>
+        <?php include('CadastroProdutoForm.php'); ?>
       </div>
     </div>
   </div>

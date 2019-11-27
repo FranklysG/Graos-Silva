@@ -18,9 +18,6 @@
     -o-transition:background 0.5s, padding 0.5s ease-out;
     -ms-transition:background 0.5s, padding 0.5s ease-out;
 }
-label{
-    font-family: 'Comfortaa', cursive !important;
-}
 .modal-backdrop{
     display:none !important;
 }
