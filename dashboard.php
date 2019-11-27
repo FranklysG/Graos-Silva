@@ -214,6 +214,14 @@ include('app/model/Load.class.php');
                                         </p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="?pag=cadastro-status" class="nav-link">
+                                        <i class="nav-icon fas fa-door-open"></i>
+                                        <p>
+                                            Status de Serviço
+                                        </p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item has-treeview menu-open">
@@ -289,6 +297,9 @@ include('app/model/Load.class.php');
                     break;
                 case 'ordem-saida':
                     include('app/ordem/ordem-saida/OrdemSaidaList.php');
+                    break;
+                case 'cadastro-status':
+                    include('app/status/CadastroStatusList.class.php');
                     break;
             }
             ?>
