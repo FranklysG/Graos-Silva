@@ -1,58 +1,108 @@
 <?php
 
 error_reporting(0);
-ini_set(“display_errors”, 0 );
+ini_set(“display_errors”, 0);
 
 ?>
-<!doctype html>
-<html lang="pt-br">
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="../../../../favicon.ico">
-  <title>Login</title>
-  <!-- Principal CSS do Bootstrap -->
-  <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-  <!-- Estilos customizados para esse template -->
-  <link href="lib/css/style-index.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grãos Silva</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="lib/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="lib/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
-<body class="text-center">
-  <form class="form-signin" action="verifica.php" method="POST">
-    <h2 style="font-weight: 700;color: #199c37;text-shadow: 3px 3px 2px #c2c2c2;"><img src="lib/img/graosSilva-logo.png"
-        style="width: 120px;"></h2><br>
-    <label for="inputEmail" class="sr-only">Endereço de email</label>
-    <input type="text" name="login" class="form-control" placeholder="Login" required autofocus><br>
-    <label for="inputPassword" class="sr-only">Senha</label>
-    <input type="password" name="pass" class="form-control" placeholder="Senha" required>
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Lembrar de mim
-      </label>
-    </div>
-    <button class="btn btn-lg btn-block" type="submit"
-      style="background-color: #199c37;color: #fff;border-color: #199c37;">Login</button>
-    <!-- <button class="btn btn-lg btn-block btn-primary" type="submit"><a href="pasta-teste/teste.php" style="color: #fff;">Pag teste</a></button> -->
-    <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
-    <?php if($_GET['login']){?>
-    <div class="btn btn-danger" disabled="disabled">
-      Verifique seus dados e tente novamente!
-    </div>
-    <?php }?>
-  </form>
+<body class="login-page" style="min-height: 512.391px;">
+    <div class="login-box">
+        <!-- /.login-logo -->
+        <div class="card">
+            <div class="card-body login-card-body">
+                <div class="login-logo">
+                    <a href="#">
+                        <img src="lib/img/graosSilva-logo.png" alt="AdminLTE Logo" style="width: 80px;height: 75px !important;">
+                    </a>
+                </div>
+                <form action="verifica.php" method="POST">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="usuario" name="login">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="senha" name="pass">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">
+                                    Manter Conectado
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
+                <div class="social-auth-links text-center mb-3">
+                    <p>- OU -</p>
+                    <a href="#" class="btn btn-block btn-primary">
+                        <i class="fab fa-facebook mr-2"></i> Registrar usando Facebook
+                    </a>
+                    <a href="#" class="btn btn-block btn-danger">
+                        <i class="fab fa-google-plus mr-2"></i> Registrar usando Google
+                    </a>
+                </div>
+                <!-- /.social-auth-links -->
+
+                <p class="mb-1">
+                    <a href="forgot-password.html">Esqueci minha senha</a>
+                </p>
+            </div>
+            <!-- /.login-card-body -->
+            <?php if ($_GET['login']) { ?>
+                <div class="btn btn-danger" disabled="disabled">
+                    Verifique seus dados e tente novamente!
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+    <!-- /.login-box -->
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+
+
+
 </body>
 
 </html>

@@ -118,9 +118,9 @@ if ($btnSalvar) {
                 <option>TO</option>
             </select>
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-primary" name="btnSalvar" value="btnSalvar">Salvar</button>
-        </div>
     </div>
 </form>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+    <button type="submit" class="btn btn-primary" name="btnSalvar" value="btnSalvar">Salvar</button>
+</div>

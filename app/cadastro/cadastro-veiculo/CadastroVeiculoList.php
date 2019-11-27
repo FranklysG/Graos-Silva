@@ -1,77 +1,140 @@
-<div class="container">
-
-  <h4 class="veiculo_title">VEICULOS</h4>
-
-  <div class="row">
-    <div class="col col-md-2 col-sm-2 col-xs-2">
-      <span><input type="text" class="form-control w-100" placeholder="Modelo" required=""></span>
-    </div>
-    <div class="col col-md-2 col-sm-2 col-xs-2">
-      <input type="text" class="form-control w-100" placeholder="Placa" required="">
-    </div>
-    <div class="col col-md-3 col-sm-3 col-xs-3">
-      <span><input type="button" class="btn btn-primary mt-2" placeholder="" required="" value="BUSCAR"></span>
-      <span><input type="button" class="btn btn-success mt-2" placeholder="" required="" value="NOVO" data-toggle="modal" data-target="#veiculoModelForm"></span>
-    </div>
-
-  </div>
-
-  <br><br>
+<!-- Main content -->
+<section class="content">
 
   <div class="container-fluid">
-    <div class="row veiculo_title_table bg-dark text-light mb-1">
-      <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_title"></div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_title">ID</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_title">MARCA</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_title">COR</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_title">PLACA</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_title">DATA CADASTRO</div>
-    </div>
+    <div class="row">
+      <div class="col-12">
+        <!-- Default box -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Cadastro Veiculos</h3>
 
-    <?php
-    $conn = new Conn;
+            <div class="card-tools">
 
-    $sql = "select * from veiculo";
-    $rows = $conn->sqlRows($sql);
+            </div>
+          </div>
+          <div class="card-body">
+            <form action="" role="form">
+              <div class="row">
+                <div class="col-sm-3">
+                  <!-- text input -->
+                  <div class="form-group">
+                    <label>PLACA </label>
+                    <input type="text" class="form-control" placeholder="">
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label>MARCA</label>
+                    <input type="text" class="form-control" placeholder="">
+                  </div>
+                </div>
 
-    foreach ($rows as $row) {
-      ?>
-      <div class="row">
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1">
-          <i id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#veiculoModelForm" data-id="<?php echo $row['id']; ?>" data-marca="<?php echo $row['marca']; ?>" data-placa="<?php echo $row['placa']; ?>" data-cor="<?php echo $row['cor']; ?>"></i>
-          <i id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#veiculoModelDel" data-id="<?php echo $row['id']; ?>"></i>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <div>
+              <a class="btn btn-default btn-sm" href="#">
+                <i class="fas fa-search">
+                </i>
+                Buscar
+              </a>
+              <a class="btn btn-success btn-sm" href="#" data-toggle="modal" data-target="#veiculoModelForm">
+                <i class="fas fa-plus">
+                </i>
+                Novo
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['id']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['marca']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['cor']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['placa']; ?></div>
-        <div class="col col-md-2 col-sm-2 col-xs-2 veiculo_table pl-3 pt-1"><?php echo $row['dtcadastro']; ?></div>
-      </div>
-    <?php } ?>
-  </div>
-</div>
-
-<div class="modal bd-example-modal-lg" id="veiculoModelForm" tabindex="-1" role="dialog" aria-labelledby="veiculoModelFormLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title veiculo_title" id="veiculoModelFormLabel">NOVO VEICULO</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <?php include('CadastroVeiculoForm.php'); ?>
+        <!-- /.card -->
       </div>
     </div>
   </div>
-</div>
 
-<div class="modal bd-example-modal-lg" id="veiculoModelDel" tabindex="-1" role="dialog" aria-labelledby="veiculoModelFormLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content" style="background:none;border:none;">
-      <div class="modal-body">
-        <div class="alert alert-danger" role="alert">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <!-- Default box -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Listagem de Veiculos</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body p-0">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th> </th>
+                  <th>#</th>
+                  <th>Marca</th>
+                  <th>Cor</th>
+                  <th>Placa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $conn = new Conn;
+
+                $sql = "select * from veiculo";
+                $rows = $conn->sqlRows($sql);
+
+                foreach ($rows as $row) {
+                  ?>
+                  <tr>
+                    <td class="project-actions text-left">
+                      <a class="btn btn-primary btn-sm text-white" href="" id="btnEdit" name="btnEdit" data-toggle="modal" data-target="#veiculoModelForm" data-id="<?php echo $row['id']; ?>" data-marca="<?php echo $row['marca']; ?>" data-placa="<?php echo $row['placa']; ?>" data-cor="<?php echo $row['cor']; ?>">
+                        <i class="fas fa-pencil-alt ">
+                        </i>
+                        Edit
+                      </a>
+                      <a class="btn btn-danger btn-sm text-white" href="" id="btnDel" name="btnDel" data-toggle="modal" data-target="#veiculoModelDel" data-id="<?php echo $row['id']; ?>">
+                        <i class="fas fa-trash fa-sm">
+                        </i>
+                        Delete
+                      </a>
+                    </td>
+                    <td><?php echo $row['id']; ?></td>
+                    <td><?php echo $row['marca']; ?></td>
+                    <td><?php echo $row['cor']; ?></td>
+                    <td><?php echo $row['placa']; ?></td>
+                  </tr>
+                <?php
+                }
+                ?>
+
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+    </div>
+  </div>
+
+  <div class="modal bd-example-modal-lg" id="veiculoModelForm" tabindex="-1" role="dialog" aria-labelledby="veiculoModelFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title veiculo_title" id="veiculoModelFormLabel">NOVO VEICULO</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <?php include('CadastroVeiculoForm.php'); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal bd-example-modal-md" id="veiculoModelDel" tabindex="-1" role="dialog" aria-labelledby="veiculoModelFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content bg-danger">
+        <div class="modal-body">
           <form class="needs-validation" method="POST">
             <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
               <span aria-hidden="true">&times;</span>
@@ -86,8 +149,7 @@
       </div>
     </div>
   </div>
-</div>
-
+</section>
 <script>
   $('#veiculoModelDel').on('show.bs.modal', function(event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
