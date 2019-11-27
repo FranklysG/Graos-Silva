@@ -1,7 +1,6 @@
 <!-- Main content -->
 <section class="content">
 
-<<<<<<< HEAD
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
@@ -21,19 +20,19 @@
                   <!-- text input -->
                   <div class="form-group">
                     <label>ARMAZÉM </label>
-                    <input type="text" class="form-control" placeholder="Ex .. PHO - 4537">
+                    <input type="text" class="form-control" placeholder="">
                   </div>
                 </div>
                 <div class="col-sm-3">
                   <div class="form-group">
                     <label>BAIRRO</label>
-                    <input type="text" class="form-control" placeholder="Ex .. Scania">
+                    <input type="text" class="form-control" placeholder="">
                   </div>
                 </div>
                 <div class="col-sm-3">
                   <div class="form-group">
                     <label>CIDADE</label>
-                    <input type="text" class="form-control" placeholder="Ex .. Scania">
+                    <input type="text" class="form-control" placeholder="">
                   </div>
                 </div>
               </div>
@@ -56,29 +55,11 @@
         </div>
         <!-- /.card -->
       </div>
-=======
-  <h4 class="armazem_title">ARMAZEM</h4>
-
-  <div class="row">
-    <div class="col col-md-2 col-sm-2 col-xs-2">
-      <span><input type="text" class="form-control w-100" placeholder="Armazen" required=""></span>
-    </div>
-    <div class="col col-md-2 col-sm-2 col-xs-2">
-      <input type="text" class="form-control w-100" placeholder="Bairro" required="">
-    </div>
-    <div class="col col-md-2 col-sm-2 col-xs-2">
-      <input type="text" class="form-control w-100" placeholder="Cidade" required="">
-    </div>
-    <div class="col col-md-3 col-sm-3 col-xs-3">
-      <span><input type="button" class="btn btn-primary mt-2" placeholder="" required="" value="BUSCAR"></span>
-      <span><input type="button" class="btn btn-success mt-2" placeholder="" required="" value="NOVO" data-toggle="modal" data-target="#armazemModelForm"></span>
->>>>>>> 558045a6b60d0fb9a45921a9c67e391ffdae26b1
     </div>
   </div>
 
 
   <div class="container-fluid">
-<<<<<<< HEAD
     <div class="row">
       <div class="col-12">
         <!-- Default box -->
@@ -136,32 +117,6 @@
             </table>
           </div>
           <!-- /.card-body -->
-=======
-    <div class="row armazem_title_table bg-dark text-light mb-1">
-      <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title"></div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title">NOME</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title">LOGRADOURO</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title">BAIRRO</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title">CIDADE</div>
-      <div class="col col-md-2 col-sm-2 col-xs-2 armazem_title">ESTADO</div>
-    </div>
-
-    <?php
-    $conn = new Conn;
-
-    $sql = "select * from armazem";
-    $rows = $conn->sqlRows($sql);
-
-    foreach ($rows as $row) {
-      ?>
-
-      <div class="row">
-        <div class="col col-md-2 col-sm-2 col-xs-2 armazem_table pl-3 pt-1">
-
-          <i id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#armazemModelForm" data-id="<?php echo $row['id']; ?>" data-nome="<?php echo $row['nome']; ?>" data-cnpj="<?php echo $row['cnpj']; ?>" data-logradouro="<?php echo $row['logradouro']; ?>" data-bairro="<?php echo $row['bairro']; ?>" data-cidade="<?php echo $row['cidade']; ?>" data-cep="<?php echo $row['cep']; ?>" data-estado="<?php echo $row['estado']; ?>">
-          </i>
-          <i id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#armazemModelDel" data-id="<?php echo $row['id']; ?>"></i>
->>>>>>> 558045a6b60d0fb9a45921a9c67e391ffdae26b1
         </div>
         <!-- /.card -->
       </div>
