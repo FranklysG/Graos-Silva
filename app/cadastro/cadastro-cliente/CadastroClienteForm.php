@@ -86,20 +86,17 @@ if ($btnSalvar) {
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-9 mb-1">
+        <div class="col-sm-6 mb-1">
             <p class="cliente_title">BAIRRO
                 <input type="text" class="form-control m-0" name="bairro" id="bairro" placeholder="" value="<?php echo $bairro; ?>" required>
             </p>
         </div>
         <div class="col-sm-3 mb-1">
-<<<<<<< HEAD
             <p class="cliente_title">NÚMERO
                 <input type="text" class="form-control m-0" name="numero" id="numero" placeholder="" value="<?php echo $numero; ?>" required>
             </p>
         </div>
         <div class="col-sm-3 mb-1">
-=======
->>>>>>> 95ba2fcdef558b063725ee5577fb42d2aa2387df
             <p class="cliente_title">CEP
                 <input type="text" class="form-control m-0" name="cep" id="cep" placeholder="" value="<?php echo $cep; ?>" required>
             </p>
