@@ -86,7 +86,7 @@ if ($btnSalvar) {
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-9 mb-1">
+        <div class="col-sm-6 mb-1">
             <p class="cliente_title">BAIRRO
                 <input type="text" class="form-control m-0" name="bairro" id="bairro" placeholder="" value="<?php echo $bairro; ?>" required>
             </p>
