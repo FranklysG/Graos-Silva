@@ -7,7 +7,7 @@
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Cadastro Veiculos</h3>
+                        <h3 class="card-title">Cadastro Motoristas</h3>
 
                         <div class="card-tools">
 
@@ -65,7 +65,7 @@
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Listagem de Veiculos</h3>
+                        <h3 class="card-title">Listagem de Motoristas</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
@@ -104,7 +104,12 @@
                                         <td><?php echo $row['nome']; ?></td>
                                         <td><?php echo $row['logradouro']; ?></td>
                                         <td><?php echo $row['cidade']; ?></td>
-                                        <td><?php echo $row['veiculo_id']; ?></td>
+                                        <td><?php 
+                                            $sql = "select * from veiculo where id=".$row['veiculo_id'];
+                                            $row = $conn->sqlRows($sql);
+                                            $row = array_shift($row);
+                                            echo $row['marca'] . " / " . $row['placa'];
+                                        ?></td>
                                     </tr>
                                 <?php
                                 }

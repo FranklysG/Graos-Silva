@@ -7,7 +7,7 @@
         <!-- Default box -->
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Cadastro Veiculos</h3>
+            <h3 class="card-title">Cadastro Armazéns</h3>
 
             <div class="card-tools">
 
@@ -65,7 +65,7 @@
         <!-- Default box -->
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Listagem de Veiculos</h3>
+            <h3 class="card-title">Listagem de Armazéns</h3>
           </div>
           <!-- /.card-header -->
           <div class="card-body p-0">
