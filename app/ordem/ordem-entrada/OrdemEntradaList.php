@@ -7,7 +7,7 @@
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Cadastro Motoristas</h3>
+                        <h3 class="card-title">Nova Ordem de Entrada</h3>
 
                         <div class="card-tools">
 
@@ -19,19 +19,19 @@
                                 <div class="col-sm-3">
                                     <!-- text input -->
                                     <div class="form-group">
-                                        <label>NOME </label>
+                                        <label>NUMERO </label>
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        <label>CPF</label>
+                                        <label>ARMAZÉM</label>
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        <label>VEICULO</label>
+                                        <label>CARGA</label>
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Listagem de Motoristas</h3>
+                        <h3 class="card-title">Ordens do Dia</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
@@ -73,20 +73,26 @@
                             <thead>
                                 <tr>
                                     <th> </th>
-                                    <th>Nome</th>
-                                    <th>Endereço</th>
-                                    <th>Cidade</th>
-                                    <th>Veiculo</th>
+                                    <th>Status</th>
+                                    <th>Produto</th>
+                                    <th>Cliente</th>
+                                    <th>Armazém</th>
+                                    <th>Motorista</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
                                 $conn = new Conn;
 
-                                $sql = "select * from motorista";
+                                $sql = "select * from saida";
                                 $rows = $conn->sqlRows($sql);
-
+                                
                                 foreach ($rows as $row) {
+                                    $status = $row['status_id'];
+                                    $produto = $row['produto_id'];
+                                    $cliente = $row['cliente_id'];
+                                    $armazem = $row['armazem_id'];
+                                    $motorista = $row['motorista_id'];
                                     ?>
                                     <tr>
                                         <td class="project-actions text-left">
@@ -95,21 +101,47 @@
                                                 </i>
                                                 Edit
                                             </a>
-                                            <a class="btn btn-danger btn-sm text-white" href="" id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#motoristaModelDel" data-id="<?php echo $row['id']; ?>">
-                                                <i class="fas fa-trash fa-sm">
-                                                </i>
-                                                Delete
-                                            </a>
                                         </td>
-                                        <td><?php echo $row['nome']; ?></td>
-                                        <td><?php echo $row['logradouro']; ?></td>
-                                        <td><?php echo $row['cidade']; ?></td>
-                                        <td><?php 
-                                            $sql = "select * from veiculo where id=".$row['veiculo_id'];
-                                            $row = $conn->sqlRows($sql);
-                                            $row = array_shift($row);
-                                            echo $row['marca'] . " / " . $row['placa'];
-                                        ?></td>
+                                        <td><?php
+                                                $sql = "select * from status where id={$status}";
+                                                $row = $conn->sqlRows($sql);
+                                                $row = array_shift($row);
+                                                switch ($status) {
+                                                    case '1':
+                                                        echo '<i class="bg-warning fas fa-shipping-fast p-2 rounded-circle" style="padding:10px";></i>';
+                                                        break;
+                                                    case '2':
+                                                        echo '<i class="bg-success fas fa-truck-loading p-2 rounded-circle" style="padding:10px";></i>';
+                                                        break;
+                                                    case '3':
+                                                        echo '<i class="bg-primary fas fa-truck p-2 rounded-circle" style="padding:10px";></i>';
+                                                        break;
+                                                }?>
+                                        </td>
+                                        <td><?php
+                                                $sql = "select * from produto where id={$produto}";
+                                                $row = $conn->sqlRows($sql);
+                                                $row = array_shift($row);
+                                                echo $row['nome']; ?>
+                                        </td>
+                                        <td><?php
+                                                $sql = "select * from cliente where id={$cliente}";
+                                                $row = $conn->sqlRows($sql);
+                                                $row = array_shift($row);
+                                                echo $row['nome']; ?>
+                                        </td>
+                                        <td><?php
+                                                $sql = "select * from armazem where id={$armazem}";
+                                                $row = $conn->sqlRows($sql);
+                                                $row = array_shift($row);
+                                                echo $row['nome']; ?>
+                                        </td>
+                                        <td><?php
+                                                $sql = "select * from motorista where id={$motorista}";
+                                                $row = $conn->sqlRows($sql);
+                                                $row = array_shift($row);
+                                                echo $row['nome']; ?>
+                                        </td>
                                     </tr>
                                 <?php
                                 }

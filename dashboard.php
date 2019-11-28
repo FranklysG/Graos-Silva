@@ -164,8 +164,8 @@ include('app/model/Load.class.php');
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <li class="nav-item has-treeview menu-open">
-                            <a href="#" class="nav-link active">
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Painel
@@ -214,9 +214,17 @@ include('app/model/Load.class.php');
                                         </p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="?pag=cadastro-status" class="nav-link">
+                                        <i class="nav-icon fas fa-door-open"></i>
+                                        <p>
+                                            Status de Serviço
+                                        </p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-shipping-fast"></i>
                                 <p>
@@ -226,7 +234,7 @@ include('app/model/Load.class.php');
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="?pag=cadastro-entrada" class="nav-link">
+                                    <a href="?pag=ordem-entrada" class="nav-link">
                                         <i class="nav-icon fas fa-truck-moving"></i>
                                         <p>
                                             Entrada
@@ -234,7 +242,7 @@ include('app/model/Load.class.php');
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="?pag=cadastro-saida" class="nav-link">
+                                    <a href="?pag=ordem-saida" class="nav-link">
                                         <i class="nav-icon fas fa-truck-loading"></i>
                                         <p>
                                             Saida
@@ -283,6 +291,15 @@ include('app/model/Load.class.php');
                     break;
                 case 'cadastro-armazem':
                     include('app/cadastro/cadastro-armazem/CadastroArmazemList.php');
+                    break;
+                case 'ordem-entrada':
+                    include('app/ordem/ordem-entrada/OrdemEntradaList.php');
+                    break;
+                case 'ordem-saida':
+                    include('app/ordem/ordem-saida/OrdemSaidaList.php');
+                    break;
+                case 'cadastro-status':
+                    include('app/status/CadastroStatusList.class.php');
                     break;
             }
             ?>
