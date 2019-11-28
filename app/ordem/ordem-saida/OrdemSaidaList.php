@@ -85,7 +85,7 @@
                                 <?php
                                 $conn = new Conn;
 
-                                $sql = "select * from saida";
+                                $sql = "select * from saida order by id desc";
                                 $rows = $conn->sqlRows($sql);
 
                                 foreach ($rows as $row) {
