@@ -12,6 +12,7 @@ include('Status.class.php');
 include('User.class.php');
 include('Veiculo.class.php');
 
+include(__FILE__.'../../../util/appUtil.class.php');
 
 include(__FILE__.'../../../controller/ControlCadastroArmazem.class.php');
 include(__FILE__.'../../../controller/ControlCadastroCliente.class.php');

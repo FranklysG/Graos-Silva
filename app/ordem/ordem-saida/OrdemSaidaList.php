@@ -19,7 +19,7 @@
                                 <div class="col-sm-3">
                                     <!-- text input -->
                                     <div class="form-group">
-                                        <label>NUMERO </label>
+                                        <label>PRODUTO </label>
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
@@ -45,7 +45,7 @@
                                 </i>
                                 Buscar
                             </a>
-                            <a class="btn btn-success btn-sm" href="#" value="NOVO" data-toggle="modal" data-target="#motoristaModelForm">
+                            <a class="btn btn-success btn-sm" href="#" value="NOVO" data-toggle="modal" data-target="#ordemModelForm">
                                 <i class="fas fa-plus">
                                 </i>
                                 Novo
@@ -73,43 +73,85 @@
                             <thead>
                                 <tr>
                                     <th> </th>
-                                    <th>Nome</th>
-                                    <th>Endereço</th>
-                                    <th>Cidade</th>
-                                    <th>Veiculo</th>
+                                    <th>Status</th>
+                                    <th>Chave </th>
+                                    <th>Produto</th>
+                                    <th>Cliente</th>
+                                    <th>Armazém</th>
+                                    <th>Motorista</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
                                 $conn = new Conn;
 
-                                $sql = "select * from motorista";
+                                $sql = "select * from saida";
                                 $rows = $conn->sqlRows($sql);
 
                                 foreach ($rows as $row) {
+                                    $status = $row['status_id'];
+                                    $produto = $row['produto_id'];
+                                    $cliente = $row['cliente_id'];
+                                    $armazem = $row['armazem_id'];
+                                    $motorista = $row['motorista_id'];
+                                    $chave = $row['chave'];
                                     ?>
                                     <tr>
                                         <td class="project-actions text-left">
-                                            <a class="btn btn-primary btn-sm text-white" href="" id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#motoristaModelForm" data-id="<?php echo $row['id']; ?>" data-nome="<?php echo $row['nome']; ?>" data-cpf="<?php echo $row['cpf']; ?>" data-rg="<?php echo $row['rg']; ?>" data-logradouro="<?php echo $row['logradouro']; ?>" data-bairro="<?php echo $row['rg']; ?>" data-cidade="<?php echo $row['cidade']; ?>" data-cep="<?php echo $row['cep']; ?>" data-estado="<?php echo $row['estado']; ?>" data-veiculo_id="<?php echo $row['veiculo_id']; ?>">
+                                            <!-- <a class="btn btn-primary btn-sm text-white" href="" id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#ordemModelForm" data-id="<?php echo $row['id']; ?>" data-produto="<?php echo $produto; ?>" data-cliente="<?php echo $cliente; ?>" data-armazem="<?php echo $armazem; ?>" data-motorista="<?php echo $motorista; ?>">
                                                 <i class="fas fa-pencil-alt ">
                                                 </i>
-                                                Edit
-                                            </a>
-                                            <a class="btn btn-danger btn-sm text-white" href="" id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#motoristaModelDel" data-id="<?php echo $row['id']; ?>">
+                                                Editar
+                                            </a> -->
+                                            <a class="btn btn-danger btn-sm text-white" href="" id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#ordemModelDel" data-id="<?php echo $row['id']; ?>">
                                                 <i class="fas fa-trash fa-sm">
                                                 </i>
                                                 Delete
                                             </a>
                                         </td>
-                                        <td><?php echo $row['nome']; ?></td>
-                                        <td><?php echo $row['logradouro']; ?></td>
-                                        <td><?php echo $row['cidade']; ?></td>
                                         <td><?php
-                                                $sql = "select * from veiculo where id=" . $row['veiculo_id'];
+                                                $sql = "select * from status where id={$status}";
                                                 $row = $conn->sqlRows($sql);
                                                 $row = array_shift($row);
-                                                echo $row['marca'] . " / " . $row['placa'];
-                                                ?></td>
+                                                switch ($status) {
+                                                    case '1':
+                                                        echo '<i class="bg-success fas fa-truck-loading p-2 rounded-circle" style="padding:10px";></i>';
+                                                        break;
+                                                    case '2':
+                                                        echo '<i class="bg-warning fas fa-shipping-fast p-2 rounded-circle" style="padding:10px";></i>';
+                                                        break;
+                                                    case '3':
+                                                        echo '<i class="bg-danger fas fa-truck p-2 rounded-circle" style="padding:10px";></i>';
+                                                        break;
+                                                } ?>
+                                        </td>
+                                        <td><?php
+                                                echo $chave; ?>
+                                        </td>
+                                        <td><?php
+                                                $sql = "select * from produto where id={$produto}";
+                                                $row = $conn->sqlRows($sql);
+                                                $row = array_shift($row);
+                                                echo $row['nome']; ?>
+                                        </td>
+                                        <td><?php
+                                                $sql = "select * from cliente where id={$cliente}";
+                                                $row = $conn->sqlRows($sql);
+                                                $row = array_shift($row);
+                                                echo $row['nome']; ?>
+                                        </td>
+                                        <td><?php
+                                                $sql = "select * from armazem where id={$armazem}";
+                                                $row = $conn->sqlRows($sql);
+                                                $row = array_shift($row);
+                                                echo $row['nome']; ?>
+                                        </td>
+                                        <td><?php
+                                                $sql = "select * from motorista where id={$motorista}";
+                                                $row = $conn->sqlRows($sql);
+                                                $row = array_shift($row);
+                                                echo $row['nome']; ?>
+                                        </td>
                                     </tr>
                                 <?php
                                 }
@@ -126,23 +168,23 @@
     </div>
 </section>
 
-<div class="modal bd-example-modal-lg" id="motoristaModelForm" tabindex="-1" role="dialog" aria-labelledby="motoristaModelFormLabel" aria-hidden="true">
+<div class="modal bd-example-modal-lg" id="ordemModelForm" tabindex="-1" role="dialog" aria-labelledby="ordemModelFormLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title motorista_title" id="motoristaModelFormLabel">NOVO MOTORISTA</h5>
+                <h5 class="modal-title motorista_title" id="ordemModelFormLabel">NOVO MOTORISTA</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <?php include('CadastroMotoristaForm.php'); ?>
+                <?php include('OrdemSaidaForm.php'); ?>
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal bd-example-modal-lg" id="motoristaModelDel" tabindex="-1" role="dialog" aria-labelledby="motoristaModelFormLabel" aria-hidden="true">
+<div class="modal bd-example-modal-lg" id="ordemModelDel" tabindex="-1" role="dialog" aria-labelledby="ordemModelFormLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content bg-danger">
             <div class="modal-body">
@@ -162,7 +204,7 @@
 </div>
 
 <script>
-    $('#motoristaModelDel').on('show.bs.modal', function(event) {
+    $('#ordemModelDel').on('show.bs.modal', function(event) {
         var button = $(event.relatedTarget) // Button that triggered the modal
         var recipient = button.data('id') // Extract info from data-* attributes
         // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
@@ -170,30 +212,21 @@
         var modal = $(this)
         modal.find('#id').val(recipient)
     })
-    $('#motoristaModelForm').on('show.bs.modal', function(event) {
+    $('#ordemModelForm').on('show.bs.modal', function(event) {
         var button = $(event.relatedTarget) // Button that triggered the modal
         var recipient = button.data('id') // Extract info from data-* attributes
-        var nome = button.data('nome') // Extract info from data-* attributes
-        var cpf = button.data('cpf') // Extract info from data-* attributes
-        var rg = button.data('rg') // Extract info from data-* attributes
-        var logradouro = button.data('logradouro') // Extract info from data-* attributes
-        var bairro = button.data('bairro') // Extract info from data-* attributes
-        var cidade = button.data('cidade') // Extract info from data-* attributes
-        var cep = button.data('cep') // Extract info from data-* attributes
-        var estado = button.data('estado') // Extract info from data-* attributes
-        var veiculo_id = button.data('veiculo_id') // Extract info from data-* attributes
+        var produto = button.data('produto') // Extract info from data-* attributes
+        var cliente = button.data('cliente') // Extract info from data-* attributes
+        var armazem = button.data('armazem') // Extract info from data-* attributes
+        var motorista = button.data('motorista') // Extract info from data-* attributes
+
         // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
         // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
         var modal = $(this)
         modal.find('#id').val(recipient)
-        modal.find('#nome').val(nome)
-        modal.find('#cpf').val(cpf)
-        modal.find('#rg').val(rg)
-        modal.find('#logradouro').val(logradouro)
-        modal.find('#bairro').val(bairro)
-        modal.find('#cidade').val(cidade)
-        modal.find('#cep').val(cep)
-        modal.find('#estado').val(estado)
-        modal.find('#veiculo_id').val(veiculo_id)
+        modal.find('#produto').val(produto)
+        modal.find('#cliente').val(cliente)
+        modal.find('#armazem').val(armazem)
+        modal.find('#motorista').val(motorista)
     })
 </script>
