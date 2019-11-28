@@ -7,6 +7,7 @@ Class Entrada{
     private $motorista;
     private $produto;
     private $fornecedor;
+    private $chave;
 
     public function getId(){
         return $this->id;
@@ -46,5 +47,13 @@ Class Entrada{
 
     public function setFornecedor($fornecedor){
         $this->fornecedor = $fornecedor;
+    }
+
+    public function getChave(){
+        return $this->chave;
+    }
+
+    public function setChave($chave){
+        $this->chave = $chave;
     }
 }

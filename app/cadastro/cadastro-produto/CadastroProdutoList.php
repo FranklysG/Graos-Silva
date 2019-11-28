@@ -125,9 +125,8 @@
 
 <div class="modal bd-example-modal-lg" id="produtoModelDel" tabindex="-1" role="dialog" aria-labelledby="veiculoModelFormLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content" style="background:none;border:none;">
+    <div class="modal-content bg-danger">
       <div class="modal-body">
-        <div class="alert alert-danger" role="alert">
           <form class="needs-validation" method="POST">
             <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
               <span aria-hidden="true">&times;</span>
@@ -138,7 +137,6 @@
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
             <button type="submit" class="btn btn-primary" name="btnDel" value="btnDel">Ok</button>
           </form>
-        </div>
       </div>
     </div>
   </div>
