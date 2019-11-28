@@ -222,6 +222,14 @@ include('app/model/Load.class.php');
                                         </p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="?pag=release-list" class="nav-link">
+                                        <i class="nav-icon fas fa-file-pdf"></i>
+                                        <p>
+                                            Relatorios de serviço
+                                        </p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item has-treeview menu-open">
@@ -300,6 +308,9 @@ include('app/model/Load.class.php');
                     break;
                 case 'cadastro-status':
                     include('app/status/CadastroStatusList.class.php');
+                    break;
+                case 'release-list':
+                    include('app/release/ReleaseList.php');
                     break;
             }
             ?>
