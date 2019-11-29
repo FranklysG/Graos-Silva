@@ -38,12 +38,15 @@ class ControlEntrada
         (strlen(trim($entrada->getChave())) > 0) and 
         (strlen(trim($entrada->getMotorista())) > 0)) {
             $chave = $entrada->getChave();
+            $chave_id = $entrada->getChaveId();
             $conn = new Conn;
             $sql = "select * from entrada where chave ='{$chave}'";
             $row = $conn->sqlRows($sql);
             if($row){
-                $this->crud->edit($entrada);
-                $entrada->setChave(null);
+               if($chave == $chave_id){
+                    $this->crud->edit($entrada);
+                    $entrada->setChave(null);
+               }
             }else{
                 $_SESSION['error'] = 0;
             }
