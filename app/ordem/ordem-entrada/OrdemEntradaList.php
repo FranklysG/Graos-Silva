@@ -91,7 +91,7 @@
                                     ?>
                                     <tr>
                                         <td class="project-actions text-left">
-                                            <a class="btn btn-success btn-sm text-white" href="" id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#ordemModelForm" data-id="<?php echo $row['id']; ?>" data-produto="<?php echo $produto; ?>" data-fornecedor="<?php echo $fornecedor; ?>" data-armazem="<?php echo $armazem; ?>" data-motorista="<?php echo $motorista; ?>">
+                                            <a class="btn btn-success btn-sm text-white" href="" id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#ordemModelForm" data-id="<?php echo $row['id']; ?>" data-produto="<?php echo $produto; ?>" data-fornecedor="<?php echo $fornecedor; ?>" data-armazem="<?php echo $armazem; ?>" data-motorista="<?php echo $motorista; ?>" data-chave_id="<?php echo $row['chave']; ?>">
                                                 <i class="fas fa-check ">
                                                 </i>
                                                 Check
@@ -209,6 +209,7 @@
         var fornecedor = button.data('fornecedor') // Extract info from data-* attributes
         var armazem = button.data('armazem') // Extract info from data-* attributes
         var motorista = button.data('motorista') // Extract info from data-* attributes
+        var chave_id = button.data('chave_id') // Extract info from data-* attributes
 
         // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
         // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
@@ -218,6 +219,7 @@
         modal.find('#fornecedor').val(fornecedor)
         modal.find('#armazem').val(armazem)
         modal.find('#motorista').val(motorista)
+        modal.find('#chave_id').val(chave_id)
     })
         
 </script>

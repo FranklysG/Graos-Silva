@@ -8,6 +8,7 @@ Class Entrada{
     private $produto;
     private $fornecedor;
     private $chave;
+    private $chave_id;
 
     public function getId(){
         return $this->id;
@@ -55,5 +56,13 @@ Class Entrada{
 
     public function setChave($chave){
         $this->chave = $chave;
+    }
+
+    public function getChaveId(){
+        return $this->chave_id;
+    }
+
+    public function setChaveId($chave_id){
+        $this->chave_id = $chave_id;
     }
 }

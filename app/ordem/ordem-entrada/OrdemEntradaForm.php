@@ -25,6 +25,7 @@ if ($btnSalvar) {
         $entrada->setArmazem(filter_input(INPUT_POST, "armazem"));
         $entrada->setMotorista(filter_input(INPUT_POST, "motorista"));
         $entrada->setChave(filter_input(INPUT_POST, "chave"));
+        $entrada->setChaveId(filter_input(INPUT_POST, "chave_id"));
 
         $action->edit($entrada);
     } else {
@@ -47,6 +48,7 @@ if ($btnSalvar) {
                 <input type="hidden" class="form-control m-0" id="fornecedor" name="fornecedor">
                 <input type="hidden" class="form-control m-0" id="motorista" name="motorista">
                 <input type="hidden" class="form-control m-0" id="armazem" name="armazem">
+                <input type="hidden" class="form-control m-0" id="chave_id" name="chave_id">
                 <input type="text" class="form-control m-0" id="chave" name="chave">
                 
             </p>
