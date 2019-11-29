@@ -159,7 +159,7 @@ include('app/model/Load.class.php');
                         <?php
                         $conn = new Conn;
 
-                        $sql = "select * from user";
+                        $sql = "select * from system_user where login='admin'";
                         $rows = $conn->sqlRows($sql);
 
                         foreach ($rows as $row) {
@@ -260,6 +260,14 @@ include('app/model/Load.class.php');
                                 <li class="nav-item">
                                     <a href="?pag=ordem-saida" class="nav-link">
                                         <i class="nav-icon fas fa-truck-loading"></i>
+                                        <p>
+                                            Saida
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="index.php" class="nav-link">
+                                        <i class="nav-icon fas fa-sign-out-alt"></i>
                                         <p>
                                             Saida
                                         </p>

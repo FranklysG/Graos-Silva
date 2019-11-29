@@ -2,8 +2,9 @@
 Class SystemUser{
 
     private $id;
-    private $user;
+    private $login;
     private $pass;
+    private $apelido;
 
     public function getId(){
         return $this->id;
@@ -13,12 +14,12 @@ Class SystemUser{
         $this->id = $id;
     }
 
-    public function getUser(){
-        return $this->user;
+    public function getLogin(){
+        return $this->login;
     }
 
-    public function setUser($user){
-        $this->user = $user;
+    public function setLogin($login){
+        $this->login = $login;
     }
 
     public function getPass(){
@@ -27,6 +28,14 @@ Class SystemUser{
 
     public function setPass($pass){
         $this->pass = $pass;
+    }
+
+    public function getApelido(){
+        return $this->apelido;
+    }
+
+    public function setApelido($apelido){
+        $this->apelido = $apelido;
     }
 }
 ?>

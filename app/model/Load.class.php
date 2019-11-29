@@ -23,6 +23,7 @@ include(__FILE__.'../../../controller/ControlCadastroVeiculo.class.php');
 include(__FILE__.'../../../controller/ControlOrdemEntrada.class.php');
 include(__FILE__.'../../../controller/ControlOrdemSaida.class.php');
 include(__FILE__.'../../../controller/ControlCadastroStatus.class.php');
+include(__FILE__.'../../../controller/ControlSystemUser.class.php');
 
 include(__FILE__.'../../../cruds/CrudCadastroArmazem.class.php');
 include(__FILE__.'../../../cruds/CrudCadastroCliente.class.php');
@@ -33,6 +34,7 @@ include(__FILE__.'../../../cruds/CrudCadastroVeiculo.class.php');
 include(__FILE__.'../../../cruds/CrudOrdemEntrada.class.php');
 include(__FILE__.'../../../cruds/CrudOrdemSaida.class.php');
 include(__FILE__.'../../../cruds/CrudCadastroStatus.class.php');
+include(__FILE__.'../../../cruds/CrudSystemUser.class.php');
 
 
 ?>
