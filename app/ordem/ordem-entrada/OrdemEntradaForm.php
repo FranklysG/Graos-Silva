@@ -15,6 +15,7 @@ $id = filter_input(INPUT_GET, "id");
 if ($btnDel) {
     $entrada->setId(filter_input(INPUT_POST, "id"));
     $action->del($entrada);
+    echo "<script> window.location.href = window.location.href;</script>";
 }
 
 if ($btnSalvar) {
@@ -28,6 +29,7 @@ if ($btnSalvar) {
         $entrada->setChaveId(filter_input(INPUT_POST, "chave_id"));
 
         $action->edit($entrada);
+        echo "<script> window.location.href = window.location.href;</script>";
     } else {
         $entrada->setProduto(filter_input(INPUT_POST, "produto"));
         $entrada->setFornecedor(filter_input(INPUT_POST, "fornecedor"));
@@ -35,6 +37,7 @@ if ($btnSalvar) {
         $entrada->setMotorista(filter_input(INPUT_POST, "motorista"));
 
         $action->add($entrada);
+        echo "<script> window.location.href = window.location.href;</script>";
     }
 }
 

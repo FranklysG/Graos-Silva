@@ -20,6 +20,7 @@ $id = filter_input(INPUT_GET, "id");
 if($btnDel){
     $cliente->setId(filter_input(INPUT_POST, "id"));
     $action->del($cliente);
+    echo "<script> window.location.href = window.location.href;</script>";
     
 }
 
@@ -37,6 +38,7 @@ if ($btnSalvar) {
         $cliente->setEstado(filter_input(INPUT_POST, "estado"));
 
         $action->edit($cliente);
+        echo "<script> window.location.href = window.location.href;</script>";
     }else{
         $cliente->setNome(filter_input(INPUT_POST, "nome"));
         $cliente->setCpf(filter_input(INPUT_POST, "cpf"));
@@ -49,6 +51,7 @@ if ($btnSalvar) {
         $cliente->setEstado(filter_input(INPUT_POST, "estado"));
 
         $action->add($cliente);
+        echo "<script> window.location.href = window.location.href;</script>";
     }
 }
 

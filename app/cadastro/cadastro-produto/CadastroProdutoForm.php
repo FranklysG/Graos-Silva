@@ -14,6 +14,7 @@ $id = filter_input(INPUT_GET, "id");
 if($btnDel){
     $produto->setId(filter_input(INPUT_POST, "id"));
     $action->del($produto);
+    echo "<script> window.location.href = window.location.href;</script>";
     
 }
 
@@ -25,12 +26,14 @@ if ($btnSalvar) {
         $produto->setQtde(filter_input(INPUT_POST, "quantidade"));
 
         $action->edit($produto);
+        echo "<script> window.location.href = window.location.href;</script>";
     } else {
         $produto->setNome(filter_input(INPUT_POST, "produto"));
         $produto->setTipo(filter_input(INPUT_POST, "tipo"));
         $produto->setQtde(filter_input(INPUT_POST, "quantidade"));
 
         $action->add($produto);
+        echo "<script> window.location.href = window.location.href;</script>";
     }
 }
 

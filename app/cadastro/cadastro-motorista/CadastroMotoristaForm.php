@@ -19,6 +19,7 @@ $btnDel = filter_input(INPUT_POST, "btnDel");
 if ($btnDel) {
     $motorista->setId(filter_input(INPUT_POST, "id"));
     $action->del($motorista);
+    echo "<script> window.location.href = window.location.href;</script>";
 }
 
 if ($btnSalvar) {
@@ -35,6 +36,7 @@ if ($btnSalvar) {
         $motorista->setVeiculo_id(filter_input(INPUT_POST, "veiculo_id"));
 
         $action->edit($motorista);
+        echo "<script> window.location.href = window.location.href;</script>";
     } else {
         $motorista->setNome(filter_input(INPUT_POST, "nome"));
         $motorista->setCpf(filter_input(INPUT_POST, "cpf"));
@@ -46,8 +48,8 @@ if ($btnSalvar) {
         $motorista->setEstado(filter_input(INPUT_POST, "estado"));
         $motorista->setVeiculo_id(filter_input(INPUT_POST, "veiculo_id"));
 
-        var_dump($motorista);
         $action->add($motorista);
+        echo "<script> window.location.href = window.location.href;</script>";
     }
 }
 

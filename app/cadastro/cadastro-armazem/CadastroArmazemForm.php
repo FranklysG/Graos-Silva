@@ -20,6 +20,7 @@ $id = filter_input(INPUT_GET, "id");
 if ($btnDel) {
     $armazem->setId(filter_input(INPUT_POST, "id"));
     $action->del($armazem);
+    echo "<script> window.location.href = window.location.href;</script>";
 }
 
 if ($btnSalvar) {
@@ -34,6 +35,7 @@ if ($btnSalvar) {
         $armazem->setEstado(filter_input(INPUT_POST, "estado"));
 
         $action->edit($armazem);
+        echo "<script> window.location.href = window.location.href;</script>";
     } else {
 
         $armazem->setNome(filter_input(INPUT_POST, "nome"));
@@ -45,6 +47,7 @@ if ($btnSalvar) {
         $armazem->setEstado(filter_input(INPUT_POST, "estado"));
 
         $action->add($armazem);
+        echo "<script> window.location.href = window.location.href;</script>";
     }
 }
 
