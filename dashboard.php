@@ -157,7 +157,16 @@ include('app/model/Load.class.php');
                         <img src="lib/img/avatars/logo.png" alt="AdminLTE Logo" class="img-circle elevation-2" style="width: 30px;height: 35px !important;margin: 5px;">
                     </div>
                     <div class="info" style="line-height: 2.4;">
-                        <a href="#" class="d-block">Franklys Guimarães</a>
+                        <?php
+                        $conn = new Conn;
+
+                        $sql = "select * from user";
+                        $rows = $conn->sqlRows($sql);
+
+                        foreach ($rows as $row) {
+                        ?>
+                            <a href="#" class="d-block"><?php echo $row['apelido'];?></a>
+                        <?php } ?>
                     </div>
                 </div>
 
@@ -315,7 +324,7 @@ include('app/model/Load.class.php');
             }
             ?>
         </div>
-        
+
     </div>
     <script src="plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
