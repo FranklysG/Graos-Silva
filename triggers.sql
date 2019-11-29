@@ -11,4 +11,5 @@ END
 CREATE DEFINER=`root`@`localhost` TRIGGER `graossilva`.`entrada_AFTER_UPDATE` AFTER UPDATE ON `entrada` FOR EACH ROW
 BEGIN
 	UPDATE saida SET status_id=1 WHERE chave=new.chave;
+	INSERT INTO graos_silva_log (user_id, tabela, tarefa) VALUES (1, 'ENTRADA', 'UPDATE');
 END
