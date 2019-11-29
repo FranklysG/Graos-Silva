@@ -9,7 +9,7 @@ include('Motorista.class.php');
 include('Produto.class.php');
 include('Saida.class.php');
 include('Status.class.php');
-include('User.class.php');
+include('SystemUser.class.php');
 include('Veiculo.class.php');
 
 include(__FILE__.'../../../util/appUtil.class.php');

@@ -1,5 +1,5 @@
 <?php
-Class User{
+Class SystemUser{
 
     private $id;
     private $user;
