@@ -42,7 +42,6 @@ class ControlEntrada
             $conn = new Conn;
             $sql = "select * from entrada where chave ='{$chave}'";
             $row = $conn->sqlRows($sql);
-            var_dump($entrada->getChaveId());
             if($row){
                if($chave == $chave_id){
                     $this->crud->edit($entrada);
