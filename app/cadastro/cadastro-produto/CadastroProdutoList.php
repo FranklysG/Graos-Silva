@@ -77,15 +77,13 @@
                   ?>
                   <tr>
                     <td class="project-actions text-left">
-                      <a class="btn btn-primary btn-sm text-white" href="" id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#produtoModelForm" data-id="<?php echo $row['id']; ?>" data-produto="<?php echo $row['nome']; ?>" data-tipo="<?php echo $row['tipo']; ?>" data-quantidade="<?php echo $row['qtde']; ?>">
-                        <i class="fas fa-pencil-alt ">
+                      <a class="btn btn-primary btn-xs text-white" href="" id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#produtoModelForm" data-id="<?php echo $row['id']; ?>" data-produto="<?php echo $row['nome']; ?>" data-tipo="<?php echo $row['tipo']; ?>" data-quantidade="<?php echo $row['qtde']; ?>">
+                        <i class="fas fa-pencil-alt fa-xs">
                         </i>
-                        Edit
                       </a>
-                      <a class="btn btn-danger btn-sm text-white" href="" id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#produtoModelDel" data-id="<?php echo $row['id']; ?>">
-                        <i class="fas fa-trash fa-sm">
+                      <a class="btn btn-danger btn-xs text-white" href="" id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#produtoModelDel" data-id="<?php echo $row['id']; ?>">
+                        <i class="fas fa-trash fa-xs">
                         </i>
-                        Delete
                       </a>
                     </td>
                     <td><?php echo $row['nome']; ?></td>
