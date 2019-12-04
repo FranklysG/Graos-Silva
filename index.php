@@ -59,7 +59,7 @@ if((isset($_SESSION['login']) == true) and (isset($_SESSION['pass']) == true)){
                     </div>
                     <div class="row">
                         <div class="col-8">
-                            <div class="icheck-primary">
+                            <div class="icheck-success">
                                 <input type="checkbox" id="remember">
                                 <label for="remember">
                                     Manter Conectado
@@ -68,7 +68,7 @@ if((isset($_SESSION['login']) == true) and (isset($_SESSION['pass']) == true)){
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                            <button type="submit" class="btn btn-success btn-block">Entrar</button>
                         </div>
                         <!-- /.col -->
                     </div>
@@ -76,7 +76,7 @@ if((isset($_SESSION['login']) == true) and (isset($_SESSION['pass']) == true)){
 
                 <div class="social-auth-links text-center mb-3">
                     <p>- OU -</p>
-                    <a href="#" class="btn btn-block btn-primary">
+                    <a href="#" class="btn btn-block btn-success">
                         <i class="fab fa-facebook mr-2"></i> Registrar usando Facebook
                     </a>
                     <a href="#" class="btn btn-block btn-danger">
@@ -89,7 +89,7 @@ if((isset($_SESSION['login']) == true) and (isset($_SESSION['pass']) == true)){
                     <a href="register.php">Não tenho cadastro</a>
                 </p>
                 <p class="mb-1">
-                    <a href="forgot-password.html">Esqueci minha senha</a>
+                    <a href="#">Esqueci minha senha</a>
                 </p>
             </div>
             <!-- /.login-card-body -->
