@@ -10,12 +10,6 @@ $message = "";
 
 $btnSalvar = filter_input(INPUT_POST, "btnSalvar");
 
-// if($btnDel){
-//     $user->setId(filter_input(INPUT_POST, "id"));
-//     $action->del($user);
-    
-// }
-
 if ($btnSalvar) {
     if (filter_input(INPUT_POST, "id")) {
         $user->setId(filter_input(INPUT_POST, "id"));
@@ -30,6 +24,7 @@ if ($btnSalvar) {
         $user->setApelido(filter_input(INPUT_POST, "apelido"));
 
         $action->add($user);
+        header('Location:index.php');
     }
 }
 
@@ -91,7 +86,7 @@ if ($btnSalvar) {
                     </div>
                     <div class="row">
                         <div class="col-8">
-                            <div class="icheck-primary">
+                            <div class="icheck-success">
                                 <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                                 <label for="agreeTerms">
                                     Li e conpassdo com os <a href="#">Termos</a>
@@ -100,7 +95,7 @@ if ($btnSalvar) {
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block" name="btnSalvar" value="btnSalvar">Registrar</button>
+                            <button type="submit" class="btn btn-success btn-block" name="btnSalvar" value="btnSalvar">Registrar</button>
                         </div>
                         <!-- /.col -->
                     </div>
@@ -108,7 +103,7 @@ if ($btnSalvar) {
 
                 <div class="social-auth-links text-center mb-3">
                     <p>- OU -</p>
-                    <a href="#" class="btn btn-block btn-primary">
+                    <a href="#" class="btn btn-block btn-success">
                         <i class="fab fa-facebook mr-2"></i> Registrar usando Facebook
                     </a>
                     <a href="#" class="btn btn-block btn-danger">

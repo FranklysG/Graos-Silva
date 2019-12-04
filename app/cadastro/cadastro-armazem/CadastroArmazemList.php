@@ -92,15 +92,13 @@
                   ?>
                   <tr>
                     <td class="project-actions text-left">
-                      <a class="btn btn-primary btn-sm text-white" href="" id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#armazemModelForm" data-id="<?php echo $row['id']; ?>" data-nome="<?php echo $row['nome']; ?>" data-cnpj="<?php echo $row['cnpj']; ?>" data-logradouro="<?php echo $row['logradouro']; ?>" data-bairro="<?php echo $row['bairro']; ?>" data-cidade="<?php echo $row['cidade']; ?>" data-cep="<?php echo $row['cep']; ?>" data-estado="<?php echo $row['estado']; ?>">
-                        <i class="fas fa-pencil-alt ">
+                      <a class="btn btn-primary btn-xs text-white" href="" id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#armazemModelForm" data-id="<?php echo $row['id']; ?>" data-nome="<?php echo $row['nome']; ?>" data-cnpj="<?php echo $row['cnpj']; ?>" data-logradouro="<?php echo $row['logradouro']; ?>" data-bairro="<?php echo $row['bairro']; ?>" data-cidade="<?php echo $row['cidade']; ?>" data-cep="<?php echo $row['cep']; ?>" data-estado="<?php echo $row['estado']; ?>">
+                        <i class="fas fa-pencil-alt fa-xs">
                         </i>
-                        Edit
                       </a>
-                      <a class="btn btn-danger btn-sm text-white" href="" id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#armazemModelDel" data-id="<?php echo $row['id']; ?>">
-                        <i class="fas fa-trash fa-sm">
+                      <a class="btn btn-danger btn-xs text-white" href="" id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#armazemModelDel" data-id="<?php echo $row['id']; ?>">
+                        <i class="fas fa-trash fa-xs">
                         </i>
-                        Delete
                       </a>
                     </td>
                     <td><?php echo $row['nome']; ?></td>

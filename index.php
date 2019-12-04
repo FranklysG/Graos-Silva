@@ -1,9 +1,14 @@
 <?php
-
 error_reporting(0);
-ini_set(“display_errors”, 0);
-
+ini_set('display_errors', 0);
+session_start();
+if((isset($_SESSION['login']) == true) and (isset($_SESSION['pass']) == true)){
+    unset($_SESSION['login']);
+    unset($_SESSION['pass']);
+    header('Location: index.php');
+}
 ?>
+
 <html>
 
 <head>
@@ -32,7 +37,7 @@ ini_set(“display_errors”, 0);
             <div class="card-body login-card-body">
                 <div class="login-logo">
                     <a href="#">
-                        <img src="lib/img/graosSilva-logo.png" alt="AdminLTE Logo" style="width: 80px;height: 75px !important;">
+                        <img src="lib/img/graosSilva-logo1.png" alt="AdminLTE Logo" style="width: 80px;height: 75px !important;">
                     </a>
                 </div>
                 <form action="verifica.php" method="POST">
@@ -54,7 +59,7 @@ ini_set(“display_errors”, 0);
                     </div>
                     <div class="row">
                         <div class="col-8">
-                            <div class="icheck-primary">
+                            <div class="icheck-success">
                                 <input type="checkbox" id="remember">
                                 <label for="remember">
                                     Manter Conectado
@@ -63,7 +68,7 @@ ini_set(“display_errors”, 0);
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                            <button type="submit" class="btn btn-success btn-block">Entrar</button>
                         </div>
                         <!-- /.col -->
                     </div>
@@ -71,7 +76,7 @@ ini_set(“display_errors”, 0);
 
                 <div class="social-auth-links text-center mb-3">
                     <p>- OU -</p>
-                    <a href="#" class="btn btn-block btn-primary">
+                    <a href="#" class="btn btn-block btn-success">
                         <i class="fab fa-facebook mr-2"></i> Registrar usando Facebook
                     </a>
                     <a href="#" class="btn btn-block btn-danger">
@@ -84,7 +89,7 @@ ini_set(“display_errors”, 0);
                     <a href="register.php">Não tenho cadastro</a>
                 </p>
                 <p class="mb-1">
-                    <a href="forgot-password.html">Esqueci minha senha</a>
+                    <a href="#">Esqueci minha senha</a>
                 </p>
             </div>
             <!-- /.login-card-body -->

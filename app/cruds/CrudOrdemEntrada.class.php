@@ -37,15 +37,14 @@ class CrudEntrada
     public function edit(Entrada $entrada)
     {
         try {
-            $sql = "UPDATE entrada SET armazem_id=:armazem_id, motorista_id=:motorista_id, produto_id=:produto_id, fornecedor_id=:fornecedor_id, status_id=:status_id, chave=:chave WHERE id=:id;";
+            $sql = "UPDATE entrada SET armazem_id=:armazem_id, motorista_id=:motorista_id, produto_id=:produto_id, fornecedor_id=:fornecedor_id, status_id=:status_id WHERE id=:id;";
             $param = array(
                 ':id' => $entrada->getId(),
                 ':armazem_id' => $entrada->getArmazem(),
                 ':fornecedor_id' => $entrada->getFornecedor(),
                 ':motorista_id' => $entrada->getMotorista(),
                 ':produto_id' => $entrada->getProduto(),
-                ':status_id' => 1,
-                ':chave' => " "
+                ':status_id' => 1
             );
             return $this->conn->sqlOne($sql, $param);
         } catch (PDOException $e) {

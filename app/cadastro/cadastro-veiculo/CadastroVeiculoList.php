@@ -85,15 +85,13 @@
                   ?>
                   <tr>
                     <td class="project-actions text-left">
-                      <a class="btn btn-primary btn-sm text-white" href="" id="btnEdit" name="btnEdit" data-toggle="modal" data-target="#veiculoModelForm" data-id="<?php echo $row['id']; ?>" data-marca="<?php echo $row['marca']; ?>" data-placa="<?php echo $row['placa']; ?>" data-cor="<?php echo $row['cor']; ?>">
-                        <i class="fas fa-pencil-alt ">
+                      <a class="btn btn-primary btn-xs text-white" href="" id="btnEdit" name="btnEdit" data-toggle="modal" data-target="#veiculoModelForm" data-id="<?php echo $row['id']; ?>" data-marca="<?php echo $row['marca']; ?>" data-placa="<?php echo $row['placa']; ?>" data-cor="<?php echo $row['cor']; ?>">
+                        <i class="fas fa-pencil-alt fa-xs">
                         </i>
-                        Edit
                       </a>
-                      <a class="btn btn-danger btn-sm text-white" href="" id="btnDel" name="btnDel" data-toggle="modal" data-target="#veiculoModelDel" data-id="<?php echo $row['id']; ?>">
-                        <i class="fas fa-trash fa-sm">
+                      <a class="btn btn-danger btn-xs text-white" href="" id="btnDel" name="btnDel" data-toggle="modal" data-target="#veiculoModelDel" data-id="<?php echo $row['id']; ?>">
+                        <i class="fas fa-trash fa-xs">
                         </i>
-                        Delete
                       </a>
                     </td>
                     <td><?php echo $row['id']; ?></td>

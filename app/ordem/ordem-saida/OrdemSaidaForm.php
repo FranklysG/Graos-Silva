@@ -33,7 +33,7 @@ if ($btnSalvar) {
         $saida->setCliente(filter_input(INPUT_POST, "cliente"));
         $saida->setArmazem(filter_input(INPUT_POST, "armazem"));
         $saida->setMotorista(filter_input(INPUT_POST, "motorista"));
-
+        
         $action->add($saida);
         echo "<script> window.location.href = window.location.href;</script>";
     }

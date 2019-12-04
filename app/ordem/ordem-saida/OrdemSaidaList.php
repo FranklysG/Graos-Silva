@@ -103,10 +103,9 @@
                                                 </i>
                                                 Editar
                                             </a> -->
-                                            <a class="btn btn-danger btn-sm text-white" href="" id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#ordemModelDel" data-id="<?php echo $row['id']; ?>">
-                                                <i class="fas fa-trash fa-sm">
+                                            <a class="btn btn-danger btn-xs text-white" href="" id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#ordemModelDel" data-id="<?php echo $row['id']; ?>">
+                                                <i class="fas fa-trash fa-xs">
                                                 </i>
-                                                Delete
                                             </a>
                                         </td>
                                         <td><?php

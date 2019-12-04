@@ -1,5 +1,11 @@
 <?php
+session_start();
 include('app/model/Load.class.php');
+if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['pass']) == true)){
+    unset($_SESSION['login']);
+    unset($_SESSION['pass']);
+    header('Location: index.php?login=false');
+}
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -9,6 +15,7 @@ include('app/model/Load.class.php');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="lib/css/style-dashboard.css">
     <link rel="stylesheet" href="lib/css/adminlte.min.css">
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
 
@@ -156,16 +163,7 @@ include('app/model/Load.class.php');
                         <img src="lib/img/avatars/logo.png" alt="AdminLTE Logo" class="img-circle elevation-2" style="width: 30px;height: 35px !important;margin: 5px;">
                     </div>
                     <div class="info" style="line-height: 2.4;">
-                        <?php
-                        $conn = new Conn;
-
-                        $sql = "select * from system_user where login='admin'";
-                        $rows = $conn->sqlRows($sql);
-
-                        foreach ($rows as $row) {
-                        ?>
-                            <a href="#" class="d-block"><?php echo $row['apelido'];?></a>
-                        <?php } ?>
+                            <a href="#" class="d-block"><?php echo $_SESSION['apelido']; ?></a>
                     </div>
                 </div>
 
@@ -194,7 +192,7 @@ include('app/model/Load.class.php');
                                         <i class="nav-icon fa fa-piggy-bank"></i>
                                         <p>
                                             Produto
-                                            <span class="right badge badge-danger">New</span>
+                                            <span class="right badge badge-danger badge-xs" style="font-size: 12px !important;">New</span>
                                         </p>
                                     </a>
                                 </li>

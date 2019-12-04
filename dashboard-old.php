@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include('app/model/Load.class.php');
 ?>
 <!doctype html>
