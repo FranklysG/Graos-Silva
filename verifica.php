@@ -1,14 +1,26 @@
 
 <?php
+  session_start();
+  include('app/model/Conn.class.php');
 
   $login = $_POST['login'];
-  $_SESSION['login'] = $login;
   $pass = $_POST['pass'];
+  
+  $conn = new Conn;
+  $sql = "select * from system_user where login = '{$login}' and pass = '{$pass}'";
 
+  $rows = $conn->sqlRows($sql);
 
-  if (($login == "admin") and ($pass == "admin")) {
-    header('Location: dashboard.php?pag=cadastro-cliente');
+  if (!empty($rows)) {
+    foreach ($rows as $row) {
+      $_SESSION['login'] = $row['login'];
+      $_SESSION['pass'] = $row['pass'];
+      $_SESSION['apelido'] = $row['apelido'];
+      header('Location: dashboard.php?pag=cadastro-cliente');
+    }
   } else {
+    unset($_SESSION['login']);
+    unset($_SESSION['pass']);
     header('Location: index.php?login=false');
   }
 ?>

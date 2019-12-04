@@ -10,12 +10,6 @@ $message = "";
 
 $btnSalvar = filter_input(INPUT_POST, "btnSalvar");
 
-// if($btnDel){
-//     $user->setId(filter_input(INPUT_POST, "id"));
-//     $action->del($user);
-    
-// }
-
 if ($btnSalvar) {
     if (filter_input(INPUT_POST, "id")) {
         $user->setId(filter_input(INPUT_POST, "id"));
@@ -30,6 +24,7 @@ if ($btnSalvar) {
         $user->setApelido(filter_input(INPUT_POST, "apelido"));
 
         $action->add($user);
+        header('Location:index.php');
     }
 }
 

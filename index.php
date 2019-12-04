@@ -1,9 +1,14 @@
 <?php
-
 error_reporting(0);
-ini_set(“display_errors”, 0);
-
+ini_set('display_errors', 0);
+session_start();
+if((isset($_SESSION['login']) == true) and (isset($_SESSION['pass']) == true)){
+    unset($_SESSION['login']);
+    unset($_SESSION['pass']);
+    header('Location: index.php');
+}
 ?>
+
 <html>
 
 <head>
