@@ -37,7 +37,7 @@ if((isset($_SESSION['login']) == true) and (isset($_SESSION['pass']) == true)){
             <div class="card-body login-card-body">
                 <div class="login-logo">
                     <a href="#">
-                        <img src="lib/img/graosSilva-logo.png" alt="AdminLTE Logo" style="width: 80px;height: 75px !important;">
+                        <img src="lib/img/graosSilva-logo1.png" alt="AdminLTE Logo" style="width: 80px;height: 75px !important;">
                     </a>
                 </div>
                 <form action="verifica.php" method="POST">
