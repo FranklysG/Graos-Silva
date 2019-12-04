@@ -47,7 +47,7 @@ if ($btnSalvar) {
                     <option>SOJA</option>
                     <option>FARELO DE SOJA</option>
                     <option>RESIDUO DE SOJA</option>
-                    <option>MLHO</option>
+                    <option>MILHO</option>
                     <option>MILHO EM GRAOS</option>
                     <option>FARELO DE MILHO</option>
                     <option>RESIDUO DE MILHO</option>
