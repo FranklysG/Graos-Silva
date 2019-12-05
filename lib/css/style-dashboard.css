@@ -1,5 +1,5 @@
 *{
-    font-size: 14px !important;
+    font-size: 13px !important;
 }
 .navbar-badge {
     font-weight: 300 !important;
@@ -18,6 +18,10 @@
     font-weight: 700 !important;
 }
 input{
+    text-transform: uppercase !important;
+}
+th{
+    
     text-transform: uppercase !important;
 }
 td{

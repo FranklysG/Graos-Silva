@@ -37,7 +37,7 @@ class ControlEntrada
         (strlen(trim($entrada->getArmazem())) > 0) and 
         (strlen(trim($entrada->getChave())) > 0) and 
         (strlen(trim($entrada->getMotorista())) > 0)) {
-            $chave = $entrada->getChave();
+            $chave = strtoupper($entrada->getChave());
             $chave_id = $entrada->getChaveId();
             $conn = new Conn;
             $sql = "select * from entrada where chave ='{$chave}'";

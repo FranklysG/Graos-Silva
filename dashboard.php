@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('app/model/Load.class.php');
-if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['pass']) == true)){
+if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)) {
     unset($_SESSION['login']);
     unset($_SESSION['pass']);
     header('Location: index.php?login=false');
@@ -151,8 +151,8 @@ if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['pass']) == true
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="lib/img/graosSilva-logo.png" alt="AdminLTE Logo" class="img-circle elevation-2" style="width: 56px;height: 45px !important;filter: invert(100%);margin: 5px;">
-                <span class="brand-text font-weight-light">Grãos Silva</span>
+                <img src="lib/img/graosSilva-logo1.png" alt="AdminLTE Logo" class="img-circle" style="width: 56px;height: 45px !important;margin: 10px;">
+                <span class="brand-text font-weight-bold" style="line-height: 0.9;">GRÃOS SILVA</span>
             </a>
 
             <!-- Sidebar -->
@@ -160,10 +160,10 @@ if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['pass']) == true
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="lib/img/avatars/logo.png" alt="AdminLTE Logo" class="img-circle elevation-2" style="width: 30px;height: 35px !important;margin: 5px;">
+                        <img src="lib/img/avatars/logo.png" alt="AdminLTE Logo" class="img-circle elevation-1" style="width: 30px;height: 35px !important;margin: 5px;">
                     </div>
-                    <div class="info" style="line-height: 2.4;">
-                            <a href="#" class="d-block"><?php echo $_SESSION['apelido']; ?></a>
+                    <div class="info" style="line-height: 2.6;">
+                        <a href="#" class="d-block"><?php echo $_SESSION['apelido']; ?></a>
                     </div>
                 </div>
 
@@ -263,15 +263,15 @@ if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['pass']) == true
                                         </p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="index.php" class="nav-link">
-                                        <i class="nav-icon fas fa-sign-out-alt"></i>
-                                        <p>
-                                            Sair
-                                        </p>
-                                    </a>
-                                </li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.php" class="nav-link">
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
+                                <p>
+                                    Sair
+                                </p>
+                            </a>
                         </li>
                     </ul>
                 </nav>

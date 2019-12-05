@@ -54,7 +54,7 @@ if ($btnSalvar) {
 
                     foreach ($rows as $row) {
                         ?>
-                        <option value="<?php echo $row['id'];?>"><?php echo $row['nome'];?></option>
+                        <option style="text-transform: uppercase !important;" value="<?php echo $row['id'];?>"><?php echo $row['nome'];?></option>
                     <?php } ?>
                 </select>
             </p>
@@ -71,7 +71,7 @@ if ($btnSalvar) {
 
                     foreach ($rows as $row) {
                         ?>
-                        <option value="<?php echo $row['id'];?>"><?php echo $row['nome'];?></option>
+                        <option style="text-transform: uppercase !important;" value="<?php echo $row['id'];?>"><?php echo $row['nome'];?></option>
                     <?php } ?>
                 </select>
             </p>
@@ -88,7 +88,7 @@ if ($btnSalvar) {
 
                     foreach ($rows as $row) {
                         ?>
-                        <option value="<?php echo $row['id'];?>"><?php echo $row['nome'];?></option>
+                        <option style="text-transform: uppercase !important;" value="<?php echo $row['id'];?>"><?php echo $row['nome'];?></option>
                     <?php } ?>
                 </select>
             </p>
@@ -105,7 +105,7 @@ if ($btnSalvar) {
 
                     foreach ($rows as $row) {
                         ?>
-                        <option value="<?php echo $row['id'];?>"><?php echo $row['nome'];?></option>
+                        <option style="text-transform: uppercase !important;" value="<?php echo $row['id'];?>"><?php echo $row['nome'];?></option>
                     <?php } ?>
                 </select>
             </p>

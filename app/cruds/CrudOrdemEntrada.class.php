@@ -15,6 +15,7 @@ class CrudEntrada
         $this->conn->close();
     }
 
+    // desabilitado
     public function add(Entrada $entrada)
     {
         try {
@@ -27,7 +28,6 @@ class CrudEntrada
                 ':status_id' => 2,
                 ':chave' => AppUtil::Hash(6)
             );
-            var_dump($entrada);
             return $this->conn->sqlOne($sql, $param);
         } catch (PDOException $e) {
             echo 'ERROR: ' . $e->getMessage();

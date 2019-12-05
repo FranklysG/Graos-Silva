@@ -28,7 +28,7 @@
                       </a>
                     </form>
                   </td>
-                  <td>Relatorio de Cadastro</td>
+                  <td>Motorista com Caminhão Mercedes</td>
                 </tr>
               </tbody>
             </table>
