@@ -14,7 +14,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="shortcut icon" href="lib/img/graosSilva-logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="lib/css/style-dashboard.css">
     <link rel="stylesheet" href="lib/css/adminlte.min.css">
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -151,7 +151,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
-                <img src="lib/img/graosSilva-logo1.png" alt="AdminLTE Logo" class="img-circle" style="width: 56px;height: 45px !important;margin: 10px;">
+                <img src="lib/img/graosSilva-logo.png" alt="AdminLTE Logo" class="img-circle" style="width: 56px;height: 45px !important;margin: 10px;">
                 <span class="brand-text font-weight-bold" style="line-height: 0.9;">GRÃOS SILVA</span>
             </a>
 

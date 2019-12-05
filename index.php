@@ -18,6 +18,7 @@ if((isset($_SESSION['login']) == true) and (isset($_SESSION['pass']) == true)){
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="shortcut icon" href="lib/img/graosSilva-logo.ico" type="image/x-icon" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="lib/css/all.min.css">
     <!-- Ionicons -->
@@ -37,7 +38,7 @@ if((isset($_SESSION['login']) == true) and (isset($_SESSION['pass']) == true)){
             <div class="card-body login-card-body">
                 <div class="login-logo">
                     <a href="#">
-                        <img src="lib/img/graosSilva-logo1.png" alt="AdminLTE Logo" style="width: 80px;height: 75px !important;">
+                        <img src="lib/img/graosSilva-logo.png" alt="AdminLTE Logo" style="width: 80px;height: 75px !important;">
                     </a>
                 </div>
                 <form action="verifica.php" method="POST">
