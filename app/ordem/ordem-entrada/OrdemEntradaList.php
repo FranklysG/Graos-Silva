@@ -92,9 +92,8 @@
                                     <tr>
                                         <td class="project-actions text-left">
                                             <a class="btn btn-success btn-xs text-white" href="" id="btnEdit" name="btnEdit" class="btn text-primary fa fa-edit" data-toggle="modal" data-target="#ordemModelForm" data-id="<?php echo $row['id']; ?>" data-produto="<?php echo $produto; ?>" data-fornecedor="<?php echo $fornecedor; ?>" data-armazem="<?php echo $armazem; ?>" data-motorista="<?php echo $motorista; ?>" data-chave_id="<?php echo $row['chave']; ?>">
-                                                <i class="fas fa-check fa-xs">
+                                                <i class="fas fa-check-circle fa-xs">
                                                 </i>
-                                                Check
                                             </a>
                                             <!-- <a class="btn btn-danger btn-sm text-white" href="" id="btnDel" name="btnDel" class="btn text-danger fa fa-trash" data-toggle="modal" data-target="#ordemModelDel" data-id="<?php echo $row['id']; ?>">
                                                 <i class="fas fa-trash fa-sm">
