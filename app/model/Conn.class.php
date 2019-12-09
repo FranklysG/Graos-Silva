@@ -13,8 +13,8 @@ class Conn
     {
         $this->host = "localhost";
         $this->dbname = "graossilva";
-        $this->username = "root";
-        $this->password = "app@123.";
+        $this->username = "SeuUser";
+        $this->password = "suaSenha";
     }
 
     public function open()
