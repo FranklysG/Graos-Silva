@@ -45,7 +45,7 @@ if ($btnSalvar) {
         <div class="col-sm-4">
             <p class="produto_title">PRODUTO
                 <input type="hidden" class="form-control m-0" id="id" name="id">
-                <select class="form-control mt-1" id="produto" name="produto">
+                <select class="form-control mt-1" id="produto" name="produto" style="text-transform: uppercase !important;">
                     <?php
                     $conn = new Conn;
 
@@ -62,7 +62,7 @@ if ($btnSalvar) {
 
         <div class="col-sm-4">
             <p class="produto_title">CLIENTE
-                <select class="form-control mt-1" id="cliente" name="cliente">
+                <select class="form-control mt-1" id="cliente" name="cliente" style="text-transform: uppercase !important;">
                 <?php
                     $conn = new Conn;
 
@@ -79,7 +79,7 @@ if ($btnSalvar) {
 
         <div class="col-sm-4">
             <p class="produto_title">ARMAZÉM
-                <select class="form-control mt-1" id="armazem" name="armazem">
+                <select class="form-control mt-1" id="armazem" name="armazem" style="text-transform: uppercase !important;">
                 <?php
                     $conn = new Conn;
 
@@ -96,7 +96,7 @@ if ($btnSalvar) {
 
         <div class="col-sm-4">
             <p class="produto_title">MOTORISTA
-                <select class="form-control mt-1" id="motorista" name="motorista">
+                <select class="form-control mt-1" id="motorista" name="motorista" style="text-transform: uppercase !important;">
                 <?php
                     $conn = new Conn;
 
