@@ -77,21 +77,14 @@ if((isset($_SESSION['login']) == true) and (isset($_SESSION['pass']) == true)){
 
                 <div class="social-auth-links text-center mb-3">
                     <p>- OU -</p>
-                    <a href="#" class="btn btn-block btn-success">
-                        <i class="fab fa-facebook mr-2"></i> Registrar usando Facebook
+                    <a href="register.php" class="btn btn-block btn-success">
+                        <i class="fab fa-facebook mr-2"></i> Não tenho cadastro
                     </a>
                     <a href="#" class="btn btn-block btn-danger">
-                        <i class="fab fa-google-plus mr-2"></i> Registrar usando Google
+                        <i class="fab fa-google-plus mr-2"></i> Esqueci minha senha
                     </a>
                 </div>
                 <!-- /.social-auth-links -->
-
-                <p class="mb-1">
-                    <a href="register.php">Não tenho cadastro</a>
-                </p>
-                <p class="mb-1">
-                    <a href="#">Esqueci minha senha</a>
-                </p>
             </div>
             <!-- /.login-card-body -->
             <?php if ($_GET['login']) { ?>

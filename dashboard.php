@@ -12,15 +12,12 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
 
 <head>
     <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="lib/img/graosSilva-logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="lib/css/style-dashboard.css">
     <link rel="stylesheet" href="lib/css/adminlte.min.css">
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-
-    <script type="text/javascript" src="lib/js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="lib/js/jquery.maskedinput.js"></script>
 
     <script src="plugins/jquery/jquery.slim.min.js"></script>
     <script src="plugins/popper/umd/popper.min.js"></script>
@@ -67,11 +64,11 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                                 <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
-                                        Brad Diesel
+                                        Porto Franco
                                         <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                                     </h3>
-                                    <p class="text-sm">Call me whenever you can...</p>
-                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                                    <p class="text-sm">Carga Registrada ...</p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Horas atrás</p>
                                 </div>
                             </div>
                             <!-- Message End -->
@@ -83,11 +80,11 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                                 <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
-                                        John Pierce
+                                        Açailandia
                                         <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
                                     </h3>
-                                    <p class="text-sm">I got your message bro</p>
-                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                                    <p class="text-sm">Motorista na triagem</p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Horas atrás</p>
                                 </div>
                             </div>
                             <!-- Message End -->
@@ -96,20 +93,20 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                                <img src="dist/img/user5-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
-                                        Nora Silvester
+                                        Barcarena
                                         <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
                                     </h3>
-                                    <p class="text-sm">The subject goes here</p>
-                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                                    <p class="text-sm">Motorista com atraso</p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Horas atrás</p>
                                 </div>
                             </div>
                             <!-- Message End -->
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+                        <a href="#" class="dropdown-item dropdown-footer">Veja todas as mensagens</a>
                     </div>
                 </li>
                 <!-- Notifications Dropdown Menu -->
@@ -119,24 +116,24 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                         <span class="badge badge-warning navbar-badge">15</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                        <span class="dropdown-header">15 Notifications</span>
+                        <span class="dropdown-header">15 Notificações</span>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
-                            <i class="fas fa-envelope mr-2"></i> 4 new messages
-                            <span class="float-right text-muted text-sm">3 mins</span>
+                            <i class="fas fa-envelope mr-2"></i> 4 Novas Menssagens
+                            <span class="float-right text-muted text-sm">3 min</span>
                         </a>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
-                            <i class="fas fa-users mr-2"></i> 8 friend requests
-                            <span class="float-right text-muted text-sm">12 hours</span>
+                            <i class="fas fa-users mr-2"></i> 8 Solicitações
+                            <span class="float-right text-muted text-sm">12 horas</span>
                         </a>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
-                            <i class="fas fa-file mr-2"></i> 3 new reports
-                            <span class="float-right text-muted text-sm">2 days</span>
+                            <i class="fas fa-file mr-2"></i> 3 Novos suportes
+                            <span class="float-right text-muted text-sm">2 dias</span>
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                        <a href="#" class="dropdown-item dropdown-footer">Veja todas as notificações</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -150,8 +147,8 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
-                <img src="lib/img/graosSilva-logo.png" alt="AdminLTE Logo" class="img-circle" style="width: 56px;height: 45px !important;margin: 10px;">
+            <a href="#" class="brand-link">
+                <img src="lib/img/graosSilva-logo.png" alt="AdminLTE Logo" class="img-circle" style="width: 45px;height: 40px !important;margin-left: 5px;">
                 <span class="brand-text font-weight-bold" style="line-height: 0.9;">GRÃOS SILVA</span>
             </a>
 
@@ -170,7 +167,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <li class="nav-item has-treeview">
+                        <li class="nav-item header">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
@@ -179,7 +176,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
+                                <li class="nav-item has-treeview">
                                     <a href="?pag=cadastro-cliente" class="nav-link">
                                         <i class="nav-icon fas fa-handshake"></i>
                                         <p>
@@ -187,7 +184,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                                         </p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item has-treeview">
                                     <a href="?pag=cadastro-produto" class="nav-link">
                                         <i class="nav-icon fa fa-piggy-bank"></i>
                                         <p>
@@ -196,7 +193,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                                         </p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item has-treeview">
                                     <a href="?pag=cadastro-motorista" class="nav-link">
                                         <i class="nav-icon fa fa-user"></i>
                                         <p>
@@ -204,7 +201,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                                         </p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item has-treeview">
                                     <a href="?pag=cadastro-veiculo" class="nav-link">
                                         <i class="nav-icon fa fa-truck-moving"></i>
                                         <p>
@@ -212,7 +209,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                                         </p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item has-treeview">
                                     <a href="?pag=cadastro-armazem" class="nav-link">
                                         <i class="nav-icon fa fa-truck-loading"></i>
                                         <p>
@@ -220,7 +217,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                                         </p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item has-treeview">
                                     <a href="?pag=cadastro-status" class="nav-link">
                                         <i class="nav-icon fas fa-door-open"></i>
                                         <p>
@@ -228,7 +225,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                                         </p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item has-treeview">
                                     <a href="?pag=release-list" class="nav-link">
                                         <i class="nav-icon fas fa-file-pdf"></i>
                                         <p>
@@ -238,7 +235,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview menu-open">
+                        <li class="nav-item menu-open">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-shipping-fast"></i>
                                 <p>
@@ -247,7 +244,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
+                                <li class="nav-item has-treeview">
                                     <a href="?pag=ordem-entrada" class="nav-link">
                                         <i class="nav-icon fas fa-truck-moving"></i>
                                         <p>
@@ -255,7 +252,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                                         </p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item has-treeview">
                                     <a href="?pag=ordem-saida" class="nav-link">
                                         <i class="nav-icon fas fa-truck-loading"></i>
                                         <p>
@@ -266,13 +263,25 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="index.php" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>
                                     Sair
+                                    <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item has-treeview">
+                                    <a href="index.php" class="nav-link">
+                                        <i class="nav-icon fas fa-sign-out-alt"></i>
+                                        <p>
+                                            Sair
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
+
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -332,9 +341,6 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
 
     </div>
     <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE App -->
     <script src="dist/js/adminlte.min.js"></script>
 </body>
 
