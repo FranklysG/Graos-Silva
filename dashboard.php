@@ -40,7 +40,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
             <!-- SEARCH FORM -->
             <form class="form-inline ml-3">
                 <div class="input-group input-group-sm">
-                    <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control form-control-navbar" type="search" placeholder="Buscar " aria-label="Search">
                     <div class="input-group-append">
                         <button class="btn btn-navbar" type="submit">
                             <i class="fas fa-search"></i>
@@ -61,7 +61,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                                <img src="lib/img/graosSilva-logo.png" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         Porto Franco
@@ -77,7 +77,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                                <img src="lib/img/graosSilva-logo.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         Açailandia
@@ -93,7 +93,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="dist/img/user5-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                                <img src="lib/img/graosSilva-logo.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         Barcarena
@@ -148,8 +148,8 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="#" class="brand-link">
-                <img src="lib/img/graosSilva-logo.png" alt="AdminLTE Logo" class="img-circle" style="width: 45px;height: 40px !important;margin-left: 5px;">
-                <span class="brand-text font-weight-bold" style="line-height: 0.9;">GRÃOS SILVA</span>
+                <!-- <img src="lib/img/graosSilva-logo.png" alt="AdminLTE Logo" class="img-circle" style="width: 45px;height: 40px !important;margin-left: 5px;"> -->
+                <span class="brand-text font-weight-bold" style="line-height: 1em;font-size: 25px !important;margin-left: 20px;">GRÃOS SILVA</span>
             </a>
 
             <!-- Sidebar -->
@@ -157,7 +157,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['pass']) == true)
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="lib/img/avatars/logo.png" alt="AdminLTE Logo" class="img-circle elevation-1" style="width: 30px;height: 35px !important;margin: 5px;">
+                        <img src="lib/img/graosSilva-logo.png" alt="AdminLTE Logo" class="img-circle elevation-1" style="width: 45px;height: 40px !important;margin-left: -10px;">
                     </div>
                     <div class="info" style="line-height: 2.6;">
                         <a href="#" class="d-block"><?php echo $_SESSION['apelido']; ?></a>
